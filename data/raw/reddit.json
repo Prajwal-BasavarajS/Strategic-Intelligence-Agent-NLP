@@ -1,0 +1,502 @@
+[
+  {
+    "id": "reddit_t3_1u7gsli",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Game Ready & Studio Driver 610.62 FAQ/Discussion",
+    "text": "Game Ready &amp; Studio Driver 610.62 has been released. Brought in the 8 fixes from the Hotfix 610.52 and added 2 additional fixes for Apex Legends and fixing certain DLSS settings being grayed out in certain games . Driver Article Here : Link Here Game Ready Driver 610.62 Direct Download Link : Link Here Studio Driver 610.62 Direct Download Link : Link Here New feature and fixes in driver 610.62: Game Ready This new Game Ready Driver provides the best gaming experience for the latest new games supporting DLSS and RTX technologies including Empulse. Applications The June NVIDIA Studio Driver provides optimal support for the latest new creative applications and updates including NVIDIA Broadcast 2.2, Reallusion Character Creator 5.1, and the latest multi-GPU optimizations for llama.cpp and ComfyUI. Fixed Gaming Bugs FIXED World of Warcraft: Gaming stability improvements [5563205] FIXED Apex Legends: Occasional visual corruption after extended gameplay [6239327] FIXED Users may observe DLSS settings being grayed out in certain games after updating to display driver 610.47 [6262805] FIXED Improved gaming stability in multi-monitor configurations when using V-SYNC with DLSS Frame Generation [6158481] FIXED Resolved an issue that could cause jittering or ghosting in some DirectX 11 games when Smooth Motion is enabled [5937897] FIXED Resolved an issue that could cause some games to crash when launched with Smooth Motion enabled [5466398] Fixed General Bugs FIXED [Ada] Resolves a frame pacing issue on certain monitors when G-SYNC is enabled [6226972] FIXED Resolved an issue that prevented the EDID from being read on certain monitors causing them to be identified as &quot;NVIDIA NV-Failsafe\u201d [6005508] FIXED Resolved an issue where certain monitors would not wake from sleep mode [5806798/5635230] FIXED General stability improvements when the system fails to create a new allocation [5449920] Includes additional open issues from GeForce Forums \u201cPrefer Maximum Performance\u201d Power Management Mode may not be applied correctly [6007998] Driver Downloads and Tools Information &amp; Documentation Driver Download Page: Nvidia Download Page Latest Game Ready Driver: 610.62 WHQL - Game Ready Driver Release Notes Latest Studio Driver: 610.62 WHQL - Studio Driver Release Notes High Bandwidth Monitors and GPU Scaling Behavior - Link Here High bandwidth monitors are those that support display modes requiring high pixel clock rates, which in turn demand more GPU resources. The threshold for what qualifies as &quot;high bandwidth&quot; varies by product. On Blackwell GPUs, any mode operating above 1620 MHz is considered high bandwidth. For instance, the 7680x4320@60Hz mode defined in the CTA-861-H specification runs at 2376 MHz, making it a high bandwidth mode for Blackwell. These monitors typically support display scaling natively. However, in some single-monitor setups, users may still prefer GPU scaling. When multiple monitors are connected to a GPU and at least one of them is high bandwidth, that monitor will default to display scaling only. GPU scaling is disabled in this case due to bandwidth limitations. Notably, display scaling can be more efficient than GPU scaling in such scenarios, as it reduces the bandwidth load on display cables\u2014especially at higher refresh rates. When GPU scaling is not enabled for a monitor, only the modes supported by the monitor itself will appear in both the Windows and NVIDIA control panels. Additionally, the &quot;Display scaling&quot; option will be pre-selected in the &quot;Adjust desktop size and position&quot; section of the NVIDIA Control Panel. Notes on NVIDIA Control Panel - From GeForce Forum Please note: With the introduction of our most recent NVIDIA App update, all actively supported NVIDIA Control Panel features for GeForce users have been modernized and transitioned to the new client. After 20 years of dedicated service, the classic NVIDIA Control Panel is officially retiring for Game Ready and Studio Drivers. For NVIDIA RTX PRO users, the NVIDIA Control Panel will continue to be supported until we have migrated professional features to the NVIDIA app. Existing installs of the NVIDIA Control Panel will remain on users\u2019 systems, unless they perform a clean installation, and users who still need the NVIDIA Control Panel can continue to download it from the Microsoft Store, but we won\u2019t be adding features, fixes, or other changes . Feedback &amp; Discussion Forums Submit driver feedback directly to NVIDIA: Link Here NVIDIA 610.62 Driver Forum: Link Here r/NVIDIA Discord Driver Feedback: Invite Link Here Having Issues with your driver and want to fully clean the driver? Use DDU (Display Driver Uninstaller) DDU Download: Link Here DDU Guide: Guide Here DDU/WagnardSoft Patreon: Link Here Before you start - Make sure you Submit Feedback for your Nvidia Driver Issue - Link Here There is only one real way for any of these problems to get solved , and that\u2019s if the Driver Team at Nvidia knows what those problems are. So in order for them to know what\u2019s going on it would be good for any users who are having problems with the drivers to Submit Feedback to Nvidia. A guide to the information that is needed to submit feedback can be found here . Additionally, if you see someone having the same issue you are having in this thread, reply and mention you are having the same issue. The more people that are affected by a particular bug, the higher the priority that bug will receive from NVIDIA!! Common Troubleshooting Steps Be sure you are on the latest build of Windows Please visit the following link for DDU guide which contains full detailed information on how to do Fresh Driver Install. If your driver still crashes after DDU reinstall, try going to Go to Nvidia Control Panel -&gt; Managed 3D Settings -&gt; Power Management Mode: Prefer Maximum Performance Common Questions Is it safe to upgrade to &lt;insert driver version here&gt;? Fact of the matter is that the result will differ person by person due to different configurations. The only way to know is to try it yourself. My rule of thumb is to wait a few days. If there\u2019s no confirmed widespread issue, I would try the new driver. Bear in mind that people who have no issues tend to not post on Reddit or forums. Unless there is significant coverage about specific driver issue, chances are they are fine. Try it yourself and you can always DDU and reinstall old driver if needed. My color is washed out after upgrading/installing driver. Help! Try going to the Nvidia Control Panel -&gt; Change Resolution -&gt; Scroll all the way down -&gt; Output Dynamic Range = FULL. My game is stuttering when processing physics calculation Try going to the Nvidia Control Panel and to the Surround and PhysX settings and ensure the PhysX processor is set to your GPU Remember, driver codes are extremely complex and there are billions of different possible configurations between hardware and software. Driver will never be perfect and there will always be issues for some people. Two people with the same hardware configuration might not have the same experience with the same driver versions. Again, I encourage folks who installed the driver to post their experience here good or bad. &#32; submitted by &#32; /u/Nestledrink [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u7gsli/game_ready_studio_driver_61062_faqdiscussion/",
+    "date": "2026-06-16T15:29:23+00:00",
+    "scraped_at": "2026-06-20T07:15:15.045846+00:00"
+  },
+  {
+    "id": "reddit_t3_1u6m3vp",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "RTX Play Live Summer Edition: Steam Next Fest Community Picks",
+    "text": "Summer is here and The Steam Next Fest is here!! We're running a giveaway on this community to celebrate the Steam Next Fest. Below is a message from NVIDIA -------------- Steam Next Fest is all about discovering your next favorite game to add to the growing backlog. This week, June 16-17 , tune in to RTX Play Live on Twitch as GeForce Evangelist Jacob Freeman spotlights epic game demos and playthroughs. https://www.twitch.tv/nvidia Comment below with the demos you\u2019re playing, or the ones you want to try, for a chance to win Steam cash right here in this community (3x $40 Steam Giftcard). We may feature some of your picks on stream too, so tune in and enter the wider Summer of RTX prize pool. https://store.steampowered.com/sale/nextfest &#32; submitted by &#32; /u/Nestledrink [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u6m3vp/rtx_play_live_summer_edition_steam_next_fest/",
+    "date": "2026-06-15T16:49:25+00:00",
+    "scraped_at": "2026-06-20T07:15:15.045892+00:00"
+  },
+  {
+    "id": "reddit_t3_1uaga47",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Since I was a little kid, I always wanted to have a Founders Edition card",
+    "text": "&#32; submitted by &#32; /u/MaestroStrings [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1uaga47/since_i_was_a_little_kid_i_always_wanted_to_have/",
+    "date": "2026-06-19T22:53:40+00:00",
+    "scraped_at": "2026-06-20T07:15:15.045906+00:00"
+  },
+  {
+    "id": "reddit_t3_1uaeoz8",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Loving my new RTX 5070 Ti! 90+ FPS on everything.",
+    "text": "\u200bI absolutely love this card. Just finished testing it at max resolutions on Battlefield 6, 007: First Light, and Forza Horizon 6 on 4k\u2014it easily pushes 90+ FPS everywhere. Absolutely perfect performance! &#32; submitted by &#32; /u/Vortex91022 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1uaeoz8/loving_my_new_rtx_5070_ti_90_fps_on_everything/",
+    "date": "2026-06-19T21:45:03+00:00",
+    "scraped_at": "2026-06-20T07:15:15.045925+00:00"
+  },
+  {
+    "id": "reddit_t3_1ua0kd2",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "FINALLY \ud83e\udd79",
+    "text": "&#32; submitted by &#32; /u/eugur361 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1ua0kd2/finally/",
+    "date": "2026-06-19T12:22:38+00:00",
+    "scraped_at": "2026-06-20T07:15:15.045940+00:00"
+  },
+  {
+    "id": "reddit_t3_1uaggzr",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Dedicated Gaming PC Build (the side panel is staying off for this beauty)",
+    "text": "Case: FormD T1 v2.1, CNC Anodized Black Case Fans: 2x Corsair RS120 Max CPU: AMD Ryzen 7 9800X3D CPU Contact Frame: Thermal Grizzly CPU Cooler: Thermalright AXP90-X47 Full Copper CPU Cooler Offset Brackets: DingKey Designs CPU Cooler Fan: Noctua A9x14 HS-PWM, Black Thermal Paste: Thermal Grizzly Duronaut GPU: NVIDIA RTX 5080 Founders Edition GPU Travel Kit: FormD T1 Riser Cable: FormD T1, PCIe 5.0 SS200 Motherboard: Asus ROG Strix B850-I Motherboard Backplate: DingKey Designs RAM: Corsair Vengeance, 32GB (2x16GB), DDR5-6000, CL30 NVMe: Samsung 990 Pro, 2TB PSU: Corsair SF1000 PSU Cables: Cablester, Teflon, Black &#32; submitted by &#32; /u/MaestroStrings [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1uaggzr/dedicated_gaming_pc_build_the_side_panel_is/",
+    "date": "2026-06-19T23:01:58+00:00",
+    "scraped_at": "2026-06-20T07:15:15.045971+00:00"
+  },
+  {
+    "id": "reddit_t3_1uaaleq",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Update: BUILD",
+    "text": "I\u2019ve cleared everything off my desk compared to my last build post, and the monitors are the same as im a tall person and I don\u2019t need to strain my neck to look up. First monitor is eye level second monitor I can see also as my chair is leaned back a bit. &#32; submitted by &#32; /u/Straight_Budget_3842 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1uaaleq/update_build/",
+    "date": "2026-06-19T18:59:35+00:00",
+    "scraped_at": "2026-06-20T07:15:15.045992+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9yyf6",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "With Unreal Engine 5.5+ (MegaLights) and Nvidia's ReSTIR PT: Enhanced, can the RTX 50 Series stay Relevant until 2030+?",
+    "text": "I saw the Tech Demo yesterday of Gears of War E-day which is coming to Xbox and PC. The Game is running in the demo at 4K60fps on an Xbox series X which is very impressive. The game is built off Unreal Engine 5.5 and features 'MegaLights', which is finally making its way through dev pipelines. It is a highly efficient Hardware Ray Traced Global Illumination algorithm that allows dev's to place hundreds of unique lights in a scene without crashing performance, and it allows for up to a 50% increase in performance over standard Lumen. But Hawdware RT cores are required. Another recent game that used MegaLights is FateKeeper which looks VERY good but runs smoothly as well. The Upcoming HALO Campaign evolved also built on UE5.5 uses MegaLights and early reports indicate a RTX 5090 powered PC was able to maintain 120fps with ALL the settings cranked @ 1440p without upscaling.(Think DLSS Quality @ 4K) In normal Lumen titles you might see 80-90fps in this scenario with the absolute worst offenders like Borderlands 4 with even less average fps. The Witcher 4 was reported to run Path Tracing &amp; max settings on a RTX 5090 at 4K80+fps with Quality upscaling in a dense forest scene, which to me again is pretty impressive. (Think the first scenes of Alan Wake 2 in comparison) Nvidia is also working on their new Path Tracing Algorithm called ReSTIR PT: Enhanced which is supposed to give between a 2x-3x boost in Path Tracing performance. So instead of 33fps 4K Native in say, CP2077, that could potentially be 60-70fps BEFORE Upscaling. Couple this with Ray Reconstruction 4.5's better temporal stability we might see even RR-Balanced or Performance match or even beat 4.0's RR-Quality in IQ. --- The industry is finally moving past the Dog days of Unreal Engine 5.1 titles and I believe the new Gears game shows us what newer UE5 versions are capable of. This along with Nvidia improving Path Tracing Performance (on all RTX cards) how long would the RTX 50 series still be relevant? Rumors indicate the 60 series is targeting a 30% raster bump, but thats not really impressive... seeing as Raster is slowly being replaced. I think Nvidia knows this and is using this as another reason and excuse to slow down the replacement cycle of Blackwell. If the Super series is introduced which fixes the VRAM issue, these cards could still be highly performant even 5 years from now. &#32; submitted by &#32; /u/Traditional-Ad26 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9yyf6/with_unreal_engine_55_megalights_and_nvidias/",
+    "date": "2026-06-19T11:02:46+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046071+00:00"
+  },
+  {
+    "id": "reddit_t3_1uan0fr",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "GPU utilization issue using upscaling on RTX Remix mods with a desktop 5090 but not a laptop 5070",
+    "text": "I have a desktop with a Gigabyte RTX 5090 and a laptop with the 8 GB RTX 5070. I'm playing some older games at 1440p that have been udpated with RTX Remix and have run into a very strange issue specifically with the UnrealRTX mod. Using the laptop, performance is exactly as it should be in terms of DLSS usage, frame rate, and GPU utilization. This is not the case with the 5090. When booting up the game and loading certain maps (like Vortex Rikers or the mine), it plays perfectly fine. On other maps, such as NyLeve Falls or Nali Castle, the 5090's utilization and power consumption are essentially cut in half, which tanks performance. What's unusual is that the frame rate stays the same (50 fps give or take a few) regardless of what upscaling mode I use in the RTX Remix settings, whether it's DLSS, TAA, XeSS, etc. However, when upscaling is disabled or DLSS is set to full resolution, the frame rate doesn't change, but GPU utilization returns to where it should be (90 percent and greater most of the time). I've not observed such behavior in other RTX Remix titles like Portal or the Half-Life 2 demo. I've tried multiple different driver sets with no success. I'm hoping someone else with a 5090 who also owns a copy of Unreal can try this to see if they can also replicate the issue. &#32; submitted by &#32; /u/saturnotaku [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1uan0fr/gpu_utilization_issue_using_upscaling_on_rtx/",
+    "date": "2026-06-20T04:24:45+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046115+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9znf7",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "is PNY RTX 5070 Ti ARGB EPIC-X worth it?",
+    "text": "pny users share ur experience abou this card or pny in Generally &#32; submitted by &#32; /u/thenoor555 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9znf7/is_pny_rtx_5070_ti_argb_epicx_worth_it/",
+    "date": "2026-06-19T11:38:51+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046128+00:00"
+  },
+  {
+    "id": "reddit_t3_1uapcey",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Possible upgrade from 2070 super",
+    "text": "Hey all. I have no interest in gaming above 1080p but I have noticed that's it getting harder to play with a consistent 120fps with recent games even with lowest graphical settings. What should I be looking at for in an upgrade? I have 8gb of VRAM and it's starting to not be enough it seems. &#32; submitted by &#32; /u/KomradeKrycek [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1uapcey/possible_upgrade_from_2070_super/",
+    "date": "2026-06-20T06:33:21+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046147+00:00"
+  },
+  {
+    "id": "reddit_t3_1uaoncd",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "How to change to display scaling for \"Perform Scaling On\"?",
+    "text": "For some reason the 610.62 forced me to play on GPU scaling rather than Display scaling. Issue is that I get far less latency and better performance on Display than GPU. Idk why it changed after the driver updated but it did. Is there a way for me to add back display scaling? &#32; submitted by &#32; /u/Coolersdisciple [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1uaoncd/how_to_change_to_display_scaling_for_perform/",
+    "date": "2026-06-20T05:53:14+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046166+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9yn39",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "I'm back gentlemen",
+    "text": "Came back from a 7900 XT to an RTX 5080 Noctua Edition. I love Radeon, but I wanted something that can go more years at 1440p ultra / RT. And DLSS is just too good to ignore now. Side note, this is the biggest GPU I've ever seen in my life. &#32; submitted by &#32; /u/Mythicguy [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9yn39/im_back_gentlemen/",
+    "date": "2026-06-19T10:45:15+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046184+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9me8t",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "+600MHz OC Result",
+    "text": "Hello so I have OC'd my RTX 5080 to 3322-3330MHz from 2730MHz which is about 600MHz +300 on Apocalypse VBIOS and I've +3000MHz VRAM with 100% Core Voltage and +125% Power. For my GPU the stock clocks are 2730MHz and the stock results was from the stock ASUS TUF 5080 OC vBIOS. This card is a naturally good performer but I wanted to see how far I could've went so I upped the core clock until it was unstable which landed me the #1 spot for Steel Nomad and Port Royal. (Check Last Two Images) RTX 5080 Stock vs OC (14900K) Cyberpunk 2077: 40.18 -&gt; 47.19 FPS (+17.45%) Hitman: 77.59 -&gt; 92.96 FPS (+19.81%) Pragmata: 100.00 -&gt; 119.00 FPS (+19.00%) Port Royal: 106.97 -&gt; 125.93 FPS (+17.72%) Steel Nomad: 87.47 -&gt; 101.71 FPS (+16.29%) GPU Temperature: Stock: 37\u00b0C OC: 44\u00b0C (+7\u00b0C) GPU Power Draw: Average: 287W -&gt; 330W (+43W, +15.0%) Peak: 352W -&gt; 401W (+49W, +13.9%) GPU Clock Speed: Average: 2719 MHz -&gt; 3312 MHz (+593 MHz, +21.8%) Peak : 2730 MHz -&gt; 3330 MHz (+600 MHz, +22.0%) TL;DR: ~18% average performance gain across games and synthetic benchmarks. Power consumption increased by only ~15%, from 287W average to 330W average. GPU temperature increased by just 7\u00b0C, from 37\u00b0C to 44\u00b0C. Average clock speed increased by nearly 600 MHz, from 2719 MHz to 3312 MHz. Specs: i9 14900K 6.0GHz DDR5 7200 MT/s CL34-42-42-28 RTX 5080 Tuf (MORA 1080mm 2x 360mm Watercooled) 7TB Storage TRYX 360MM AIO STAGE (Didn't watercool CPU as temps weren't over 100C and didn't throttle) Z790 Gaming X AX Rev 1.1 12x Lian Li SL120 Fans and 12x Arctic P12 for MORA with 2x D5 Pumps NOTE: I AM NOT RESPONSIBLE FOR YOUR PC WELL BEING AND OVERCLOCKING FAILURE, DO THIS AT YOUR OWN PRECAUTION AND DO NOT USE MY GPU CORE CLOCKS AS A STANDARD. &#32; submitted by &#32; /u/Straight_Budget_3842 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9me8t/600mhz_oc_result/",
+    "date": "2026-06-18T23:52:15+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046258+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9c2nw",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Shout out to my 4070Ti SUPER gang",
+    "text": "( Previous post removed by mods as I posted a picture of the GPU in its box. Please don't judge my poor cable management bahaha.) Built this PC two years ago, upgrading from a 1660 Super, and it's still an absolute weapon. Have been playing 007 First Light on my 4K OLED and it's beautiful. 7800X3D and 32GB DDR5 RAM. I only recently learned of the component price increases &amp; I've become more thankful. Reaching that Herbie: Fully Loaded-esque sentimental attachment. Fingers crossed our builds don't implode for years to come. &#32; submitted by &#32; /u/Xawn [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9c2nw/shout_out_to_my_4070ti_super_gang/",
+    "date": "2026-06-18T17:08:18+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046284+00:00"
+  },
+  {
+    "id": "reddit_t3_1ua19vj",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "5080 Aero SSF OC vs 5080 ROG Astral OC",
+    "text": "The price difference between the two is around 400USD. I\u2019m looking to buy the white model to match the rest of my PC but cannot decide between the two is the extra 400 for the astral worth it or is overclocking the SSF just the same as the Astral? &#32; submitted by &#32; /u/Necessary-Bill-8708 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1ua19vj/5080_aero_ssf_oc_vs_5080_rog_astral_oc/",
+    "date": "2026-06-19T12:55:52+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046302+00:00"
+  },
+  {
+    "id": "reddit_t3_1uae229",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "4k Ray tracing or 1440p Path Tracing",
+    "text": "What would you choose? Especially with cards like 5070 TI and 5080 because they can easily run RT at 4k with DLSS 4.5 without FG\u2026.interested to see opinions on this matter :) &#32; submitted by &#32; /u/PhantomFoxZ [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1uae229/4k_ray_tracing_or_1440p_path_tracing/",
+    "date": "2026-06-19T21:18:47+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046318+00:00"
+  },
+  {
+    "id": "reddit_t3_1u8a6m6",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Scammed. Be careful guys.",
+    "text": "Thought I was getting a good deal on a 5090. Mf gutted the thing and I didn\u2019t realize till it was too late. Paid cash and dude deleted his account. Yes I\u2019m an idiot. Be careful out there folks and ALWAYS TEST BEFORE PURCHASE. &#32; submitted by &#32; /u/SpartanXeroOne [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u8a6m6/scammed_be_careful_guys/",
+    "date": "2026-06-17T13:27:29+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046339+00:00"
+  },
+  {
+    "id": "reddit_t3_1u8euxp",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "It happened\u2026 PNY 5080",
+    "text": "I still cannot believe it\u2026 The guy won this from a \u201cwork\u201d raffle and wanted to sell it half off to help someone out who wanted one! Literally brand new and runs cool, even during intense benchmarks. &#32; submitted by &#32; /u/Representative_Yak47 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u8euxp/it_happened_pny_5080/",
+    "date": "2026-06-17T16:21:43+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046356+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9z9fw",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Aorus Master or Astral 5080?",
+    "text": "Heads up. i dont really need answers like &quot;the cheapest one&quot; cuz my budget for a GPU is 1.6k euros. im in germany rn and the cheapest gpus run for like 1.1 or 1.2k and these 2 options run same oraund 1.5k maybe a lil less. &#x200b; Im using a Vision compact with the fallowing fan setup 3 bottom intake 3side aio intakes back exhausts and top glass panel &#x200b; Im rly wanting an Aorus Master for its overclocking or Astral for already a beastly performance on top of the 5% above FE. &#x200b; MY MAIN QUESTIONS: &#x200b; which is a better mix of being quiet and powerful? mostly being quiet (if i have to undervolt ill do it) &#32; submitted by &#32; /u/WeakSaladin [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9z9fw/aorus_master_or_astral_5080/",
+    "date": "2026-06-19T11:18:41+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046387+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9p0l4",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Pulsar monitor bug with G-Sync when using single-monitor mode",
+    "text": "Just bumping this issue for more awareness as others seem to be having the same issue with new 360hz Pulsar monitors: https://www.reddit.com/r/nvidia/comments/1rvztl4/there_is_a_serious_bug_with_the_new_gsync_pulsar/ https://www.reddit.com/r/Monitors/comments/1r6mnpp/gsync_vsync_reflex_ultra_randomly_locks_fps_to/ I like to play games with the usual G-Sync+V-Sync+Reflex where it automatically caps FPS/Hz to 326/327. However, when using the Pulsar monitor in single-monitor mode, after 1-2 minutes, the monitor will drop down from 326/327 to 320 instead, which seems like a buffered V-Sync state with a significant latency increase. If you alt-tab and go back into the game again, it'll go back to the good 326/327 reflex cap state, but once again, after 1-2 minutes, it'll go back down to 320. Another weird quirk with this bug is that if you have a second monitor plugged in, it doesn't drop down to 320. It will keep the 326/327 reflex cap. I'm running the latest Nvidia Pulsar firmware 1.1.6 on my XG27AQNGV monitor with a 5090 on driver 596.49. I'm curious if any Pulsar monitor owners have updated to the new 610.62 Nvidia driver and are still seeing this issue. &#32; submitted by &#32; /u/Danny__L [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9p0l4/pulsar_monitor_bug_with_gsync_when_using/",
+    "date": "2026-06-19T01:56:35+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046426+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9ismg",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Should i get a 5060ti 8gb or a 5070?",
+    "text": "I have a 3050 so either of them would be a huge upgrade. My main problem is i don't want to spend a lot of money so the 5060ti is definitely more in my price range but i want to know if i'd be better off just giving up the extra 200 bucks for a 5070 or if a 5060ti would still be a good upgrade. &#32; submitted by &#32; /u/waffledaffle69 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9ismg/should_i_get_a_5060ti_8gb_or_a_5070/",
+    "date": "2026-06-18T21:19:46+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046444+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9qeid",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "PNY 5080 Slim - Is it a keeper? (Not looking for tech support)",
+    "text": "Hey everyone, looking for some advice on my current GPU situation and potential upcoming build upgrade. My current motherboard is an AsRock X570M Pro 4, which has some incredibly bulky armor covering the chipset fan and the primary NVMe slot. I originally tried upgrading my Asus Dual 4070 to an Asus Prime 5070 Ti, but it was a total no-go. The card just would not seat all the way into the PCIe slot because it hit that motherboard armor. Even my old 4070 barely cleared it. I decided to take a gamble on the PNY 5080 Slim. AI models swore up and down that it would fit with the armor on, but surprise, it did not. I really wanted to see what a 5080 could do, so I ended up just removing the motherboard armor completely. With the shield gone, the Slim finally fit, though it was still a tight squeeze. It barely cleared the SATA ports at the edge of the board. I still have a few days left on my return window, so I am trying to make a final decision. The card runs remarkably cool inside my Thermaltake Tower 200 case. Surprisingly, the chipset and primary NVMe are also running totally fine without their armor shield. Since things are working, I am seriously considering making the leap to a modern AM5 bundle from Micro Center along with a brand new case. My main question is about the GPU itself. Is the PNY 5080 Slim a keeper for the long haul, or would I be better off returning it and grabbing a different 5080 model? PNY has always felt a bit like an off-brand to me personally, so I would love to hear your opinions. TL;DR: Upgraded to a PNY 5080 Slim on my AsRock X570M Pro 4, but had to remove the motherboard's bulky chipset/NVMe armor to make it fit. Temps are actually great in my Tower 200 without the armor, but I am considering a Micro Center AM5 bundle and new case upgrade. Is the PNY Slim a keeper, or should I swap it for a different 5080 variant while I am still in the return window? &#32; submitted by &#32; /u/QNAP_throwaway [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9qeid/pny_5080_slim_is_it_a_keeper_not_looking_for_tech/",
+    "date": "2026-06-19T03:03:23+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046504+00:00"
+  },
+  {
+    "id": "reddit_t3_1u8b56v",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "NVIDIA ACE AI teammate now available in PUBG, needs RTX GPU with at least 8GB VRAM",
+    "text": "&#32; submitted by &#32; /u/RenatsMC [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u8b56v/nvidia_ace_ai_teammate_now_available_in_pubg/",
+    "date": "2026-06-17T14:04:49+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046513+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9m4s6",
+    "source": "reddit",
+    "source_detail": "r/nvidia",
+    "title": "Aorus master 5080 undervolt",
+    "text": "Hey guys I\u2019ve managed to undervolt the 5080 and I\u2019m more than happy max settings Pragmata I\u2019m seeing a 20-40 extra frames and my 1% lows are well higher, now don\u2019t need frame gen for a smooth experience, I\u2019m using path tracing fully maxed out 1440p dlss quality and I\u2019m using roughly 40w less power and a higher average clock speed, and the card is running 3-4 degrees lower, would you say this is a good undervolt for my first &#32; submitted by &#32; /u/Far_Win_3390 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/nvidia/comments/1u9m4s6/aorus_master_5080_undervolt/",
+    "date": "2026-06-18T23:40:18+00:00",
+    "scraped_at": "2026-06-20T07:15:15.046536+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9drsx",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Weekly Earnings Thread 6/22 - 6/26",
+    "text": "&#32; submitted by &#32; /u/OSRSkarma [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9drsx/weekly_earnings_thread_622_626/",
+    "date": "2026-06-18T18:10:16+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769229+00:00"
+  },
+  {
+    "id": "reddit_t3_1uac4fx",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Weekend Discussion Thread for the Weekend of June 20-21",
+    "text": "This post contains content not supported on old Reddit. Click here to view the full post &#32; submitted by &#32; /u/verified-trader [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uac4fx/weekend_discussion_thread_for_the_weekend_of_june/",
+    "date": "2026-06-19T20:00:37+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769250+00:00"
+  },
+  {
+    "id": "reddit_t3_1uabfl5",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "$2.1M in gains in 2 years",
+    "text": "I actually gained around $1.6M 2 years ago and stopped and then gained another ~$500k this year. Withdrew my $1.6M 2 years ago which is why account value today doesn\u2019t add up. Deposited around 150k total over this whole period of time. My top positions shown and the last month. Edit: Losses screenshot in comments &#32; submitted by &#32; /u/TechnicalWish1632 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uabfl5/21m_in_gains_in_2_years/",
+    "date": "2026-06-19T19:32:32+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769278+00:00"
+  },
+  {
+    "id": "reddit_t3_1ua7mug",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "The US says ASML's top chip tool may be in China | TechCrunch",
+    "text": "&#32; submitted by &#32; /u/Pipepoi [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1ua7mug/the_us_says_asmls_top_chip_tool_may_be_in_china/",
+    "date": "2026-06-19T17:07:24+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769290+00:00"
+  },
+  {
+    "id": "reddit_t3_1uajz9v",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Drank the Kool-aid. We can come back?",
+    "text": "Someone told me it would be 300 by now. &#32; submitted by &#32; /u/Fun_Paleontologist_2 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uajz9v/drank_the_koolaid_we_can_come_back/",
+    "date": "2026-06-20T01:49:17+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769303+00:00"
+  },
+  {
+    "id": "reddit_t3_1uagc37",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "You regards are making history",
+    "text": "\u201cRetail investors have never traded more options.\u201d Let\u2019s show \u2018em what we\u2019re made of. &#32; submitted by &#32; /u/Visible-Surround-550 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uagc37/you_regards_are_making_history/",
+    "date": "2026-06-19T22:56:10+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769323+00:00"
+  },
+  {
+    "id": "reddit_t3_1ua6fqn",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "How did WSB's stock picks of 2026 perform in Q2 - Mid year check in",
+    "text": "First of all, I know we still have over a week till end of Q2, but I'm bored that the stock market is closed today, so I'm posting this a week early. At the end of 2024, there was a thread here in which people picked their stocks to watch for 2025. At the end of 2025 , WSB's top 10 picks had an average return of 76% , which beat SPY which returned only 17% in 2025. So at the end of 2025, another thread was posted here in which people picked their stocks to watch for 2026. 10 stocks were picked based on how many times they were mentioned in that thread. This is how they have performed year to date: 1 ASTS: 8.15% 2 RKLB: 50.36% 3 GOOGL/GOOG: 15.62% 4 AMZN: 5.11% 5 NBIS: 228.22% 6 RDDT: -25.15% 7 MU: 290.28% 8 IREN: 53.88% 9 TSLA: -12.95% 10 PLTR: -29.05% So that is an average return of 58.45% , compared to SPY's YTD return of 8.93% With SPY curve this year looks so similar to last year (Jan/Feb peak then March/April bottom from Trump's dump and pump), and we are moving in the same direction as last year, my guess is: At the end of 2026 , WSB's top 10 picks will have an average return of about 76% , and SPY will has a YTD return of about 17% WSB has a better track record than hedge funds. If you are still not convinced that we are superior regards, you are missing out on the greatest and easiest generational wealth of your lifetime! &#32; submitted by &#32; /u/hacking99percent [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1ua6fqn/how_did_wsbs_stock_picks_of_2026_perform_in_q2/",
+    "date": "2026-06-19T16:22:03+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769385+00:00"
+  },
+  {
+    "id": "reddit_t3_1uah6wm",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Charter Communications. Potential 56 bagger.",
+    "text": "In a world of multi-trillion dollar unprofitable space internet companies there is another internet company worth only 1% of space X. While Elon simps are cheering about the overpriced Cursor purchase and daydreaming about asteroid mining labor camps, there is another broadband provider quietly earning more money than Starlink has ever earned and generating cash faster than Musk can burn it. Charter Communications (CHTR). You know them as Spectrum internet, the 2nd largest internet provider in the United States, providing high-speed internet to 100 million Americans daily. Currently Charter is valued at around $125 down from $400 earlier this year. That gives them a market cap of $15-16 billion dollars and a Price to earnings of around 3. The free cash flow story is even more telling. Currently Charter is generating around $5 billion in FCF even as they are spending crazy capex to upgrade their entire network to symmetrical multi-gigabit \u2013 speeds Elon can only dream about. Management expects FCF to surge to around $8 billion in 2028 as they reduce their capex to a normalized $7-8 billion. While it\u2019s true that they have been losing internet and video subscribers at a paltry rate of 1-2% a year, they are rapidly increasing their mobile subscribers \u2013 the end result being growth in total product lines sold and steady revenue and profits. Given their FCF, the company has been buying back stock aggressively. In Q1 they bought back $1 billion worth of shares at an average price of $220 a share. At current prices the company will likely be buying back 8 million shares per quarter or 32 million share a year. The play: 1. Buy 1 share of Charter for $126. Never sell. 2. The company continues to buy back 32 million shares a year. 3. In 4 years the company buys back all their 120 million shares \u2013 except the one that you hold. 4. You are the sole owner of Charter Communications \u2013 if Elon tweets something you don\u2019t like \u2013 just shut off his internet. Let\u2019s see him try to connect to the World Wide Web without broadband service. Now, unfortunately, this strategy won\u2019t work out exactly as planned because the finance bros will be forced to bid up the stock price as the earnings per share rises. But if the company continues to have a P/E of 3 or less, the company can continue its 25% buyback \u2013 while still paying down $1 billion debt a year. A 25% buyback = a 33% rise in Earnings per Share = a 33% in stock appreciation. Run the numbers for 10 years and you have a 16 bagger stock. If the company uses all its free cash flow to buy back stock = 33% buy back = 50% EPS increase = 56 bagger in 10 years. TLDR: Charter Communications is a medium risk \u2013 high reward stock opportunity. &#32; submitted by &#32; /u/PenComfortable5269 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uah6wm/charter_communications_potential_56_bagger/",
+    "date": "2026-06-19T23:34:23+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769481+00:00"
+  },
+  {
+    "id": "reddit_t3_1uagkol",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Long gamble in ARM turned into regret",
+    "text": "I went long on my ARM covered calls when it was around $100/share, now I have some regrets. Trying to decide if I buy back some of the contracts to report a loss on taxes (and get the stock back) or just take it like a proper Wendy\u2019s employee. &#32; submitted by &#32; /u/rwrife [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uagkol/long_gamble_in_arm_turned_into_regret/",
+    "date": "2026-06-19T23:06:26+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769503+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9tci4",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "When MU going back to $100\u2026?",
+    "text": "&#32; submitted by &#32; /u/Hi_Keyboard_Warriors [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9tci4/when_mu_going_back_to_100/",
+    "date": "2026-06-19T05:35:40+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769514+00:00"
+  },
+  {
+    "id": "reddit_t3_1ua8vl5",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Servthisnow in my ass",
+    "text": "Guess whose a retard &#32; submitted by &#32; /u/charliekirkbread [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1ua8vl5/servthisnow_in_my_ass/",
+    "date": "2026-06-19T17:54:36+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769527+00:00"
+  },
+  {
+    "id": "reddit_t3_1uaalzr",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "My First 200% Stock",
+    "text": "I held bitfarm for a long time, then suddenly noticed it changed to keel one day and started mooning. &#32; submitted by &#32; /u/BASGTA [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uaalzr/my_first_200_stock/",
+    "date": "2026-06-19T19:00:13+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769540+00:00"
+  },
+  {
+    "id": "reddit_t3_1ual9sg",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "SNXX Gains",
+    "text": "Realized these 9 days ago, but wasn\u2019t able to post due to Reddit suspension. (Don\u2019t type \u201cthe group of people who trade KOSPI\u201d need to get liquidated before you will buy DRAM.) These look good until you realize when I sold vs where SNXX is today. Can\u2019t be too upset, because I spent it on MU/DRAM shares. If we get another pullback like in Feb/Mar I\u2019ll buy LEAPS instead. &#32; submitted by &#32; /u/Vlisa [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1ual9sg/snxx_gains/",
+    "date": "2026-06-20T02:54:18+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769566+00:00"
+  },
+  {
+    "id": "reddit_t3_1uahiip",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "News screwing with my only investment into peace.",
+    "text": "The one time I felt comfortable with betting on calming markets, I got into some VXX puts on Wednesday. I am only hoping for a Sunday night tweet to bring futures out of the eventual red. July 2nd is still two weeks away, but in a world like this, VXX can easily remain elevated above 25 until expiration. If we open to a red Monday, I am just not sure if I want to double up or exit on a loss. &#32; submitted by &#32; /u/joesati10 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uahiip/news_screwing_with_my_only_investment_into_peace/",
+    "date": "2026-06-19T23:49:54+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769593+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9qvku",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Satya and Zuckerberg are incinerating capital",
+    "text": "No one wants to say it proudly but $MSFT and $META are throwing billions of dollars at AI CAPEX with little to show for it. They turned what was originally a CAPEX light business with high software margins and lit it on fire. Copilot and even Meta AI are absolutely inferior to GPT/Claude by every conceivable metric. What are they even doing? AI is becoming a commodity now with so many good models in the market. There is no MOAT. More importantly, AI does not demonstrate ROI for most businesses and is a rather expensive technology financially and environmentally. OpenAI which is azures biggest customer is recently running at a loss LMAO and profitability is not clear \ud83d\ude02. Instead of burning precious shareholder FCF, Satya should focus on optimizing his own products that made MSFT great or at the very least slow down CAPEX. Azure as an AI play will compete with Amazon, Google Cloud and even other players like Nebius for consumers. New more expensive chips will come out every year increasing costs ($MU will go up forever). Depreciation is a thing. It will be race for lower margins. I get the fear\u2026they are worried about missing out on a digital god and are willing to build and spend billions to have a stake. But at the moment, the progress is minimal after 4 years since the AI buildout started. Maybe it\u2019s better for OpenAI and Anthropic to take the lead instead of burning precious capital with nothing to show for it. I am so confused with their AI strategy and Satya (and Zuckerberg) should be replaced. At the very least explain the ROI before incinerating shareholder cash. Please explain why I am wrong so I can cope. TLDR : Short Mag7 and long semis. Biggest transfer of wealth in history from $MSFT shareholders to $MU and $AMD shareholders! We are currently experiencing a prisoners dilemma where no Mag7 wants to be left behind and they choose to spend on CAPEX which is hurting all of them collectively. Instead they should cooperate rationally by cutting spending collectively. Otherwise, Multiple compression is here to stay bois &#32; submitted by &#32; /u/carpetmagicianlaughs [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9qvku/satya_and_zuckerberg_are_incinerating_capital/",
+    "date": "2026-06-19T03:27:05+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769670+00:00"
+  },
+  {
+    "id": "reddit_t3_1uagckl",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "How to lose 10k overnight",
+    "text": "First off I want to let you know im a gamba gamba investor and if there is a high premium, im taking that shit because a dollar today is worth more than a dollar tomorrow, even if that dollar doesn't exist tomorrow. &#x200b; I went into this trade along with the hype that people would buy in thinking it was space x stock, turns out im the dumm that bought at the top. &#x200b; Technically there had been momentum before this and this stock should have held above the 5 dollar and I would have been fine holding short term. The fact that it had a -30% drop overnight is ridiculous and def not retail selling their mistake, but institutional short sellers fr. &#x200b; So now im bag holding this company because once they start commercial flights, there is a basis for this stock to start building momentum(which is already showing by its recent spikes to $8 and $6+. &#x200b; Tell me why im dumm for believing this stock will be 10+ next year &#x200b; &#32; submitted by &#32; /u/SmarterScience [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uagckl/how_to_lose_10k_overnight/",
+    "date": "2026-06-19T22:56:48+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769709+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9xuif",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "What Are Your Moves for Juneteenth, June 19, 2026",
+    "text": "This post contains content not supported on old Reddit. Click here to view the full post &#32; submitted by &#32; /u/verified-trader [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9xuif/what_are_your_moves_for_juneteenth_june_19_2026/",
+    "date": "2026-06-19T10:00:37+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769723+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9bfu2",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "SpaceX Bankers Preparing for Bond Sale of at Least $20 Billion",
+    "text": "&#32; submitted by &#32; /u/joe4942 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9bfu2/spacex_bankers_preparing_for_bond_sale_of_at/",
+    "date": "2026-06-18T16:45:00+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769733+00:00"
+  },
+  {
+    "id": "reddit_t3_1u96r5r",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Bought ACN puts instead of ACM, got 3000%",
+    "text": "I accidentally bought Accenture puts and the shit PowerPoint company nuked itself. https://preview.redd.it/wyqlieddp18h1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=286108c9a81ff4989ad9960dabe4ef364feb7f6d &#32; submitted by &#32; /u/Jacker247 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u96r5r/bought_acn_puts_instead_of_acm_got_3000/",
+    "date": "2026-06-18T13:47:17+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769749+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9ffv5",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Spacex loss prn, suggestions for my last 40k?",
+    "text": "&#32; submitted by &#32; /u/BandicootMelodic1417 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9ffv5/spacex_loss_prn_suggestions_for_my_last_40k/",
+    "date": "2026-06-18T19:11:39+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769760+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9jfcg",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Even more investors want out of private credit",
+    "text": "&#32; submitted by &#32; /u/I_killed_the_kraken [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9jfcg/even_more_investors_want_out_of_private_credit/",
+    "date": "2026-06-18T21:44:46+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769768+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9i619",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "33k -> 225k in a month.",
+    "text": "Been a whirlwind of ups and downs. Caught the ride up from WDC calls last week and sold at 795 or so today and ported into SMR given the recent wave of news. Traded on vibes and prayers and saw my portfolio go to 130k back down to 56k and to 218k and then back down to 138k to end here at close today. Long weekend plus peace deal signing plus fed being over has me holding into the weekend. &#32; submitted by &#32; /u/Chosoiii [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9i619/33k_225k_in_a_month/",
+    "date": "2026-06-18T20:55:30+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769792+00:00"
+  },
+  {
+    "id": "reddit_t3_1ua4ws5",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "70K LEAP YOLO $TMC",
+    "text": "Bull call spread on my favourite critical mineral play. &#x200b; $TMC only has to reach $15 in a year and a half for me to 10x. &#x200b; I think the chances of $TMC reaching $15 before January 2028 are high, certainly way, way higher than 10%. &#x200b; It could even be higher than that very soon, the share price being extremely sensitive to news on regulatory developments and US government investment. &#x200b; Well connected, well lobbied company offering a novel way to have a shit ton of something everyone wants. &#x200b; Also works as a dollar debasement play (no way \ud83e\udd6d chose Warsh to be a hawk) &#x200b; Any of you virgins want to come at me about sea amoebas save your virtual breath. &#x200b; &#x200b; &#32; submitted by &#32; /u/Uzunzatu [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1ua4ws5/70k_leap_yolo_tmc/",
+    "date": "2026-06-19T15:23:26+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769831+00:00"
+  },
+  {
+    "id": "reddit_t3_1u9nakp",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "Smith and Wesson ($SWBI) BANG BANG BANG",
+    "text": "So now Im in the money after recent earnings.. feel like theres room to run here as these \u201cluxury goods\u201d are high quality and in ever increasing demand with current events. Anyone else here got exposure to this/theories on potential upside? &#32; submitted by &#32; /u/Lox4tw [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1u9nakp/smith_and_wesson_swbi_bang_bang_bang/",
+    "date": "2026-06-19T00:33:12+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769851+00:00"
+  },
+  {
+    "id": "reddit_t3_1uaafb6",
+    "source": "reddit",
+    "source_detail": "r/wallstreetbets",
+    "title": "I probably shouldn't have...but I did anyways. Wish me luck.",
+    "text": "C'mon Reta!! &#32; submitted by &#32; /u/MoistCabbage1 [link] &#32; [comments]",
+    "url": "https://www.reddit.com/r/wallstreetbets/comments/1uaafb6/i_probably_shouldnt_havebut_i_did_anyways_wish_me/",
+    "date": "2026-06-19T18:52:57+00:00",
+    "scraped_at": "2026-06-20T07:16:04.769861+00:00"
+  }
+]

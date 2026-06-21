@@ -1,0 +1,206 @@
+"""
+Strategic analysis engine for the NVIDIA CEO Agent (Phase 5/6).
+
+For a given category (opportunities | risks | trends):
+  1. Retrieve the top-k most relevant documents from ChromaDB.
+  2. Feed them to a local Ollama LLM (qwen2.5) with their ids/titles/urls.
+  3. Get back STRICT JSON: a list of findings, each citing the evidence
+     doc ids that support it.
+  4. Map evidence ids back to {title, url} so the dashboard can show
+     clickable supporting evidence.
+
+This is a deterministic retrieve -> reason pipeline (not an autonomous
+agent loop): predictable, debuggable, defensible under live coding.
+
+Run (tests the 'risks' category):  python analyze.py
+"""
+
+import json
+import re
+
+import chromadb
+import ollama
+from sentence_transformers import SentenceTransformer
+
+# --- Config -----------------------------------------------------------------
+CHROMA_DIR = "./chroma_db"
+COLLECTION_NAME = "nvidia_docs"
+EMBED_MODEL = "all-MiniLM-L6-v2"
+LLM_MODEL = "qwen2.5:7b-instruct"
+TOP_K = 6
+
+# Retrieval query + instruction framing per category.
+CATEGORY_CONFIG = {
+    "opportunities": {
+        "query": "NVIDIA opportunities new markets partnerships emerging technologies growth",
+        "noun": "strategic opportunities",
+    },
+    "risks": {
+        "query": "NVIDIA risks threats competition regulation negative sentiment supply chain",
+        "noun": "strategic risks and threats",
+    },
+    "trends": {
+        "query": "NVIDIA technology trends industry shifts customer behavior market direction",
+        "noun": "emerging trends management should monitor",
+    },
+}
+
+# Lazy singletons so importing this module is cheap.
+_embed_model = None
+_collection = None
+
+
+def _get_embed_model():
+    global _embed_model
+    if _embed_model is None:
+        _embed_model = SentenceTransformer(EMBED_MODEL)
+    return _embed_model
+
+
+def _get_collection():
+    global _collection
+    if _collection is None:
+        client = chromadb.PersistentClient(path=CHROMA_DIR)
+        _collection = client.get_collection(COLLECTION_NAME)
+    return _collection
+
+
+def retrieve(query: str, k: int = TOP_K) -> list[dict]:
+    """Return top-k docs as {id, title, url, source, text}."""
+    model = _get_embed_model()
+    collection = _get_collection()
+    q_emb = model.encode([query]).tolist()
+    res = collection.query(
+        query_embeddings=q_emb,
+        n_results=k,
+        include=["metadatas", "documents"],
+    )
+    docs = []
+    for doc_id, meta, text in zip(
+        res["ids"][0], res["metadatas"][0], res["documents"][0]
+    ):
+        docs.append({
+            "id": doc_id,
+            "title": meta["title"],
+            "url": meta["url"],
+            "source": meta["source"],
+            "text": text,
+        })
+    return docs
+
+
+def build_prompt(category_noun: str, docs: list[dict]) -> str:
+    """Construct the LLM prompt with numbered evidence documents."""
+    evidence_block = "\n".join(
+        f"- id: {d['id']}\n  title: {d['title']}\n  content: {d['text'][:400]}"
+        for d in docs
+    )
+    return f"""You are a strategic intelligence analyst advising NVIDIA's CEO.
+
+Below are {len(docs)} documents collected from news, community, and company sources.
+
+DOCUMENTS:
+{evidence_block}
+
+TASK: Identify the most important {category_noun} for NVIDIA based ONLY on these documents.
+
+Return STRICT JSON - a list of 2 to 4 findings. Each finding must be an object with EXACTLY these keys:
+  "title": short title (under 12 words)
+  "detail": one or two sentences explaining it
+  "impact": one of "High", "Medium", "Low"
+  "confidence": a number between 0.0 and 1.0
+  "evidence_ids": a list of the document id strings that support this finding (use the exact ids shown above)
+
+Rules:
+- Base every finding on the documents. Do not invent facts.
+- Only cite a document as evidence if it DIRECTLY supports the finding. If a document is not clearly relevant, do not use it.
+- It is better to report fewer findings than to cite weak or unrelated evidence. A finding with no strong supporting document should be omitted entirely.
+- The "detail" must describe what the cited documents actually say. Do not attribute a claim to a source that does not contain it.
+- Use only document ids that appear above for evidence_ids.
+- Output ONLY the JSON array. No prose, no markdown, no code fences.
+
+JSON:"""
+
+
+def extract_json(raw: str):
+    """Pull a JSON array out of the model output, tolerating stray text."""
+    # Strip code fences if the model added them despite instructions.
+    raw = re.sub(r"```(?:json)?", "", raw).strip()
+    # Find the outermost [ ... ] array.
+    start = raw.find("[")
+    end = raw.rfind("]")
+    if start == -1 or end == -1 or end < start:
+        raise ValueError(f"No JSON array found in model output:\n{raw[:300]}")
+    return json.loads(raw[start:end + 1])
+
+
+def analyze_category(category: str) -> dict:
+    """Full pipeline for one category. Returns findings + evidence map."""
+    cfg = CATEGORY_CONFIG[category]
+    docs = retrieve(cfg["query"])
+    doc_by_id = {d["id"]: d for d in docs}
+
+    prompt = build_prompt(cfg["noun"], docs)
+    resp = ollama.chat(
+        model=LLM_MODEL,
+        messages=[{"role": "user", "content": prompt}],
+        options={"temperature": 0.2},   # low temp = more consistent JSON
+    )
+    raw = resp["message"]["content"]
+    findings = extract_json(raw)
+
+    # Bind evidence ids -> {title, url} for the dashboard.
+    for f in findings:
+        ev = []
+        for eid in f.get("evidence_ids", []):
+            if eid in doc_by_id:
+                ev.append({
+                    "title": doc_by_id[eid]["title"],
+                    "url": doc_by_id[eid]["url"],
+                })
+            else:
+                print(f"    warning: evidence id '{eid}' not in retrieved docs")
+        f["evidence"] = ev
+
+    return {"category": category, "findings": findings, "retrieved": len(docs)}
+
+
+import os
+
+ANALYSIS_PATH = "data/analysis.json"
+
+
+def analyze_category_safe(category: str, retries: int = 1) -> dict:
+    """analyze_category with one retry if the model emits bad JSON."""
+    last_err = None
+    for attempt in range(retries + 1):
+        try:
+            return analyze_category(category)
+        except Exception as e:
+            last_err = e
+            print(f"    {category} attempt {attempt + 1} failed: "
+                  f"{type(e).__name__}: {str(e)[:120]}")
+    # Both attempts failed: return an empty result rather than crashing.
+    print(f"    {category}: giving up, returning empty findings")
+    return {"category": category, "findings": [], "retrieved": 0,
+            "error": str(last_err)}
+
+
+def analyze_all() -> dict:
+    """Run all three categories and cache to data/analysis.json."""
+    results = {}
+    for category in CATEGORY_CONFIG:
+        print(f"Analyzing: {category} ...")
+        results[category] = analyze_category_safe(category)
+        n = len(results[category]["findings"])
+        print(f"  -> {n} findings\n")
+
+    os.makedirs(os.path.dirname(ANALYSIS_PATH), exist_ok=True)
+    with open(ANALYSIS_PATH, "w") as f:
+        json.dump(results, f, indent=2)
+    print(f"Saved analysis -> {ANALYSIS_PATH}")
+    return results
+
+
+if __name__ == "__main__":
+    analyze_all()
