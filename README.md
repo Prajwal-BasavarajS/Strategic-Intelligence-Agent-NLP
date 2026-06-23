@@ -4,7 +4,7 @@ An AI-powered strategic intelligence system that collects live information about
 NVIDIA from multiple independent public sources, reasons over it using a local
 open-source LLM, and generates evidence-based executive recommendations.
 
-Built for the NLP examination project. Answers the question:
+
 **"If you were NVIDIA's CEO today, what would you do next and why?"**
 
 ---
