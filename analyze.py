@@ -90,7 +90,7 @@ def retrieve(query: str, k: int = TOP_K) -> list[dict]:
 def build_prompt(category_noun: str, docs: list[dict]) -> str:
     """Construct the LLM prompt with the retrieved evidence documents.
 
-    Each document is labelled by its id (not a positional number) so the
+    Each document is labelled by its id so the
     model cites the exact id string, which we can resolve back to a source.
     """
     evidence_block = "\n".join(

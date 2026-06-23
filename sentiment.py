@@ -1,6 +1,4 @@
 """
-Sentiment scoring for the NVIDIA CEO Agent (feeds Dashboard Section 5).
-
 Scores every clean document with VADER, then produces:
   - per-document compound score + label
   - aggregate sentiment by source (news vs public/reddit vs corporate)
