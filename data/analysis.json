@@ -3,19 +3,14 @@
     "category": "opportunities",
     "findings": [
       {
-        "title": "Partnership with SK hynix",
-        "detail": "NVIDIA and SK hynix are collaborating to advance memory technology for AI factories.",
+        "title": "NVIDIA and SK hynix Partnership",
+        "detail": "NVIDIA partners with SK hynix to advance memory technology for AI factories.",
         "impact": "High",
         "confidence": 0.9,
         "evidence_ids": [
-          "ir_nvidia_newsroom_7afef0088a85",
           "news_google_news_d9f1b87d0dbd"
         ],
         "evidence": [
-          {
-            "title": "NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories",
-            "url": "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory"
-          },
           {
             "title": "NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories - NVIDIA Newsroom",
             "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9uXzBzR3NhYkhmOFNSb0tua2s2U1RCRHQ5RXpRcUxKS0xMUkFMNlYxMDltR3N3bmVSdWFQc1lMWDcwaC1yVnNnWEdkMEt3QkZOaGZvaXY0cHRHMVBaLUp1SzFDejc?oc=5"
@@ -23,17 +18,17 @@
         ]
       },
       {
-        "title": "Global Growth Strategy",
-        "detail": "NVIDIA is expanding its growth beyond the U.S. market.",
-        "impact": "Medium",
-        "confidence": 0.8,
+        "title": "AI-Driven Investment Ecosystem",
+        "detail": "NVIDIA's ecosystem is driven by AI investments, indicating strong market demand.",
+        "impact": "High",
+        "confidence": 0.85,
         "evidence_ids": [
-          "news_google_news_6a76702deca6"
+          "news_google_news_7da720bc4f68"
         ],
         "evidence": [
           {
-            "title": "Nvidia Stock Gains as the Chip Maker Looks to Growth Outside the U.S. - Barron's",
-            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZjZLUTVQd1QtY2RQaFVYTzBIMWZBRjJiM3B1WDZPZjBFNUVMVDYzOEMtTjh3NVg1UGp5SVJ1OFo4emtTMmJiRjRDN3hDM1M0SmpEbms2UUg4VV9HcDVjRnFsVVhJdk1ESDhHTkpiY1J6MnF3c2NmMkphaWJkMFZOc0hXZw?oc=5"
+            "title": "Nvidia: AI-Driven Investment Ecosystem (NASDAQ:NVDA) - Seeking Alpha",
+            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQN0ppeU9PM1R0eVp4VXZvc055SjdQT2NhQ0E2MTBqWE5sNGZ0T1V3NTU1Rl9YZ2RxS1lURHVYakhlYnplamdkN29nRncyMjV0R3Q4MmhSXzZQRTRFT2FDUWNYalJUMDF2RTZHTFNLVWhWdW1YamU2SmtNSW1LYmJwTklnV3c?oc=5"
           }
         ]
       }
@@ -44,32 +39,37 @@
     "category": "risks",
     "findings": [
       {
-        "title": "Customer Retention Risk",
-        "detail": "NVIDIA faces a threat from its own best customers who might reduce their reliance on NVIDIA products.",
-        "impact": "High",
-        "confidence": 0.85,
+        "title": "Nvidia Stock Price Volatility",
+        "detail": "Multiple sources indicate Nvidia's stock is currently down from its high and faces potential buying opportunities.",
+        "impact": "Medium",
+        "confidence": 0.8,
         "evidence_ids": [
-          "news_google_news_7093f76f17e6"
+          "news_google_news_5f1f42a08ee3",
+          "news_google_news_628dc5e5fa3d"
         ],
         "evidence": [
           {
-            "title": "Nvidia\u2019s Biggest Threat Isn\u2019t AMD\u2014It\u2019s Its Own Best Customers - Barron's",
-            "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lZjk4U0Z0cWl0U0NPU255Rng2ZlBPOXNENklQVjQzOXZiUk0xckRPbmNBdk5HTmZlUlhMN0VTd0ZCUjdnMGstai1vMDgxVWNJekFPb3d3RHplQ3dMNUtUVE1ueENjTW15TzMwbVFJeS1CUDFuaEp5OQ?oc=5"
+            "title": "Nvidia Still Down From Its High. History Says This Is the Buy Window Investors Beg For - 24/7 Wall St.",
+            "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNZTZTNHZLbGpUdkZOcDdTWFM4eUw1dGl5SHducVVDSnRYb29iUmJMNWtRSnlsVmN3MlJHMU4zYlFHODZ0dU41ZWpvSWplWWNfb3pwMktFbzg3eFZ4akdRVE52VGY2bU81TzluYW1qTl9WVXNaQXZyMmgwemhGS3pHaUtkSDhXN0pLSHBRRUkwdzUxVVdWRk1KMUViX1FTcDFwVmdDdEVHNXpzRm1oSFBFWl9ZUnZzY051RlZoeEtmSVFsTlhkUUw1RQ?oc=5"
+          },
+          {
+            "title": "1 Mind-Boggling Metric That Makes Nvidia Stock a Screaming Buy - Yahoo Finance",
+            "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYmlnMVpscWg3RnF0dE9tbUhtbkVJUnVFZmlaS1EySEdDMjVrckY4VkRZT1h6SER4VnpHMUpJWlYxal9rZXZwTFBoQTVBS2w1ZUg1dFFoMlZ5ak5nVFhwal9scHNEU21VZUkyV2RlYTJVUm9zUEN0T2NDVlA5cGFkSGdZd1NyM3pLenI0cDZacE9GNDZvWWd1ag?oc=5"
           }
         ]
       },
       {
-        "title": "Amazon's Challenge to Dominance",
-        "detail": "Amazon is considering selling AI chips directly, potentially reducing NVIDIA\u2019s market share.",
-        "impact": "Medium",
-        "confidence": 0.8,
+        "title": "Chip Price Expectations",
+        "detail": "Kalshi traders are betting on chip prices coming down, which could negatively impact Nvidia's stock.",
+        "impact": "High",
+        "confidence": 0.7,
         "evidence_ids": [
-          "news_google_news_2ebf65f38008"
+          "news_google_news_d9fb3fe06f32"
         ],
         "evidence": [
           {
-            "title": "Amazon weighs direct sales of AI chips in challenge to Nvidia\u2019s dominance - Baton Rouge Business Report",
-            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRVIzQ1A5eUN2NDZ1eXNLS3B4dmJBYmpLNHdteVAzQllSM1NHajFsV2lUa09zNzhQVG41eklVUWVpdzEzYnJRbFgzQm1ILXFoSTUwcmQyZUhLa0YtR2RIX3d1a21zRjFxNXg4cjhqWnM5TXdrZkdLaXNWaGpQbnMyWmpSakVtTm8xLUlReG1lV0NXeUx5SjNNX1pKSWhodmFVRXN4VlFVQmVkSTlRY3c4NtIBuAFBVV95cUxQUUxWZ0JnRE1IOUJLZGtGWjdUdmYzSlVNX0FVOTV2OER6WDRoX1VKV0k4cFZPZ0FrV0xqLXhFNk5yYlczX0ZXMTNwLURrVHc1Q3RONE42Wl9zeGhwZ2NxSVViTi1kV0o2NmlQNnU0c3F6UEFQRVR1Si13eHM5TXBDaGlRMkxUTkRjZU4xMDN1WTBVaklaQS1LN01SUzJOMUhwT0ZwV0dkQ0tDbjN5YXJiTV9GeDdvRDNk?oc=5"
+            "title": "Nvidia's stock struggles as Kalshi traders bet chip prices are coming down - CNBC",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTFctMnQ3aTJLdkZoUlZIbE9razlGMndPTzJ0Zk9jakwyd2FXVEV3NFFRU2hUazlLTk5IY3dzQTRUaFVRMFFRX2pDX2xrU2szMTBIN2E0Z0RERWZtY0I5d2JSQXdrUmN1NnhxbGlkUUJ6NFVBaHNLTzVCQ3NQZVFoZFNkZnN3aU9tMTN4RXBoWGIxem9aV3IzaWdNYW1lclRMYTJlUDdrdkNwZ2pqeVZZ0gG0AUFVX3lxTE5ZaDY5Rm9MQUYya0U0eHlGOHE5MXA3YmgyaUVfVDFubWtvZVB2Sk5KYV9pT0hJWklMalA1WEd4WVdVNjM1aVVfdXY5UVkxYi11a0ZwNFZ1c0hOOGRVSElFS0YzekMxQmFhQVRIMzZMa0VqMFowel80VUV3RGpnLUdibGoyY1pvZkFLdmQ1VGRpdkdEWEtHalFfNHVRR2pLX2VTdDg0TkhPS3pxNlF3ZlhWN2k5ZQ?oc=5"
           }
         ]
       }
@@ -80,17 +80,32 @@
     "category": "trends",
     "findings": [
       {
-        "title": "NVIDIA's AI Trade Resurgence",
-        "detail": "CNBC suggests potential shifts favoring NVIDIA in the AI trade.",
-        "impact": "High",
-        "confidence": 0.9,
+        "title": "Chip Price Expectations",
+        "detail": "Kalshi traders are betting on chip prices coming down, potentially affecting Nvidia's stock.",
+        "impact": "Medium",
+        "confidence": 0.8,
         "evidence_ids": [
-          "news_google_news_3e3d24f32939"
+          "news_google_news_d9fb3fe06f32"
         ],
         "evidence": [
           {
-            "title": "The AI trade could shift back in Nvidia's favor. Here's why - CNBC",
-            "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxORWhEdEFCaDFleU9yV1poUDBrZ2V3NUlMeFZsVTFKdE9tMndPaEpBbS1lSFJFYWZJNnBJNGxNSzl6ZU9aZ0pTUldvakZoUXZyaW96aUQ3U2k2UUpNTDRaZXFnbnpxQ3ppSld1aFN4d0dId3BuZEhESTlLenhBZGpXYTlqS2pTQ0taVXMyaXFqVHcxWTU2Nmp5Sg?oc=5"
+            "title": "Nvidia's stock struggles as Kalshi traders bet chip prices are coming down - CNBC",
+            "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTFctMnQ3aTJLdkZoUlZIbE9razlGMndPTzJ0Zk9jakwyd2FXVEV3NFFRU2hUazlLTk5IY3dzQTRUaFVRMFFRX2pDX2xrU2szMTBIN2E0Z0RERWZtY0I5d2JSQXdrUmN1NnhxbGlkUUJ6NFVBaHNLTzVCQ3NQZVFoZFNkZnN3aU9tMTN4RXBoWGIxem9aV3IzaWdNYW1lclRMYTJlUDdrdkNwZ2pqeVZZ0gG0AUFVX3lxTE5ZaDY5Rm9MQUYya0U0eHlGOHE5MXA3YmgyaUVfVDFubWtvZVB2Sk5KYV9pT0hJWklMalA1WEd4WVdVNjM1aVVfdXY5UVkxYi11a0ZwNFZ1c0hOOGRVSElFS0YzekMxQmFhQVRIMzZMa0VqMFowel80VUV3RGpnLUdibGoyY1pvZkFLdmQ1VGRpdkdEWEtHalFfNHVRR2pLX2VTdDg0TkhPS3pxNlF3ZlhWN2k5ZQ?oc=5"
+          }
+        ]
+      },
+      {
+        "title": "Historical Buy Window",
+        "detail": "Nvidia is down from its high, and historical trends suggest this could be a good buying opportunity.",
+        "impact": "Medium",
+        "confidence": 0.7,
+        "evidence_ids": [
+          "news_google_news_5f1f42a08ee3"
+        ],
+        "evidence": [
+          {
+            "title": "Nvidia Still Down From Its High. History Says This Is the Buy Window Investors Beg For - 24/7 Wall St.",
+            "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNZTZTNHZLbGpUdkZOcDdTWFM4eUw1dGl5SHducVVDSnRYb29iUmJMNWtRSnlsVmN3MlJHMU4zYlFHODZ0dU41ZWpvSWplWWNfb3pwMktFbzg3eFZ4akdRVE52VGY2bU81TzluYW1qTl9WVXNaQXZyMmgwemhGS3pHaUtkSDhXN0pLSHBRRUkwdzUxVVdWRk1KMUViX1FTcDFwVmdDdEVHNXpzRm1oSFBFWl9ZUnZzY051RlZoeEtmSVFsTlhkUUw1RQ?oc=5"
           }
         ]
       }

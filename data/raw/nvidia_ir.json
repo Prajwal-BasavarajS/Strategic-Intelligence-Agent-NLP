@@ -1,5 +1,95 @@
 [
   {
+    "id": "ir_nvidia_newsroom_76f7edffd489",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "NAIRR Science Program Reshapes Scientific Research, Powered by NVIDIA AI Infrastructure",
+    "text": "For the past two years, the U.S. National Science Foundation\u2019s National Artificial Intelligence Research Resource (NAIRR) pilot program has driven innovative research across the U.S. for over 700 projects \u2014 spanning protein prediction and infectious disease outbreak management. NVIDIA contributed to the NAIRR pilot through a cloud-based resource that gives researchers dedicated access to a [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/nairr-scientific-research-ai-infrastructure/",
+    "date": "2026-06-22T13:00:38+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292176+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_e98fab613985",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "From Materials Simulation to Experimental Astronomy, New NVIDIA AI Software Unlocks Scientific Discoveries",
+    "text": "At the ISC conference running in Hamburg this week, NVIDIA is introducing new software that speeds AI for science, from chemistry and materials discovery to the search for dark matter. The NVIDIA DAQIRI library and new NVIDIA ALCHEMI NIM microservices \u2014 as well as the NVIDIA cuPhoton reference code, coming soon \u2014 turn work that [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/ai-for-science-software-cuda/",
+    "date": "2026-06-22T13:00:20+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292212+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_2ace5aa8e79c",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "NVIDIA Vera CPU Opens the Way for Agentic Scientific AI at Los Alamos National Laboratory",
+    "text": "Mission, Vision and Veritas \u2014 new Los Alamos National Laboratory (LANL) supercomputers to be built with HPE and NVIDIA \u2014 are tapping NVIDIA Vera CPUs to accelerate scientific discovery, unlocking agentic AI for science. The supercomputers will use the HPE Cray Supercomputing GX5000 architecture with the NVIDIA Vera Rubin platform, combining NVIDIA Vera CPUs, NVIDIA [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/nvidia-vera-cpu-los-alamos-national-laboratory/",
+    "date": "2026-06-22T13:00:20+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292239+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_5593704f03db",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "Eco Wave Power Turns Waves Into Watts With NVIDIA AI Infrastructure and Digital Twins",
+    "text": "The next era of AI will not be defined by compute alone. Its growth will be determined by energy. As accelerated computing scales across AI factories, agentic AI, industrial AI, edge computing and physical AI \u2014 including robotics and autonomous systems \u2014 global electricity demand is rising at unprecedented speed. In many regions, expanding grid [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/eco-wave-power-ai-digital-twins/",
+    "date": "2026-06-22T13:00:13+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292263+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_71579f365502",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "At ISC, JUPITER Shows What Exascale Science Looks Like",
+    "text": "JUPITER, Europe\u2019s first exascale supercomputer at Germany\u2019s Forschungszentrum J\u00fclich, runs on NVIDIA Grace Hopper Superchips and NVIDIA Quantum-X800 InfiniBand networking \u2014 and it\u2019s had a busy year. As the international supercomputing community gathers at ISC in Hamburg this week, four projects running on JUPITER point to what exascale computing can actually do: map the human [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/jupiter-exascale-supercomputing-science/",
+    "date": "2026-06-22T13:00:00+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292288+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_1994c0102836",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "NVIDIA Vera Rubin Delivers World-Class Supercomputers for Science",
+    "text": "ISC High Performance 2026 -- NVIDIA today announced the NVIDIA Vera Rubin platform delivers world-class supercomputers for science, combining native double-precision (FP64) performance, NVIDIA CUDA-X\u2122 libraries and the full-stack capabilities of the NVIDIA AI platform.",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-delivers-world-class-supercomputers-for-science",
+    "date": "2026-06-22T13:00:00+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292306+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_596ff03fee80",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "Europe Unveils a Record 35 New NVIDIA AI Supercomputers",
+    "text": "ISC High Performance 2026 -- NVIDIA today announced that a record 35 NVIDIA AI HPC supercomputers are in development across Europe \u2014 equipping more than 3 million researchers with next-generation infrastructure for continental AI, accelerated science and industrial innovation.",
+    "url": "https://nvidianews.nvidia.com/news/europe-unveils-a-record-35-new-nvidia-ai-supercomputers",
+    "date": "2026-06-22T13:00:00+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292325+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_2021fa49d634",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "NVIDIA Announces Halos for Robotics, the Industry\u2019s First Full-Stack Safety System for Physical AI",
+    "text": "NVIDIA today announced NVIDIA Halos for Robotics, the industry\u2019s first full-stack, comprehensive safety system for robotics and physical AI that unifies AI compute and safety.",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-announces-halos-for-robotics-the-industrys-first-full-stack-safety-system-for-physical-ai",
+    "date": "2026-06-22T13:00:00+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292340+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_02ca09e10163",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "Hotter Than a Hot Tub: The 45\u00b0C Breakthrough to Cool AI\u2019s Biggest Machines",
+    "text": "Hot tubs sit at about 38 to 40 degrees Celsius, warm enough that most people can only soak for about 15 minutes. NVIDIA\u2019s newest AI servers can run their cooling liquid even hotter \u2014 up to 45 degrees Celsius, or 113 degrees Fahrenheit. That higher temperature limit is precisely what makes them more energy efficient. [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/",
+    "date": "2026-06-22T05:00:00+00:00",
+    "scraped_at": "2026-06-23T00:39:37.292363+00:00"
+  },
+  {
     "id": "ir_nvidia_newsroom_fdfac61152ca",
     "source": "nvidia_ir",
     "source_detail": "nvidia_newsroom",
@@ -7,7 +97,7 @@
     "text": "In a consequential grid infrastructure decision, the Federal Energy Regulatory Commission (FERC) today issued a major milestone on large-load interconnection impacting how those building AI factories, semiconductor fabrication support systems and advanced manufacturing facilities can connect to the grid. In the era of AI, which NVIDIA founder and CEO Jensen Huang has described as a [\u2026]",
     "url": "https://blogs.nvidia.com/blog/ferc-large-load-interconnection/",
     "date": "2026-06-18T20:00:27+00:00",
-    "scraped_at": "2026-06-20T07:41:18.768820+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292384+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_878e03f0bb5b",
@@ -17,7 +107,7 @@
     "text": "The digital era gave the advertising and marketing industry speed; the AI era is giving it autonomous operations. For companies building next-generation technologies for advertising and marketing, the question is no longer whether to adopt AI but whether their infrastructure can support it at the speed and scale the industry demands. At Cannes Lions, running [\u2026]",
     "url": "https://blogs.nvidia.com/blog/nvidia-ai-marketing-advertising-cannes-lions/",
     "date": "2026-06-18T13:00:43+00:00",
-    "scraped_at": "2026-06-20T07:41:18.768870+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292406+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_e1a1021043ec",
@@ -27,7 +117,7 @@
     "text": "Play favorite titles from popular game libraries, keep progress synced and jump back into gaming sessions on virtually any device. That\u2019s the power of GeForce NOW cloud gaming. From providing access to members\u2019 favorite game libraries to offering some of the season\u2019s best membership pricing, GeForce NOW is making it easier than ever to get [\u2026]",
     "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-game-stores/",
     "date": "2026-06-18T13:00:32+00:00",
-    "scraped_at": "2026-06-20T07:41:18.768909+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292427+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_4751d22d2888",
@@ -37,7 +127,7 @@
     "text": "A year ago at NVIDIA GTC Paris at VivaTech, France laid out plans to advance local AI \u2014 from new AI factories and national compute capacity to open frontier models and industrial platforms. Now, that AI infrastructure is coming online. AI agents are running in production, startups are deploying applications and the French AI ecosystem [\u2026]",
     "url": "https://blogs.nvidia.com/blog/france-advances-europes-ai-future/",
     "date": "2026-06-18T06:00:59+00:00",
-    "scraped_at": "2026-06-20T07:41:18.768942+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292447+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_e56087ba39e5",
@@ -47,7 +137,7 @@
     "text": "NVIDIA XR AI is now available in public beta, giving developers a framework for building multimodal AI agents for AR glasses and XR devices.",
     "url": "https://blogs.nvidia.com/blog/nvidia-xr-ai/",
     "date": "2026-06-16T22:30:41+00:00",
-    "scraped_at": "2026-06-20T07:41:18.768964+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292461+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_73f0fe714484",
@@ -57,7 +147,7 @@
     "text": "AI runs at the speed of light. More and more, that light is made in Texas. Coherent broke ground today on an expanded manufacturing building in Sherman, Texas. The company makes the lasers, optical components and compound semiconductors that wire AI systems together \u2014 and runs what it calls the world\u2019s first 6-inch indium phosphide [\u2026]",
     "url": "https://blogs.nvidia.com/blog/coherent-texas-ai-optical/",
     "date": "2026-06-16T22:10:56+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769000+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292481+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_a8a99da03dcc",
@@ -67,7 +157,7 @@
     "text": "Enterprises are moving agentic AI from proof of concept to production \u2014 and the next generation of AI factories are built for the era of agents. At HPE Discover Las Vegas, running through Thursday, June 18, NVIDIA and HPE are expanding the HPE AI Factory with NVIDIA, including NVIDIA Vera CPU and NVIDIA Agent Toolkit [\u2026]",
     "url": "https://blogs.nvidia.com/blog/hpe-ai-factory-agentic-enterprise/",
     "date": "2026-06-16T16:30:27+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769031+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292500+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_39294416a114",
@@ -77,7 +167,7 @@
     "text": "Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs shapes everything: how fast teams can iterate, what scale of model they can build and whether those jobs complete reliably. As models grow in size, complexity and intelligence, the demands on training infrastructure are also rising. In [\u2026]",
     "url": "https://blogs.nvidia.com/blog/blackwell-mlperf-training-6-0/",
     "date": "2026-06-16T15:00:36+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769067+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292520+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_af1e32d6a203",
@@ -87,7 +177,7 @@
     "text": "AgentPerf from Artificial Analysis, the industry\u2019s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA [\u2026]",
     "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/",
     "date": "2026-06-12T21:00:08+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769097+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292540+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_6425e0bef760",
@@ -97,7 +187,7 @@
     "text": "NVIDIA today announced it will hold its 2026 Annual Meeting of Stockholders online on Wednesday, June 24, at 9 a.m. PT. The meeting will take place virtually at https://www.virtualshareholdermeeting.com/NVDA2026.",
     "url": "https://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-24-individuals-can-participate-online",
     "date": "2026-06-11T21:32:00+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769120+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292555+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_1c2de03f4582",
@@ -107,96 +197,6 @@
     "text": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game. But [\u2026]",
     "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/",
     "date": "2026-06-11T13:00:17+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769148+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_b6f03855bc8f",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "For Robotaxis, Safety Must Be Built In, Not Bolted On",
-    "text": "A car pulls up to the curb. The app says, \u201cYour ride is here.\u201d No one\u2019s in the driver\u2019s seat. For people who live in one of the dozens of cities now hosting robotaxi services, this is already a reality. The robotaxi industry has moved from prototype milestones to commercial operations, with an expanding ecosystem [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/",
-    "date": "2026-06-10T19:00:12+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769178+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_510ca48bfe1f",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "NVIDIA Accelerates Google DeepMind\u2019s DiffusionGemma for Local AI",
-    "text": "Today, Google DeepMind released DiffusionGemma \u2014 an experimental open model built for exceptionally fast text generation. NVIDIA has optimized DiffusionGemma to run even faster across NVIDIA GeForce RTX GPUs, the NVIDIA RTX PRO platform and NVIDIA DGX Spark systems, from local PCs to the cloud. Rather than generating text one word at a time, DiffusionGemma generates multiple words in parallel to output whole blocks of text, opening a new, low-latency frontier for the kind of single-user workloads that developers, [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/",
-    "date": "2026-06-10T16:15:20+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769215+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_d9c792696944",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "NVIDIA Confidential Computing to Help Expand Apple\u2019s Private Cloud Compute",
-    "text": "NVIDIA GPUs with Confidential Computing are now used for confidential inference in Apple\u2019s Private Cloud Compute (PCC), as it expands beyond Apple\u2019s data centers to Google Cloud. Unveiled during Apple\u2019s annual WWDC gathering for developers from around the globe, NVIDIA GPUs will support server-side inference for Apple Foundation Models, custom-built by Apple and Google, leveraging [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/nvidia-confidential-computing-apple-private-cloud-compute/",
-    "date": "2026-06-09T22:34:27+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769244+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_11892f53bfec",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "How the UK Is Turning Sovereign AI Ambition Into Action With NVIDIA Technologies",
-    "text": "A year ago at London Tech Week, NVIDIA founder and CEO Jensen Huang and U.K. Prime Minister Keir Starmer made a declaration: the U.K. would be an AI maker, not an AI taker. At this year\u2019s event, NVIDIA and its partners are showcasing how that commitment is producing real momentum across the nation\u2019s infrastructure, startups [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/uk-sovereign-ai-advancements/",
-    "date": "2026-06-08T06:00:57+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769272+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_0f45a45a7a59",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "NVIDIA and LG Group Build an AI Factory to Advance Physical AI, Mobility and AI Infrastructure",
-    "text": "NVIDIA and LG Group are building an AI factory to accelerate LG Group\u2019s next wave of AI-driven businesses, spanning robotics, autonomous driving, data center technologies and GPU cloud services. The AI factory will provide LG Group with accelerated computing infrastructure to train, simulate, validate and deploy AI-based applications across its key businesses. The collaboration brings [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/nvidia-and-lg-group-ai-factory/",
-    "date": "2026-06-08T03:00:50+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769301+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_983ca5f5eaa4",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "NVIDIA and Doosan Group Collaborate to Advance Physical AI and AI Factory Infrastructure",
-    "text": "NVIDIA and Doosan Group are expanding their collaboration to advance new opportunities across physical AI, robotics and AI factory infrastructure, spanning Doosan Robotics, Doosan Bobcat, Doosan Enerbility and Doosan Corporation Electro-Materials BG. The collaboration will bring together NVIDIA\u2019s full-stack accelerated computing platforms with Doosan Group\u2019s capabilities in industrial automation, power generation and advanced electronics materials [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/nvidia-and-doosan-group-physical-ai/",
-    "date": "2026-06-07T23:00:36+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769333+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_e81ac529fc6f",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "SK Telecom and NVIDIA Build AI Infrastructure to Power Korea\u2019s AI Innovation",
-    "text": "NVIDIA and SK Telecom today announced that SK Telecom plans to build a gigawatt-scale AI Cloud in Korea using the NVIDIA DSX\u2122 platform, with the first AI factory coming online in 2027.",
-    "url": "https://nvidianews.nvidia.com/news/sk-telecom-ai-infrastructure",
-    "date": "2026-06-07T23:00:00+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769353+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_7afef0088a85",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories",
-    "text": "NVIDIA and SK hynix today announced a multiyear technology partnership to advance next-generation memory for the global AI factory buildout and accelerate semiconductor design and manufacturing.",
-    "url": "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory",
-    "date": "2026-06-07T23:00:00+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769373+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_f29a3c011f3d",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand",
-    "text": "NVIDIA and NAVER today announced that NAVER will expand sovereign AI infrastructure, starting at 55 megawatts with plans to move to gigawatt scale using the NVIDIA DSX\u2122 platform to rapidly design, build and scale full-stack, end-to-end AI platforms that can serve enterprises, industries and government.",
-    "url": "https://nvidianews.nvidia.com/news/naver-ai-infrastructure",
-    "date": "2026-06-07T23:00:00+00:00",
-    "scraped_at": "2026-06-20T07:41:18.769398+00:00"
+    "scraped_at": "2026-06-23T00:39:37.292574+00:00"
   }
 ]

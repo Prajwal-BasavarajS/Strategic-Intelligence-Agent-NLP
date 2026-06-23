@@ -17,7 +17,7 @@ import os
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-# --- Config -----------------------------------------------------------------
+# Config 
 RAW_DIR = "data/clean"
 CHROMA_DIR = "./chroma_db"
 COLLECTION_NAME = "nvidia_docs"
@@ -36,7 +36,7 @@ def load_all_docs() -> list[dict]:
 
 
 def main():
-    # 1. Load -----------------------------------------------------------------
+    # 1. Load 
     print("Loading raw documents...")
     docs = load_all_docs()
     print(f"  total: {len(docs)} documents\n")
@@ -55,9 +55,8 @@ def main():
               f"(exact id collisions only)\n")
     docs = unique
 
-    # 2. Embed ----------------------------------------------------------------
+    # 2. Embed 
     print(f"Loading embedding model ({EMBED_MODEL})...")
-    print("  (first run downloads ~80MB, may take a minute)")
     model = SentenceTransformer(EMBED_MODEL)
 
     # Embed title + text so the headline contributes to the match.
@@ -66,7 +65,7 @@ def main():
     embeddings = model.encode(texts, show_progress_bar=True,
                               convert_to_numpy=True)
 
-    # 3. Store in ChromaDB ----------------------------------------------------
+    # 3. Store in ChromaDB 
     print("\nBuilding ChromaDB collection...")
     client = chromadb.PersistentClient(path=CHROMA_DIR)
 

@@ -4,7 +4,6 @@ Source #1 of 3. Uses public .rss feeds. Handles Reddit's 429 rate limiting
 with a longer inter-request delay and one retry with backoff.
 
 Outputs: data/raw/reddit.json
-Run:     python scrapers/reddit_scraper.py
 """
 
 import json
@@ -18,7 +17,7 @@ import feedparser
 import requests
 
 # --- Config -----------------------------------------------------------------
-SUBREDDITS = ["nvidia", "wallstreetbets"]
+SUBREDDITS = ["nvidia", "wallstreetbets","ArtificialInteligence"]
 OUTPUT_PATH = "data/raw/reddit.json"
 DELAY_SECONDS = 8          # polite gap between feeds; Reddit RSS limits bursts
 MAX_RETRIES = 2            # retry a 429 this many extra times

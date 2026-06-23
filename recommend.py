@@ -1,5 +1,4 @@
 """
-Recommendation engine for the NVIDIA CEO Agent (Phase 7).
 
 Reads data/analysis.json (the opportunities/risks/trends findings) and
 synthesizes them into prioritized, executive-grade recommendations.
@@ -11,15 +10,15 @@ Each recommendation follows the brief's Task 6 template:
   - expected impact
   - risk assessment (financial / operational / strategic)
 
-This is the 'agent reasoning over its own analysis' step: it takes the
-extracted intelligence and decides what the CEO should DO.
+This is the synthesis step: it reasons over the extracted analysis and
+decides what the CEO should DO. One LLM call across all categories, because
+a strong recommendation may address a risk by leveraging an opportunity.
 
-Run:  python recommend.py
 """
 
 import json
-import re
 import os
+import re
 
 import ollama
 
@@ -85,12 +84,21 @@ JSON:"""
 
 
 def extract_json(raw: str):
+    """Pull JSON out of model output, tolerating stray text and accepting
+    either a [...] array or a single {...} object (wrapped into a list)."""
     raw = re.sub(r"```(?:json)?", "", raw).strip()
-    start = raw.find("[")
-    end = raw.rfind("]")
-    if start == -1 or end == -1 or end < start:
-        raise ValueError(f"No JSON array found:\n{raw[:300]}")
-    return json.loads(raw[start:end + 1])
+
+    # Prefer an array.
+    start, end = raw.find("["), raw.rfind("]")
+    if start != -1 and end != -1 and end > start:
+        return json.loads(raw[start:end + 1])
+
+    # Fall back: a lone object becomes a one-element list.
+    start, end = raw.find("{"), raw.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        return [json.loads(raw[start:end + 1])]
+
+    raise ValueError(f"No JSON found:\n{raw[:300]}")
 
 
 def generate(retries: int = 1) -> dict:

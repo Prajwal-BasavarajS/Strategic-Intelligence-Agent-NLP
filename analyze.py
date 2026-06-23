@@ -1,6 +1,4 @@
 """
-Strategic analysis engine for the NVIDIA CEO Agent (Phase 5/6).
-
 For a given category (opportunities | risks | trends):
   1. Retrieve the top-k most relevant documents from ChromaDB.
   2. Feed them to a local Ollama LLM (qwen2.5) with their ids/titles/urls.
@@ -9,13 +7,11 @@ For a given category (opportunities | risks | trends):
   4. Map evidence ids back to {title, url} so the dashboard can show
      clickable supporting evidence.
 
-This is a deterministic retrieve -> reason pipeline (not an autonomous
-agent loop): predictable, debuggable, defensible under live coding.
 
-Run (tests the 'risks' category):  python analyze.py
 """
 
 import json
+import os
 import re
 
 import chromadb
@@ -28,6 +24,7 @@ COLLECTION_NAME = "nvidia_docs"
 EMBED_MODEL = "all-MiniLM-L6-v2"
 LLM_MODEL = "qwen2.5:7b-instruct"
 TOP_K = 6
+ANALYSIS_PATH = "data/analysis.json"
 
 # Retrieval query + instruction framing per category.
 CATEGORY_CONFIG = {
@@ -45,7 +42,8 @@ CATEGORY_CONFIG = {
     },
 }
 
-# Lazy singletons so importing this module is cheap.
+# Lazy singletons so importing this module is cheap and the model/DB
+# load only once even across multiple category calls.
 _embed_model = None
 _collection = None
 
@@ -66,7 +64,7 @@ def _get_collection():
 
 
 def retrieve(query: str, k: int = TOP_K) -> list[dict]:
-    """Return top-k docs as {id, title, url, source, text}."""
+    """Embed the query and return the top-k nearest documents from ChromaDB."""
     model = _get_embed_model()
     collection = _get_collection()
     q_emb = model.encode([query]).tolist()
@@ -90,7 +88,11 @@ def retrieve(query: str, k: int = TOP_K) -> list[dict]:
 
 
 def build_prompt(category_noun: str, docs: list[dict]) -> str:
-    """Construct the LLM prompt with numbered evidence documents."""
+    """Construct the LLM prompt with the retrieved evidence documents.
+
+    Each document is labelled by its id (not a positional number) so the
+    model cites the exact id string, which we can resolve back to a source.
+    """
     evidence_block = "\n".join(
         f"- id: {d['id']}\n  title: {d['title']}\n  content: {d['text'][:400]}"
         for d in docs
@@ -123,19 +125,26 @@ JSON:"""
 
 
 def extract_json(raw: str):
-    """Pull a JSON array out of the model output, tolerating stray text."""
+    """Pull JSON out of model output, tolerating stray text and accepting
+    either a [...] array or a single {...} object (wrapped into a list)."""
     # Strip code fences if the model added them despite instructions.
     raw = re.sub(r"```(?:json)?", "", raw).strip()
-    # Find the outermost [ ... ] array.
-    start = raw.find("[")
-    end = raw.rfind("]")
-    if start == -1 or end == -1 or end < start:
-        raise ValueError(f"No JSON array found in model output:\n{raw[:300]}")
-    return json.loads(raw[start:end + 1])
+
+    # Prefer an array.
+    start, end = raw.find("["), raw.rfind("]")
+    if start != -1 and end != -1 and end > start:
+        return json.loads(raw[start:end + 1])
+
+    # Fall back: a lone object becomes a one-element list.
+    start, end = raw.find("{"), raw.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        return [json.loads(raw[start:end + 1])]
+
+    raise ValueError(f"No JSON found in model output:\n{raw[:300]}")
 
 
 def analyze_category(category: str) -> dict:
-    """Full pipeline for one category. Returns findings + evidence map."""
+    """Full pipeline for one category. Returns findings + bound evidence."""
     cfg = CATEGORY_CONFIG[category]
     docs = retrieve(cfg["query"])
     doc_by_id = {d["id"]: d for d in docs}
@@ -149,7 +158,7 @@ def analyze_category(category: str) -> dict:
     raw = resp["message"]["content"]
     findings = extract_json(raw)
 
-    # Bind evidence ids -> {title, url} for the dashboard.
+    # Bind evidence ids -> {title, url}; warn on any id not in the retrieved set.
     for f in findings:
         ev = []
         for eid in f.get("evidence_ids", []):
@@ -165,11 +174,6 @@ def analyze_category(category: str) -> dict:
     return {"category": category, "findings": findings, "retrieved": len(docs)}
 
 
-import os
-
-ANALYSIS_PATH = "data/analysis.json"
-
-
 def analyze_category_safe(category: str, retries: int = 1) -> dict:
     """analyze_category with one retry if the model emits bad JSON."""
     last_err = None
@@ -180,7 +184,7 @@ def analyze_category_safe(category: str, retries: int = 1) -> dict:
             last_err = e
             print(f"    {category} attempt {attempt + 1} failed: "
                   f"{type(e).__name__}: {str(e)[:120]}")
-    # Both attempts failed: return an empty result rather than crashing.
+    # Both attempts failed: return empty findings rather than crashing.
     print(f"    {category}: giving up, returning empty findings")
     return {"category": category, "findings": [], "retrieved": 0,
             "error": str(last_err)}
