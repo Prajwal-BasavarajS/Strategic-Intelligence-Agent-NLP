@@ -23,7 +23,15 @@
           "title": "Nvidia (NVDA) Launches BioNeMo Toolkit As Life Sciences Groups Rush To Integrate It - Yahoo Finance",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYWhkaDcwYmNrV0ZjZ01pZ1k0V3RtdDlZUTYwTXNzNGo2UWxVOWRwbmtDem5MdWZkYmRmLU5DeUEyY2l1Qk02ZTJ0SkNZbG53UUh2VGJvWTlIdWdYMXBSYlk1bG4xcDl3elVwWHFYc081X2VYOGtWX19WQ3FIRWUyODhFMXNjMkU4d1Q1ZUFWeXlSUVM4RUJqQVlSZDV0d2tkckE?oc=5"
         }
-      ]
+      ],
+      "validation": {
+        "passed": false,
+        "layer": "llm",
+        "problems": [
+          "evidence does not support claim"
+        ],
+        "llm_reason": "The cited evidence does not directly link NVIDIA's chip release to expanding market share for AI leadership."
+      }
     },
     {
       "recommendation": "Mitigate competition by diversifying product offerings",
@@ -47,7 +55,13 @@
           "title": "Nvidia Stock Is Falling on a Good Day for Intel and Other Chip Stocks - Barron's",
           "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5MSnV6RWNOazJMeXF2RVd2RUhJNU9aR0hKNElGM0s0UUNhTkZtRDVwRE9xWVlEMFE3QWp0RUhQTDJPVUZLNkEyS05QYm1FTURGMWtlbkRxMGM1QVF3NktaN3hKaHZwNFo0UGphRFVHRUZXblh5QXB0ckZB?oc=5"
         }
-      ]
+      ],
+      "validation": {
+        "passed": true,
+        "layer": "llm",
+        "problems": [],
+        "llm_reason": "The cited evidence indicates growing competition fears, which supports the recommendation to diversify product offerings."
+      }
     },
     {
       "recommendation": "Address AI chip black market issues through enhanced security measures",
@@ -67,7 +81,19 @@
           "title": "Nvidia\u2019s banned AI chips double in price on China\u2019s black market - Financial Times",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSXpqZ3Z1Mjl2QmVnQmFLT3NWYXMtWHR6MDRoei15NWhqVWFrOHhfaFE2dnB3enQ3NEFUWk1mbWQ4VWhfbVVhdjNRc2JOYVFpNkZlcnlXMEUwMG52SEZtUjJnMFFGYjI4b1AzRGxwT2t0aUVqMHB6b2ZjS1ctR04xQ3EzQ0E?oc=5"
         }
-      ]
+      ],
+      "validation": {
+        "passed": true,
+        "layer": "llm",
+        "problems": [],
+        "llm_reason": "The cited evidence shows increased black market prices for banned AI chips, which supports the need for enhanced security measures."
+      }
     }
-  ]
+  ],
+  "validation_summary": {
+    "total": 3,
+    "passed": 2,
+    "failed": 1,
+    "dropped_failed": false
+  }
 }

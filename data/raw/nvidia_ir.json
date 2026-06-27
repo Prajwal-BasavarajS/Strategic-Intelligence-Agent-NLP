@@ -1,5 +1,65 @@
 [
   {
+    "id": "ir_nvidia_newsroom_7a13fb672688",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "The Ultimate Summer Sale Pairing: Steam Sale Meets GeForce NOW Discounts",
+    "text": "Summer savings are heating up. From the Steam Summer Sale to GeForce NOW membership discounts, this week\u2019s GFN Thursday delivers double the deals and more ways to get the most value from cloud gaming. Plus, Dark Scrolls joins the growing Devolver lineup, alongside Square Enix\u2019s The Adventures of Elliot: The Millennium Tales. They lead the [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-steam-summer-sale-2026/",
+    "date": "2026-06-25T13:00:34+00:00",
+    "scraped_at": "2026-06-27T06:52:46.594824+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_87e972a2730e",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "NVIDIA and AWS Collaborate to Bring AI to Production at Scale",
+    "text": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA\u2019s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Amazon OpenSearch and Amazon EC2, NVIDIA AI infrastructure is giving enterprises more practical paths to deploy [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/nvidia-aws-ai-production-scale/",
+    "date": "2026-06-24T00:05:37+00:00",
+    "scraped_at": "2026-06-27T06:52:46.594847+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_942fad7ac452",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "How Businesses Are Building Specialized AI They Can Trust",
+    "text": "Companies are asking how to build specialized AI that fits with the way their workflows actually run. The first wave of enterprise AI was about access. Companies experimented with new frontier and open models, ran pilots and explored how AI can help. Now, specialized agents \u2014 systems of models that can reason, use tools and [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/nvidia-agent-toolkit-open-models-tools-skills-secure-runtime-ai-agents/",
+    "date": "2026-06-23T13:00:07+00:00",
+    "scraped_at": "2026-06-27T06:52:46.594866+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_f105a0d12d56",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "NVIDIA Announces BioNeMo Agent Toolkit \u2014 Tools for Agents to Accelerate Scientific Discovery",
+    "text": "NVIDIA today announced NVIDIA BioNeMo Agent Toolkit, which provides domain-specific tools and skills for the agentic life sciences era.",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-launches-bionemo-agent-toolkit-giving-ai-agents-the-tools-to-accelerate-scientific-discovery",
+    "date": "2026-06-23T13:00:00+00:00",
+    "scraped_at": "2026-06-27T06:52:46.594876+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_5669b8cec957",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "NVIDIA Powers Over 400 of the World\u2019s 500 Fastest Supercomputers",
+    "text": "News Highlights: NVIDIA technology runs 81% of the TOP500 and 90% of the systems new to the list. 26 systems on the TOP500 adopted the NVIDIA Grace CPU, up eight from the previous list. The top eight systems on the Green500 run on NVIDIA GPUs and nine of the top 10 use NVIDIA technologies. No. [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/",
+    "date": "2026-06-23T09:00:38+00:00",
+    "scraped_at": "2026-06-27T06:52:46.594889+00:00"
+  },
+  {
+    "id": "ir_nvidia_newsroom_de8964e17252",
+    "source": "nvidia_ir",
+    "source_detail": "nvidia_newsroom",
+    "title": "NVIDIA Brings Trusted, 24/7 AI Agents to Telecom Operations",
+    "text": "Telecom operators have seen remarkable returns from using generative AI to automate network management, customer care and back-office operations. Most of that impact has been task\u2011based: automation that speeds up predetermined steps while people manually correlate insights and direct next steps. Automation is no longer the finish line \u2014 it\u2019s the launchpad to autonomy. The [\u2026]",
+    "url": "https://blogs.nvidia.com/blog/telecom-ai-agents-dtw-ignite-2026/",
+    "date": "2026-06-23T06:00:09+00:00",
+    "scraped_at": "2026-06-27T06:52:46.594903+00:00"
+  },
+  {
     "id": "ir_nvidia_newsroom_76f7edffd489",
     "source": "nvidia_ir",
     "source_detail": "nvidia_newsroom",
@@ -7,7 +67,7 @@
     "text": "For the past two years, the U.S. National Science Foundation\u2019s National Artificial Intelligence Research Resource (NAIRR) pilot program has driven innovative research across the U.S. for over 700 projects \u2014 spanning protein prediction and infectious disease outbreak management. NVIDIA contributed to the NAIRR pilot through a cloud-based resource that gives researchers dedicated access to a [\u2026]",
     "url": "https://blogs.nvidia.com/blog/nairr-scientific-research-ai-infrastructure/",
     "date": "2026-06-22T13:00:38+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292176+00:00"
+    "scraped_at": "2026-06-27T06:52:46.594917+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_e98fab613985",
@@ -17,7 +77,7 @@
     "text": "At the ISC conference running in Hamburg this week, NVIDIA is introducing new software that speeds AI for science, from chemistry and materials discovery to the search for dark matter. The NVIDIA DAQIRI library and new NVIDIA ALCHEMI NIM microservices \u2014 as well as the NVIDIA cuPhoton reference code, coming soon \u2014 turn work that [\u2026]",
     "url": "https://blogs.nvidia.com/blog/ai-for-science-software-cuda/",
     "date": "2026-06-22T13:00:20+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292212+00:00"
+    "scraped_at": "2026-06-27T06:52:46.594935+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_2ace5aa8e79c",
@@ -27,7 +87,7 @@
     "text": "Mission, Vision and Veritas \u2014 new Los Alamos National Laboratory (LANL) supercomputers to be built with HPE and NVIDIA \u2014 are tapping NVIDIA Vera CPUs to accelerate scientific discovery, unlocking agentic AI for science. The supercomputers will use the HPE Cray Supercomputing GX5000 architecture with the NVIDIA Vera Rubin platform, combining NVIDIA Vera CPUs, NVIDIA [\u2026]",
     "url": "https://blogs.nvidia.com/blog/nvidia-vera-cpu-los-alamos-national-laboratory/",
     "date": "2026-06-22T13:00:20+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292239+00:00"
+    "scraped_at": "2026-06-27T06:52:46.594951+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_5593704f03db",
@@ -37,7 +97,7 @@
     "text": "The next era of AI will not be defined by compute alone. Its growth will be determined by energy. As accelerated computing scales across AI factories, agentic AI, industrial AI, edge computing and physical AI \u2014 including robotics and autonomous systems \u2014 global electricity demand is rising at unprecedented speed. In many regions, expanding grid [\u2026]",
     "url": "https://blogs.nvidia.com/blog/eco-wave-power-ai-digital-twins/",
     "date": "2026-06-22T13:00:13+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292263+00:00"
+    "scraped_at": "2026-06-27T06:52:46.594964+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_71579f365502",
@@ -47,7 +107,7 @@
     "text": "JUPITER, Europe\u2019s first exascale supercomputer at Germany\u2019s Forschungszentrum J\u00fclich, runs on NVIDIA Grace Hopper Superchips and NVIDIA Quantum-X800 InfiniBand networking \u2014 and it\u2019s had a busy year. As the international supercomputing community gathers at ISC in Hamburg this week, four projects running on JUPITER point to what exascale computing can actually do: map the human [\u2026]",
     "url": "https://blogs.nvidia.com/blog/jupiter-exascale-supercomputing-science/",
     "date": "2026-06-22T13:00:00+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292288+00:00"
+    "scraped_at": "2026-06-27T06:52:46.594977+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_1994c0102836",
@@ -57,7 +117,7 @@
     "text": "ISC High Performance 2026 -- NVIDIA today announced the NVIDIA Vera Rubin platform delivers world-class supercomputers for science, combining native double-precision (FP64) performance, NVIDIA CUDA-X\u2122 libraries and the full-stack capabilities of the NVIDIA AI platform.",
     "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-delivers-world-class-supercomputers-for-science",
     "date": "2026-06-22T13:00:00+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292306+00:00"
+    "scraped_at": "2026-06-27T06:52:46.594988+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_596ff03fee80",
@@ -67,7 +127,7 @@
     "text": "ISC High Performance 2026 -- NVIDIA today announced that a record 35 NVIDIA AI HPC supercomputers are in development across Europe \u2014 equipping more than 3 million researchers with next-generation infrastructure for continental AI, accelerated science and industrial innovation.",
     "url": "https://nvidianews.nvidia.com/news/europe-unveils-a-record-35-new-nvidia-ai-supercomputers",
     "date": "2026-06-22T13:00:00+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292325+00:00"
+    "scraped_at": "2026-06-27T06:52:46.595004+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_2021fa49d634",
@@ -77,7 +137,7 @@
     "text": "NVIDIA today announced NVIDIA Halos for Robotics, the industry\u2019s first full-stack, comprehensive safety system for robotics and physical AI that unifies AI compute and safety.",
     "url": "https://nvidianews.nvidia.com/news/nvidia-announces-halos-for-robotics-the-industrys-first-full-stack-safety-system-for-physical-ai",
     "date": "2026-06-22T13:00:00+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292340+00:00"
+    "scraped_at": "2026-06-27T06:52:46.595012+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_02ca09e10163",
@@ -87,7 +147,7 @@
     "text": "Hot tubs sit at about 38 to 40 degrees Celsius, warm enough that most people can only soak for about 15 minutes. NVIDIA\u2019s newest AI servers can run their cooling liquid even hotter \u2014 up to 45 degrees Celsius, or 113 degrees Fahrenheit. That higher temperature limit is precisely what makes them more energy efficient. [\u2026]",
     "url": "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/",
     "date": "2026-06-22T05:00:00+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292363+00:00"
+    "scraped_at": "2026-06-27T06:52:46.595024+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_fdfac61152ca",
@@ -97,7 +157,7 @@
     "text": "In a consequential grid infrastructure decision, the Federal Energy Regulatory Commission (FERC) today issued a major milestone on large-load interconnection impacting how those building AI factories, semiconductor fabrication support systems and advanced manufacturing facilities can connect to the grid. In the era of AI, which NVIDIA founder and CEO Jensen Huang has described as a [\u2026]",
     "url": "https://blogs.nvidia.com/blog/ferc-large-load-interconnection/",
     "date": "2026-06-18T20:00:27+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292384+00:00"
+    "scraped_at": "2026-06-27T06:52:46.595038+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_878e03f0bb5b",
@@ -107,7 +167,7 @@
     "text": "The digital era gave the advertising and marketing industry speed; the AI era is giving it autonomous operations. For companies building next-generation technologies for advertising and marketing, the question is no longer whether to adopt AI but whether their infrastructure can support it at the speed and scale the industry demands. At Cannes Lions, running [\u2026]",
     "url": "https://blogs.nvidia.com/blog/nvidia-ai-marketing-advertising-cannes-lions/",
     "date": "2026-06-18T13:00:43+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292406+00:00"
+    "scraped_at": "2026-06-27T06:52:46.595050+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_e1a1021043ec",
@@ -117,7 +177,7 @@
     "text": "Play favorite titles from popular game libraries, keep progress synced and jump back into gaming sessions on virtually any device. That\u2019s the power of GeForce NOW cloud gaming. From providing access to members\u2019 favorite game libraries to offering some of the season\u2019s best membership pricing, GeForce NOW is making it easier than ever to get [\u2026]",
     "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-game-stores/",
     "date": "2026-06-18T13:00:32+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292427+00:00"
+    "scraped_at": "2026-06-27T06:52:46.595067+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_4751d22d2888",
@@ -127,7 +187,7 @@
     "text": "A year ago at NVIDIA GTC Paris at VivaTech, France laid out plans to advance local AI \u2014 from new AI factories and national compute capacity to open frontier models and industrial platforms. Now, that AI infrastructure is coming online. AI agents are running in production, startups are deploying applications and the French AI ecosystem [\u2026]",
     "url": "https://blogs.nvidia.com/blog/france-advances-europes-ai-future/",
     "date": "2026-06-18T06:00:59+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292447+00:00"
+    "scraped_at": "2026-06-27T06:52:46.595079+00:00"
   },
   {
     "id": "ir_nvidia_newsroom_e56087ba39e5",
@@ -137,66 +197,6 @@
     "text": "NVIDIA XR AI is now available in public beta, giving developers a framework for building multimodal AI agents for AR glasses and XR devices.",
     "url": "https://blogs.nvidia.com/blog/nvidia-xr-ai/",
     "date": "2026-06-16T22:30:41+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292461+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_73f0fe714484",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "Coherent Breaks Ground on Expanded Texas Facility, Scaling AI\u2019s Optical Backbone",
-    "text": "AI runs at the speed of light. More and more, that light is made in Texas. Coherent broke ground today on an expanded manufacturing building in Sherman, Texas. The company makes the lasers, optical components and compound semiconductors that wire AI systems together \u2014 and runs what it calls the world\u2019s first 6-inch indium phosphide [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/coherent-texas-ai-optical/",
-    "date": "2026-06-16T22:10:56+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292481+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_a8a99da03dcc",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "HPE AI Factory With NVIDIA Expands for the Era of Agents",
-    "text": "Enterprises are moving agentic AI from proof of concept to production \u2014 and the next generation of AI factories are built for the era of agents. At HPE Discover Las Vegas, running through Thursday, June 18, NVIDIA and HPE are expanding the HPE AI Factory with NVIDIA, including NVIDIA Vera CPU and NVIDIA Agent Toolkit [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/hpe-ai-factory-agentic-enterprise/",
-    "date": "2026-06-16T16:30:27+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292500+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_39294416a114",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
-    "text": "Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs shapes everything: how fast teams can iterate, what scale of model they can build and whether those jobs complete reliably. As models grow in size, complexity and intelligence, the demands on training infrastructure are also rising. In [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/blackwell-mlperf-training-6-0/",
-    "date": "2026-06-16T15:00:36+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292520+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_af1e32d6a203",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark",
-    "text": "AgentPerf from Artificial Analysis, the industry\u2019s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/",
-    "date": "2026-06-12T21:00:08+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292540+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_6425e0bef760",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "NVIDIA Stockholder Meeting Set for June 24; Individuals Can Participate Online",
-    "text": "NVIDIA today announced it will hold its 2026 Annual Meeting of Stockholders online on Wednesday, June 24, at 9 a.m. PT. The meeting will take place virtually at https://www.virtualshareholdermeeting.com/NVDA2026.",
-    "url": "https://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-24-individuals-can-participate-online",
-    "date": "2026-06-11T21:32:00+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292555+00:00"
-  },
-  {
-    "id": "ir_nvidia_newsroom_1c2de03f4582",
-    "source": "nvidia_ir",
-    "source_detail": "nvidia_newsroom",
-    "title": "Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings",
-    "text": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game. But [\u2026]",
-    "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/",
-    "date": "2026-06-11T13:00:17+00:00",
-    "scraped_at": "2026-06-23T00:39:37.292574+00:00"
+    "scraped_at": "2026-06-27T06:52:46.595091+00:00"
   }
 ]

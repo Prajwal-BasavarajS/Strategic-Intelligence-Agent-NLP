@@ -1,4 +1,6 @@
 """
+Strategic analysis engine for the NVIDIA CEO Agent (Phase 5/6).
+
 For a given category (opportunities | risks | trends):
   1. Retrieve the top-k most relevant documents from ChromaDB.
   2. Feed them to a local Ollama LLM (qwen2.5) with their ids/titles/urls.
@@ -7,7 +9,10 @@ For a given category (opportunities | risks | trends):
   4. Map evidence ids back to {title, url} so the dashboard can show
      clickable supporting evidence.
 
+This is a deterministic retrieve -> reason pipeline (not an autonomous
+agent loop): predictable, debuggable, defensible under live coding.
 
+Run:  python analyze.py
 """
 
 import json
@@ -33,8 +38,17 @@ CATEGORY_CONFIG = {
         "noun": "strategic opportunities",
     },
     "risks": {
-        "query": "NVIDIA risks threats competition regulation negative sentiment supply chain",
+        "query": ("NVIDIA threats competitive pressure AMD Intel Amazon custom chips "
+                  "regulation export restrictions lawsuit supply shortage customer loss "
+                  "declining demand stock decline"),
         "noun": "strategic risks and threats",
+        "guidance": ("A RISK is something that could HARM NVIDIA: a competitive threat, "
+                     "regulatory or legal danger, supply problem, loss of customers, or "
+                     "negative market pressure. Do NOT label NVIDIA's own product launches, "
+                     "partnerships, or positive developments as risks. If a document "
+                     "describes something good for NVIDIA, it is NOT a risk - omit it. "
+                     "Only report genuine threats. If few genuine risks are present, "
+                     "report fewer findings rather than reframing positive news as risk."),
     },
     "trends": {
         "query": "NVIDIA technology trends industry shifts customer behavior market direction",
@@ -87,16 +101,20 @@ def retrieve(query: str, k: int = TOP_K) -> list[dict]:
     return docs
 
 
-def build_prompt(category_noun: str, docs: list[dict]) -> str:
+def build_prompt(category_noun: str, docs: list[dict], guidance: str = "") -> str:
     """Construct the LLM prompt with the retrieved evidence documents.
 
-    Each document is labelled by its id so the
+    Each document is labelled by its id (not a positional number) so the
     model cites the exact id string, which we can resolve back to a source.
+
+    `guidance` is an optional category-specific instruction (e.g. a stricter
+    definition of what counts as a 'risk') injected into the rules.
     """
     evidence_block = "\n".join(
         f"- id: {d['id']}\n  title: {d['title']}\n  content: {d['text'][:400]}"
         for d in docs
     )
+    guidance_line = f"\n- {guidance}" if guidance else ""
     return f"""You are a strategic intelligence analyst advising NVIDIA's CEO.
 
 Below are {len(docs)} documents collected from news, community, and company sources.
@@ -118,7 +136,7 @@ Rules:
 - Only cite a document as evidence if it DIRECTLY supports the finding. If a document is not clearly relevant, do not use it.
 - It is better to report fewer findings than to cite weak or unrelated evidence. A finding with no strong supporting document should be omitted entirely.
 - The "detail" must describe what the cited documents actually say. Do not attribute a claim to a source that does not contain it.
-- Use only document ids that appear above for evidence_ids.
+- Use only document ids that appear above for evidence_ids.{guidance_line}
 - Output ONLY the JSON array. No prose, no markdown, no code fences.
 
 JSON:"""
@@ -149,7 +167,7 @@ def analyze_category(category: str) -> dict:
     docs = retrieve(cfg["query"])
     doc_by_id = {d["id"]: d for d in docs}
 
-    prompt = build_prompt(cfg["noun"], docs)
+    prompt = build_prompt(cfg["noun"], docs, cfg.get("guidance", ""))
     resp = ollama.chat(
         model=LLM_MODEL,
         messages=[{"role": "user", "content": prompt}],

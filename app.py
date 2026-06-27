@@ -1,9 +1,11 @@
 """
+Executive Intelligence Dashboard for the NVIDIA CEO Agent (styled).
+
 Reads cached JSON artifacts (no live LLM calls) and renders the 7 required
 sections with a full visual style pass: color system, KPI tiles, styled
 section headers, and cards. No data/logic changes from the working version.
 
-
+Run:  streamlit run app.py
 """
 
 import json
@@ -15,6 +17,7 @@ import streamlit as st
 CLEAN_PATH = "data/clean/docs.json"
 ANALYSIS_PATH = "data/analysis.json"
 RECS_PATH = "data/recommendations.json"
+RECS_VALIDATED_PATH = "data/recommendations_validated.json"
 SENTIMENT_PATH = "data/sentiment.json"
 BRIEFING_PATH = "data/briefing.json"
 
@@ -31,7 +34,10 @@ def load_json(path, default=None):
 
 docs = load_json(CLEAN_PATH, [])
 analysis = load_json(ANALYSIS_PATH, {})
-recs = load_json(RECS_PATH, {"recommendations": []})
+# Prefer the VALIDATED recommendations (post "Validate" stage); fall back to
+# the raw recommendations if validation has not been run yet.
+recs = load_json(RECS_VALIDATED_PATH, None) or load_json(
+    RECS_PATH, {"recommendations": []})
 sentiment = load_json(SENTIMENT_PATH, {})
 briefing = load_json(BRIEFING_PATH, None)
 
@@ -177,7 +183,15 @@ else:
     st.info("No dated documents available.")
 
 
-def render_cards(findings, kind):
+def render_cards(findings, kind, low_confidence=False, lc_reason=""):
+    if low_confidence:
+        st.markdown(
+            "<div style='background:#fff4e5;border-left:4px solid #e8870b;"
+            "border-radius:8px;padding:8px 12px;margin-bottom:10px;"
+            "font-size:.84rem;color:#92400e;'>"
+            "&#9888; <b>Provisional &mdash; limited evidence.</b> "
+            f"{lc_reason or 'The agent could not fully verify these findings.'}"
+            "</div>", unsafe_allow_html=True)
     if not findings:
         st.info("No findings available.")
         return
@@ -200,10 +214,16 @@ def render_cards(findings, kind):
 col_o, col_r = st.columns(2)
 with col_o:
     section("Opp", "Opportunity Monitor")
-    render_cards(analysis.get("opportunities", {}).get("findings", []), "opp")
+    opp_block = analysis.get("opportunities", {})
+    render_cards(opp_block.get("findings", []), "opp",
+                 opp_block.get("low_confidence", False),
+                 opp_block.get("low_confidence_reason", ""))
 with col_r:
     section("Risk", "Risk Monitor")
-    render_cards(analysis.get("risks", {}).get("findings", []), "risk")
+    risk_block = analysis.get("risks", {})
+    render_cards(risk_block.get("findings", []), "risk",
+                 risk_block.get("low_confidence", False),
+                 risk_block.get("low_confidence_reason", ""))
 
 section("Data", "Sentiment Analysis", "VADER - scored per source")
 
@@ -241,7 +261,7 @@ if sentiment:
 else:
     st.info("Run sentiment.py to populate this section.")
 
-section("Rec", "Strategic Recommendations", "prioritized - evidence-based")
+section("Rec", "Strategic Recommendations", "prioritized - evidence-based - validated")
 
 rec_list = recs.get("recommendations", [])
 if not rec_list:
@@ -249,6 +269,28 @@ if not rec_list:
 else:
     for i, r in enumerate(rec_list, 1):
         prio = r.get("priority", "Medium")
+
+        # Validation badge from the Validate stage.
+        val = r.get("validation")
+        val_badge = ""
+        val_note = ""
+        if val is not None:
+            if val.get("passed"):
+                val_badge = ("<span style='background:#2f9e44;color:#fff;"
+                             "padding:2px 9px;border-radius:999px;font-size:.72rem;"
+                             "font-weight:700;margin-left:6px;'>&#10003; Validated</span>")
+            else:
+                val_badge = ("<span style='background:#e8870b;color:#fff;"
+                             "padding:2px 9px;border-radius:999px;font-size:.72rem;"
+                             "font-weight:700;margin-left:6px;'>&#9888; Not validated</span>")
+                reason = (val.get("llm_reason")
+                          or "; ".join(val.get("problems", []))
+                          or "did not pass validation")
+                val_note = (f"<div style='background:#fff4e5;border-left:3px solid "
+                            f"#e8870b;border-radius:6px;padding:6px 10px;margin:6px 0;"
+                            f"font-size:.8rem;color:#92400e;'>"
+                            f"<b>Validation flag:</b> {reason}</div>")
+
         ra = r.get("risk_assessment", {})
         risk_html = ""
         if ra:
@@ -264,7 +306,8 @@ else:
                 for e in r["evidence"])
             ev_html = f"<div style='margin-top:6px'><b style='font-size:.82rem'>Supporting evidence</b>{links}</div>"
         st.markdown(
-            f"<div class='card rec'><h4>{i}. {r['recommendation']} {badge(prio)}</h4>"
+            f"<div class='card rec'><h4>{i}. {r['recommendation']} {badge(prio)}{val_badge}</h4>"
+            f"{val_note}"
             f"<p>{r.get('rationale','')}</p>"
             f"<p><b>Expected impact:</b> {r.get('expected_impact','-')}</p>"
             f"{risk_html}{ev_html}</div>", unsafe_allow_html=True)

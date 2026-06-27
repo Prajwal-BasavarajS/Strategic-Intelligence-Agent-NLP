@@ -1,0 +1,42 @@
+{
+  "recommendations": [
+    {
+      "recommendation": "Acquire a coffee plantation chain to diversify NVIDIA's revenue.",
+      "priority": "High",
+      "rationale": "Diversifying into agriculture will protect NVIDIA from semiconductor market volatility.",
+      "evidence_refs": ["opp_0"],
+      "expected_impact": "New revenue stream from coffee sales.",
+      "risk_assessment": {
+        "financial": "Low",
+        "operational": "Medium",
+        "strategic": "High"
+      },
+      "evidence": [
+        {
+          "title": "NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories - NVIDIA Newsroom",
+          "url": "https://example.com/skhynix"
+        }
+      ]
+    },
+    {
+      "recommendation": "Expand AI chip production capacity.",
+      "priority": "High",
+      "rationale": "Demand for AI chips is growing rapidly.",
+      "evidence_refs": [],
+      "expected_impact": "Meet rising demand.",
+      "risk_assessment": {
+        "financial": "Medium"
+      },
+      "evidence": []
+    },
+    {
+      "recommendation": "",
+      "priority": "Critical",
+      "rationale": "",
+      "evidence_refs": [],
+      "expected_impact": "",
+      "risk_assessment": {},
+      "evidence": []
+    }
+  ]
+}

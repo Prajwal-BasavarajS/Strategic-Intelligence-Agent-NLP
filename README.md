@@ -4,7 +4,7 @@ An AI-powered strategic intelligence system that collects live information about
 NVIDIA from multiple independent public sources, reasons over it using a local
 open-source LLM, and generates evidence-based executive recommendations.
 
-
+Built for the NLP examination project. Answers the question:
 **"If you were NVIDIA's CEO today, what would you do next and why?"**
 
 ---
@@ -60,8 +60,8 @@ graph TD
 
 ```mermaid
 flowchart LR
-    A[Scrape<br/>3 sources] --> B[Raw JSON<br/>190 docs]
-    B --> C[Clean + Dedup<br/>182 docs]
+    A[Scrape<br/>3 sources] --> B[Raw JSON<br/>~190 docs]
+    B --> C[Clean + Dedup<br/>~180-190 docs]
     C --> D[Embed<br/>all-MiniLM-L6-v2]
     D --> E[ChromaDB<br/>384-dim vectors]
     E --> F[Retrieve<br/>top-6 per query]
@@ -95,7 +95,7 @@ the dashboard only reads those files, so it never calls the LLM at render time.
 - **Press** — Google News (NVIDIA query) + Ars Technica via RSS
 - **Corporate** — NVIDIA Newsroom (official press releases) via RSS
 
-182 cleaned documents from 3 independent sources.
+~180-190 cleaned documents from 3 independent sources (the exact count varies with each live collection run).
 
 ---
 
@@ -138,7 +138,7 @@ the dashboard only reads those files, so it never calls the LLM at render time.
 - **ChromaDB instead of FAISS.** ChromaDB persists to disk automatically and
   manages embedding-to-ID mapping; FAISS requires handling persistence and ID
   mapping manually. For a first vector-store project under deadline, ChromaDB is
-  lower-risk. FAISS's speed advantage is irrelevant at 182 documents.
+  lower-risk. FAISS's speed advantage is irrelevant at this corpus size (~180-190 docs).
 
 - **all-MiniLM-L6-v2 instead of bge-base.** Smaller (384-dim, ~80MB) and faster.
   For short documents the retrieval-quality gap versus bge-base is negligible,
@@ -158,7 +158,7 @@ the dashboard only reads those files, so it never calls the LLM at render time.
   must see all findings at once — the opposite of the analysis step.
 
 - **VADER instead of LLM-based sentiment.** §5 needs positive/negative/neutral
-  buckets and a trend; VADER scores 182 docs deterministically in under a second.
+  buckets and a trend; VADER scores the whole corpus deterministically in under a second.
   Sentiment is reported per-source because VADER reads expressive Reddit text
   well but news headlines are neutral by design.
 
