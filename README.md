@@ -1,62 +1,128 @@
-# NVIDIA Strategic Intelligence Agent (AI CEO Agent)
+# NVIDIA AI CEO Agent — Strategic Intelligence System
 
-An AI-powered strategic intelligence system that collects live information about
-NVIDIA from multiple independent public sources, reasons over it using a local
-open-source LLM, and generates evidence-based executive recommendations.
+An **agentic** strategic-intelligence system that autonomously collects live
+information about NVIDIA, reasons over it, and produces **validated**,
+evidence-based executive recommendations.
 
-Built for the NLP examination project. Answers the question:
-**"If you were NVIDIA's CEO today, what would you do next and why?"**
+The system is built around an explicit agent workflow:
+
+```
+Goal → Plan → Retrieve → Analyze → Decide → Recommend → Validate
+```
+
+It does not merely send a prompt to an LLM. A planning agent decides which
+tool to run next, a self-evaluating analysis agent decides whether it has
+gathered enough evidence, and a validation agent checks every recommendation
+before it is presented. It answers the question:
+**"If you were NVIDIA's CEO today, what would you do next — and why?"**
 
 ---
 
-## 1. System Architecture
+## 1. Agent Capabilities (how the system goes beyond prompt → LLM)
+
+| Capability | Where it lives | What it does |
+|---|---|---|
+| **Planning before execution** | `agent_orchestrator.py` | An LLM planner is given the registered tools + current state and decides the next tool to run, respecting data dependencies. |
+| **Autonomous decision-making** | `agent_orchestrator.py`, `agent.py` | The orchestrator chooses each next step; the analysis agent decides whether evidence is *sufficient* or whether to retrieve more. |
+| **Tool usage beyond the LLM** | scrapers, `index.py`, ChromaDB, VADER | The system uses non-LLM tools: RSS scrapers, an embedding model, a vector database, and a lexicon sentiment analyzer. |
+| **Retrieval & use of evidence** | `analyze.py` (RAG) | Documents are retrieved by semantic similarity and bound to findings by ID; only retrieved evidence may be cited. |
+| **Risk / opportunity / trend analysis** | `agent.py` / `analyze.py` | Three category agents extract findings, each grounded in cited evidence. |
+| **Validation before presenting** | `validate.py` | A rule-based gate + an LLM groundedness judge check every recommendation; failures are flagged on the dashboard. |
+| **Memory** | `agent.py`, `agent_orchestrator.py` | The analysis agent remembers tried queries and seen docs across iterations; the orchestrator tracks completed artifacts. |
+
+---
+
+## 2. The Agent Workflow
 
 ```mermaid
 graph TD
-    subgraph Collection["Data Collection (Task 1)"]
-        R[Reddit RSS<br/>r/nvidia, r/wallstreetbets]
-        N[News RSS<br/>Google News + Ars Technica]
-        I[NVIDIA Newsroom RSS<br/>Investor/Press]
+    GOAL[Goal: produce validated recommendations,<br/>sentiment, and a CEO briefing]
+    PLAN[PLAN<br/>agent_orchestrator.py<br/>LLM picks next tool from state]
+    RETRIEVE[RETRIEVE<br/>RAG: embed query, fetch top-k from ChromaDB]
+    ANALYZE[ANALYZE<br/>agent.py: extract findings per category]
+    DECIDE[DECIDE<br/>agent self-evaluates: sufficient?<br/>if not, reformulate + retrieve more]
+    RECOMMEND[RECOMMEND<br/>recommend.py: synthesize across categories]
+    VALIDATE[VALIDATE<br/>validate.py: rule gate + LLM groundedness]
+    DASH[Dashboard<br/>app.py: 7 sections + validation status]
+
+    GOAL --> PLAN
+    PLAN --> RETRIEVE
+    RETRIEVE --> ANALYZE
+    ANALYZE --> DECIDE
+    DECIDE -->|insufficient| RETRIEVE
+    DECIDE -->|sufficient| RECOMMEND
+    RECOMMEND --> VALIDATE
+    VALIDATE --> DASH
+    PLAN -.re-plans after each tool.-> PLAN
+```
+
+**Planning loop (orchestrator).** `agent_orchestrator.py` registers each
+operation as a *tool* (name, description, prerequisites, output). At every step
+it builds the current state — which artifacts exist, which tools are eligible —
+and asks the LLM planner which tool to run next. It runs that tool, re-plans,
+and repeats until the goal is met. A deterministic guard prevents the planner
+from declaring completion while a required output is still missing.
+
+**Decision loop (analysis agent).** `agent.py` wraps the RAG analysis with a
+self-evaluation loop: after producing findings it asks the LLM whether the
+evidence is sufficient. If not, it reformulates the query, increases the number
+of retrieved documents, and tries again (up to a cap), remembering what it has
+already tried. If it never reaches sufficiency, it flags the findings as
+*provisional / low confidence* — surfaced honestly on the dashboard rather than
+presented as certain.
+
+**Validation (validation agent).** `validate.py` checks each recommendation in
+two layers: a deterministic structural gate (valid priority, present evidence,
+complete risk assessment) and an LLM groundedness judge (does the cited evidence
+actually support the claim?). Recommendations that fail are flagged on the
+dashboard with the reason.
+
+---
+
+## 3. System Architecture
+
+```mermaid
+graph TD
+    subgraph Orchestration["Agentic Orchestration"]
+        ORCH[agent_orchestrator.py<br/>LLM tool-planner]
     end
 
-    subgraph Processing["Processing (Tasks 3-4)"]
-        RAW[(data/raw/*.json)]
+    subgraph Tools["Registered Tools"]
+        SCR[scrapers/*<br/>Reddit, News, NVIDIA IR via RSS]
         CLEAN[clean.py<br/>dedup + normalize]
-        CDOCS[(data/clean/docs.json)]
-        IDX[index.py<br/>embed + store]
-        VDB[(ChromaDB<br/>vector store)]
+        IDX[index.py<br/>embed -> ChromaDB]
+        AGENT[agent.py<br/>self-evaluating RAG analysis]
+        REC[recommend.py<br/>cross-category synthesis]
+        SENT[sentiment.py<br/>VADER per source]
+        BRIEF[briefing.py<br/>CEO summary]
+        VAL[validate.py<br/>rule gate + LLM judge]
     end
 
-    subgraph Intelligence["Strategic Intelligence (Tasks 4-6)"]
-        AN[analyze.py<br/>RAG + LLM]
-        REC[recommend.py<br/>synthesis]
-        SENT[sentiment.py<br/>VADER]
-        BRIEF[briefing.py<br/>LLM summary]
+    subgraph Stores["Data & Stores"]
+        RAW[(data/raw)]
+        CLEANJSON[(data/clean/docs.json)]
+        VDB[(ChromaDB vectors)]
+        OUT[(analysis / recommendations /<br/>sentiment / briefing / validated)]
     end
 
-    subgraph Presentation["Dashboard (Task: 7 sections)"]
-        APP[app.py<br/>Streamlit]
-    end
+    APP[app.py<br/>Streamlit dashboard - 7 sections]
 
-    R --> RAW
-    N --> RAW
-    I --> RAW
-    RAW --> CLEAN --> CDOCS --> IDX --> VDB
-    CDOCS --> SENT
-    VDB --> AN
-    AN --> REC
-    AN --> BRIEF
-    REC --> BRIEF
-    AN --> APP
-    REC --> APP
-    SENT --> APP
-    BRIEF --> APP
-    CDOCS --> APP
+    ORCH --> SCR --> RAW
+    ORCH --> CLEAN
+    RAW --> CLEAN --> CLEANJSON --> IDX --> VDB
+    ORCH --> AGENT
+    VDB --> AGENT --> OUT
+    ORCH --> REC --> OUT
+    ORCH --> SENT --> OUT
+    ORCH --> BRIEF --> OUT
+    ORCH --> VAL --> OUT
+    OUT --> APP
+    CLEANJSON --> APP
 ```
 
 ---
 
-## 2. Data Flow
+## 4. Data Flow
 
 ```mermaid
 flowchart LR
@@ -64,138 +130,99 @@ flowchart LR
     B --> C[Clean + Dedup<br/>~180-190 docs]
     C --> D[Embed<br/>all-MiniLM-L6-v2]
     D --> E[ChromaDB<br/>384-dim vectors]
-    E --> F[Retrieve<br/>top-6 per query]
-    F --> G[LLM Reason<br/>qwen2.5:7b]
-    G --> H[Analysis JSON<br/>opp/risk/trend]
-    H --> I[Recommend<br/>synthesis]
-    H --> J[Briefing]
+    E --> F[Agentic Analysis<br/>retrieve + reason + self-evaluate]
+    F --> G[Recommend<br/>synthesis]
+    G --> H[Validate<br/>rule + LLM]
+    F --> I[Briefing]
+    C --> J[Sentiment]
     H --> K[Dashboard]
+    I --> K
+    J --> K
 ```
 
-**The pipeline is run-once and deterministic.** Each stage writes JSON to disk;
-the dashboard only reads those files, so it never calls the LLM at render time.
+The system collects broadly and filters at *retrieval* (semantic search),
+not at collection — so relevance is enforced where it matters. The dashboard
+reads only cached JSON and never calls the LLM live, so it renders instantly
+and cannot stall during a demo.
 
 ---
 
-## 3. Technology Stack
+## 5. Technology Stack
 
 | Layer | Choice | Notes |
 |---|---|---|
 | Language / runtime | Python 3.13 | venv on Apple Silicon (M4) |
-| LLM serving | Ollama | local, no API keys |
-| Reasoning LLM | `qwen2.5:7b-instruct` | open-source, strong at JSON output |
+| LLM serving | Ollama | local, open-source, no API keys |
+| Reasoning LLM | `qwen2.5:7b-instruct` | strong structured-JSON output |
 | Embedding model | `all-MiniLM-L6-v2` | 384-dim, fast, sufficient for short docs |
 | Vector store | ChromaDB | persistent, cosine similarity |
 | Sentiment | VADER | lexicon-based, fast, deterministic |
 | Dashboard | Streamlit | 7-section executive dashboard |
 | Collection | feedparser + requests | RSS feeds |
 
-**Data sources (3 independent viewpoints):**
-- **Community** — Reddit (r/nvidia, r/wallstreetbets) via RSS
-- **Press** — Google News (NVIDIA query) + Ars Technica via RSS
-- **Corporate** — NVIDIA Newsroom (official press releases) via RSS
-
-~180-190 cleaned documents from 3 independent sources (the exact count varies with each live collection run).
+**Data sources (3 independent viewpoints):** community (Reddit), press
+(Google News + Ars Technica), and corporate (NVIDIA Newsroom) — all via RSS.
+~180-190 cleaned documents; the exact count varies with each live collection.
 
 ---
 
-## 4. AI Pipeline
+## 6. Design Decisions
 
-1. **Collect** — three scrapers pull RSS feeds, each emitting an identical
-   8-field schema (`id, source, source_detail, title, text, url, date, scraped_at`).
-   Provenance (`url`, `date`) is captured at collection so every later finding
-   can cite its source.
-2. **Clean** — HTML entities stripped, boilerplate removed, **within-source**
-   duplicates dropped (cross-source duplicates are kept as corroborating evidence).
-3. **Index** — each document is embedded (title + text) into a 384-dim vector
-   with all-MiniLM-L6-v2 and stored in ChromaDB with full metadata. One document
-   = one vector (no chunking).
-4. **Analyze (RAG)** — for each category (opportunities / risks / trends), the
-   system embeds a category query, retrieves the top-6 nearest documents, and
-   passes them to the LLM, which returns strict JSON findings citing the
-   document IDs that support each one.
-5. **Recommend** — a single LLM call synthesizes findings *across* all three
-   categories into prioritized recommendations, each with priority, expected
-   impact, a financial/operational/strategic risk assessment, and multi-source
-   evidence.
-6. **Sentiment** — VADER scores every document, aggregated by source and into a
-   daily trend.
-7. **Briefing** — one LLM call produces the three-part CEO summary
-   (what happened / why it matters / what next).
-8. **Dashboard** — Streamlit reads all cached JSON and renders the 7 sections.
+- **Agentic orchestration over a fixed script.** Each operation is a registered
+  tool; an LLM planner sequences them and re-plans after each step, with a
+  deterministic guard so it cannot finish while a required output is missing.
+  This combines LLM flexibility with deterministic guarantees.
 
----
+- **Autonomy placed where choice is real.** The pipeline's stage order is
+  constrained by data dependencies (you cannot index before cleaning), so the
+  meaningful autonomous decision is *inside* analysis — "is the evidence
+  sufficient, or do I retrieve more?" That is a genuine choice with alternatives,
+  not a forced step.
 
-## 5. Design Decisions
+- **Honest uncertainty.** When the analysis agent cannot reach sufficient
+  evidence within its iteration cap, it flags findings as provisional rather than
+  presenting them as certain. The dashboard shows this.
 
-> These are the deliberate engineering tradeoffs made under a 1-week deadline,
-> optimizing for a reliable, defensible system over maximum sophistication.
+- **Validation before presentation.** Recommendations pass a rule gate + an LLM
+  groundedness check; failures are shown with their reason rather than hidden.
 
-- **RSS instead of Reddit/news JSON APIs.** Reddit's JSON endpoint returns 403
-  without OAuth; RSS is publicly accessible and needs no auth keys. RSS gives
-  less per item but is reliable and fast to reach 100+ documents.
+- **RSS not JSON APIs.** Reddit's JSON endpoint 403s without OAuth; RSS is public
+  and needs no keys.
 
-- **ChromaDB instead of FAISS.** ChromaDB persists to disk automatically and
-  manages embedding-to-ID mapping; FAISS requires handling persistence and ID
-  mapping manually. For a first vector-store project under deadline, ChromaDB is
-  lower-risk. FAISS's speed advantage is irrelevant at this corpus size (~180-190 docs).
+- **ChromaDB over FAISS.** Automatic persistence and ID mapping; FAISS's speed
+  advantage is irrelevant at this corpus size (~180-190 docs).
 
-- **all-MiniLM-L6-v2 instead of bge-base.** Smaller (384-dim, ~80MB) and faster.
-  For short documents the retrieval-quality gap versus bge-base is negligible,
-  and MiniLM embeds the whole corpus in ~2 seconds.
+- **all-MiniLM-L6-v2, no chunking.** Documents are short, so one document = one
+  vector; chunking would add complexity with no benefit and keeps each retrieval
+  result mapping cleanly to one source URL.
 
-- **No chunking.** Documents are already short (headlines, posts, press-release
-  summaries), so one document = one chunk = one vector. Chunking would add
-  complexity with no benefit and keeps each retrieval result mapping cleanly to
-  one source URL for evidence.
+- **Separate analysis calls per category, one synthesis call for recommendations.**
+  Analysis extracts *within* a category (focused retrieval); recommendations
+  synthesize *across* categories, so the model must see all findings at once.
 
-- **Separate LLM calls per category (analysis).** Each category gets its own
-  focused retrieval, so the evidence is tailored; a single combined call would
-  blur the evidence and a single JSON failure would lose all three categories.
+- **VADER per source.** Fast and deterministic; reported per source because
+  community text is expressive while news headlines are written more neutrally.
 
-- **One LLM call for recommendations.** Recommendations synthesize *across*
-  categories (e.g. addressing a risk by leveraging an opportunity), so the model
-  must see all findings at once — the opposite of the analysis step.
-
-- **VADER instead of LLM-based sentiment.** §5 needs positive/negative/neutral
-  buckets and a trend; VADER scores the whole corpus deterministically in under a second.
-  Sentiment is reported per-source because VADER reads expressive Reddit text
-  well but news headlines are neutral by design.
-
-- **Deterministic pipeline, not an autonomous agent.** The control flow is fixed
-  and run-once; the *reasoning* (analyze / prioritize / recommend / justify) is
-  dynamic and LLM-driven. Determinism was chosen for debuggability and a stable
-  live demonstration. A production version would add an autonomous control loop.
-
-- **Dashboard reads cached JSON, never calls the LLM live.** All expensive work
-  runs beforehand and writes JSON; the dashboard only displays it, so it renders
-  instantly and cannot hang or crash mid-demo on an LLM timeout.
-
-- **Evidence binding with validation.** The LLM may only cite document IDs that
-  were in the retrieved set; every returned ID is validated against that set, and
-  unmatched IDs are flagged rather than silently shown — guarding against
-  hallucinated evidence.
+- **Dashboard reads cached JSON, never calls the LLM live** — so it renders
+  instantly and cannot hang mid-demo.
 
 ---
 
-## 6. Limitations & Tradeoffs
+## 7. Limitations & Tradeoffs
 
-Honest constraints, kept visible rather than hidden:
-
-- **Google News documents are headline-only.** The RSS feed provides titles, not
-  full article bodies. Headlines carry the strategic signal (e.g. "Amazon to
-  Undercut Nvidia"), but full-text fetching is a deferred enhancement. NVIDIA IR
-  and Reddit documents do carry full text.
-- **Briefing and risk-assessment depth are bounded by the 7B model.** The
-  structure is correct (three questions answered, three risk dimensions present);
-  the prose is competent but not deeply insightful, which is the ceiling of an
-  open-source 8B-class model summarizing pre-summarized input.
-- **Run-once, not continuous.** The pipeline is executed manually rather than
-  running as a persistent monitoring agent.
+- **LLM planner can err.** The planner is an LLM and can mis-judge completion;
+  a deterministic goal-check overrides premature "finish" decisions.
+- **Risk coverage depends on the corpus.** If genuine NVIDIA risks are sparse in
+  a given collection, the agent reports fewer (and flags low confidence) rather
+  than inventing them.
+- **Google News documents are headline-only.** RSS provides titles/summaries, not
+  full article bodies; NVIDIA IR and Reddit documents carry fuller text.
+- **Open-source 7B model.** Briefing/risk prose is competent but bounded by model
+  size; structure and grounding are enforced by the pipeline.
 
 ---
 
-## 7. How to Run
+## 8. How to Run
 
 ```bash
 # 0. Prerequisites: Ollama running with the model pulled
@@ -206,50 +233,52 @@ ollama pull qwen2.5:7b-instruct
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# 2. Collect (writes data/raw/*.json)
-python scrapers/reddit_scraper.py
-python scrapers/news_scraper.py
-python scrapers/nvidia_ir_scraper.py
+# 2. Run the full agent (plans + executes the whole workflow)
+#    Add --scrape to force fresh collection (otherwise cached data is reused).
+python agent_orchestrator.py
 
-# 3. Clean + index
-python clean.py
-python index.py
-
-# 4. Generate intelligence
-python analyze.py
-python recommend.py
-python sentiment.py
-python briefing.py
-
-# 5. Launch dashboard
+# 3. Launch the dashboard
 streamlit run app.py
 ```
 
+To force a complete fresh run from scratch:
+
+```bash
+rm -rf data/raw data/clean chroma_db
+rm -f data/analysis.json data/recommendations.json data/sentiment.json \
+      data/briefing.json data/recommendations_validated.json
+python agent_orchestrator.py --scrape
+```
+
+The agent runs each stage as a tool, in dependency order, and finishes only
+when all goal artifacts — including the validated recommendations — exist.
+
 ---
 
-## Project Structure
+## 9. Project Structure
 
 ```
 nvidia_ceo_agent/
-├── scrapers/
-│   ├── reddit_scraper.py
-│   ├── news_scraper.py
-│   └── nvidia_ir_scraper.py
-├── clean.py
-├── index.py
-├── analyze.py
-├── recommend.py
-├── sentiment.py
-├── briefing.py
-├── app.py
+├── agent_orchestrator.py   # LLM tool-planner (Plan)
+├── agent.py                # self-evaluating analysis agent (Analyze + Decide)
+├── validate.py             # validation agent (Validate)
+├── scrapers/               # Reddit, News, NVIDIA IR (RSS)
+├── clean.py                # dedup + normalize
+├── index.py                # embed -> ChromaDB
+├── recommend.py            # cross-category synthesis
+├── sentiment.py            # VADER per source
+├── briefing.py             # CEO summary
+├── app.py                  # Streamlit dashboard (7 sections)
+├── run_pipeline.py         # simple deterministic runner (baseline)
 ├── requirements.txt
 ├── data/
-│   ├── raw/          # scraped JSON, one file per source
-│   ├── clean/        # cleaned + deduplicated docs
+│   ├── raw/                # scraped JSON per source
+│   ├── clean/docs.json     # cleaned + deduplicated
 │   ├── analysis.json
 │   ├── recommendations.json
+│   ├── recommendations_validated.json
 │   ├── sentiment.json
 │   └── briefing.json
-├── chroma_db/        # persistent vector store (regenerable)
+├── chroma_db/              # persistent vector store
 └── README.md
 ```
