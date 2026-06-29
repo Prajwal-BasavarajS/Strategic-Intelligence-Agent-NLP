@@ -1,17 +1,13 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
 .venv/
 venv/
-*.egg-info/
-
-# Vector store (regenerable from index.py)
-chroma_db/
 
 # OS
 .DS_Store
 
-# Optional: keep raw data out if large, but for THIS project you likely
-# WANT data/ committed so the examiner can run without re-scraping.
-# Leaving data/ tracked. Uncomment below only if you change your mind:
-# data/raw/
+# Editor
+.vscode/
+.idea/
