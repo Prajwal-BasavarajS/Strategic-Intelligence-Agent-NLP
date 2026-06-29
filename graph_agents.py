@@ -48,6 +48,7 @@ FINAL_GOAL_AGENTS = ["recommendation", "sentiment", "validation", "briefing"]
 # ---------------------------------------------------------------------------
 class AgentState(TypedDict):
     goal: str
+    plan: list           # the planner's execution plan (capabilities, in order)
     completed: list      # names of agents that have finished
     next_agent: str      # supervisor's decision
     log: list            # human-readable trace of decisions
@@ -93,6 +94,48 @@ def _run(cmd):
 
 
 # ---------------------------------------------------------------------------
+# PLANNER  (runs ONCE before routing: turns the goal into an execution plan)
+# ---------------------------------------------------------------------------
+def planner(state: AgentState) -> AgentState:
+    """Goal -> Plan. The planner decomposes the goal into the capabilities
+    needed and the order to run them, before any execution. This is the
+    explicit 'Plan' stage of Goal -> Plan -> Retrieve -> Analyze -> ... .
+
+    The supervisor then executes this plan, routing agent by agent.
+    """
+    capability_list = ", ".join(GOAL_AGENTS)
+    prompt = f"""You are the PLANNER for a strategic-intelligence system.
+
+GOAL: {state['goal']}
+
+Available capabilities (agents): {capability_list}
+
+Produce an execution plan: the ordered list of capabilities needed to achieve
+the goal. Respect data dependencies (you must collect before cleaning, clean
+before indexing, index before analysis, analyze before recommendation, and
+recommend before validation).
+
+Return STRICT JSON: {{"plan": ["<capability>", "<capability>", ...]}}
+Output ONLY the JSON."""
+    try:
+        raw = llm.invoke(prompt).content
+        raw = raw.replace("```json", "").replace("```", "").strip()
+        s, e = raw.find("{"), raw.rfind("}")
+        parsed = json.loads(raw[s:e + 1])
+        plan = [c for c in parsed.get("plan", []) if c in GOAL_AGENTS]
+        if not plan:
+            plan = list(GOAL_AGENTS)  # fallback to the full ordered set
+    except Exception:
+        plan = list(GOAL_AGENTS)
+
+    print("PLANNER produced execution plan:")
+    for i, cap in enumerate(plan, 1):
+        print(f"  {i}. {cap}")
+    log = state["log"] + [f"PLANNER -> plan: {plan}"]
+    return {**state, "plan": plan, "log": log}
+
+
+# ---------------------------------------------------------------------------
 # SUPERVISOR AGENT  (true agent - decides the next agent via the LLM)
 # ---------------------------------------------------------------------------
 def supervisor(state: AgentState) -> AgentState:
@@ -108,20 +151,26 @@ def supervisor(state: AgentState) -> AgentState:
             continue  # don't scrape unless permitted
         eligible.append(a)
 
+    # Order the eligible agents by the planner's plan so the supervisor
+    # executes the plan it produced (falling back to GOAL_AGENTS order).
+    plan = state.get("plan") or list(GOAL_AGENTS)
+    eligible.sort(key=lambda a: plan.index(a) if a in plan else 99)
+
     # Goal is met when the FINAL goal artifacts exist (data-prep is a means).
     if all(_exists(ARTIFACTS[a]) for a in FINAL_GOAL_AGENTS):
         decision, reason = "FINISH", "All goal artifacts exist."
     elif not eligible:
         decision, reason = "FINISH", "No eligible agent can run."
     else:
-        prompt = f"""You are the SUPERVISOR agent coordinating a team of agents.
+        prompt = f"""You are the SUPERVISOR agent executing a plan.
 
 GOAL: {state['goal']}
+EXECUTION PLAN (from the planner): {plan}
 
 Agents that have completed: {done}
 Agents eligible to run now (prerequisites met): {eligible}
 
-Choose the single next agent to run from the eligible list.
+Choose the single next agent to run from the eligible list, following the plan.
 Return STRICT JSON: {{"next_agent": "<name>", "reason": "<one sentence>"}}
 Output ONLY the JSON."""
         try:
@@ -209,6 +258,7 @@ def route(state: AgentState) -> str:
 def build_graph():
     g = StateGraph(AgentState)
 
+    g.add_node("planner", planner)
     g.add_node("supervisor", supervisor)
     g.add_node("collection", collection_node)
     g.add_node("cleaning", cleaning_node)
@@ -219,7 +269,9 @@ def build_graph():
     g.add_node("validation", validation_agent)
     g.add_node("briefing", briefing_node)
 
-    g.add_edge(START, "supervisor")
+    # Goal -> Plan -> (Supervisor executes the plan)
+    g.add_edge(START, "planner")
+    g.add_edge("planner", "supervisor")
 
     # Supervisor routes to whichever agent it chose (or ends).
     g.add_conditional_edges("supervisor", route, {
@@ -247,6 +299,7 @@ def main():
     initial = {
         "goal": ("Produce validated, evidence-based NVIDIA recommendations, "
                  "a sentiment picture, and a CEO briefing."),
+        "plan": [],
         "completed": [],
         "next_agent": "",
         "log": [],

@@ -16,7 +16,8 @@ shared state that the agents pass between each other.
 
 ```mermaid
 graph TD
-    GOAL[User Goal] --> SUP[Supervisor]
+    GOAL[User Goal] --> PLAN[Planner<br/>makes execution plan]
+    PLAN --> SUP[Supervisor]
 
     SUP --> COL[Collection]
     SUP --> CLN[Cleaning]
@@ -47,6 +48,7 @@ synthesize text; some are plain deterministic steps with no LLM at all.
 
 | Component | Type | Engine | What it does |
 |---|---|---|---|
+| Planner | reasoning agent | LLM | Runs once at the start; turns the goal into an ordered execution plan. |
 | Supervisor | reasoning agent | LLM router | Picks the next agent to run from those eligible, and decides when the goal is met. |
 | Collection | deterministic node | `scrapers/*` | Scrapes Reddit, news, and NVIDIA IR over RSS. |
 | Cleaning | deterministic node | `clean.py` | Removes duplicates and normalizes the raw documents. |
@@ -64,9 +66,26 @@ they're closer to nodes than agents. Sentiment, cleaning, indexing, and collecti
 don't use the LLM at all. I labeled each one for what it actually does rather than
 calling everything an agent.
 
+## How the goal is planned, then executed
+
+The run has two stages: plan, then execute. A planner node runs once at the
+start. It takes the goal and produces an explicit execution plan — the ordered
+list of capabilities needed to reach it (collection, cleaning, indexing,
+analysis, recommendation, validation, briefing). The plan is stored in the
+shared state. The supervisor then executes that plan, routing one agent at a
+time.
+
+The planner's order is shaped by data dependencies (you can't analyze before
+indexing), so the plan mostly follows the necessary sequence. What the planning
+stage adds is that the system reasons about what the goal requires and states it
+up front, rather than discovering it step by step. This is the explicit "Plan"
+stage in the Goal → Plan → Retrieve → Analyze → Decide → Recommend → Validate
+workflow.
+
 ## How the supervisor decides
 
-The supervisor does not follow a fixed sequence. On each turn it looks at which
+The supervisor executes the plan but does not blindly follow a fixed sequence.
+On each turn it looks at which
 output files already exist, works out which agents are eligible (their output is
 missing and their prerequisites are present), and picks one. The order is still
 shaped by real dependencies — you can't index before cleaning, or analyze before
