@@ -22,8 +22,6 @@ This demonstrates:
   - Memory                           (tracks plan, completed tasks, artifacts)
   - Tool usage beyond the LLM        (scrapers, embeddings, ChromaDB, VADER)
 
-Run:  python agent_orchestrator.py
-      python agent_orchestrator.py --scrape    # allow fresh collection
 """
 
 import json
@@ -46,9 +44,8 @@ def _exists(path):
     return os.path.exists(path)
 
 
-# ---------------------------------------------------------------------------
 # TOOL REGISTRY
-# ---------------------------------------------------------------------------
+
 TOOLS = {
     "scrape": {
         "desc": "Collect raw documents from Reddit, news, and NVIDIA IR (RSS). "
@@ -106,9 +103,9 @@ TOOLS = {
 }
 
 
-# ---------------------------------------------------------------------------
+
 # PHASE 1: DECOMPOSE THE GOAL
-# ---------------------------------------------------------------------------
+
 def decompose_goal(allow_scrape: bool) -> dict:
     """Ask the LLM to decide, for each tool, whether the goal requires it.
 
@@ -156,9 +153,8 @@ JSON:"""
     return {"plan": plan}
 
 
-# ---------------------------------------------------------------------------
 # PHASE 3: RE-PLAN CHECKPOINT (after analysis)
-# ---------------------------------------------------------------------------
+
 def replan_after_analysis(included: set) -> dict:
     """After analysis, the agent reasons about whether the plan still holds.
 
@@ -204,9 +200,9 @@ JSON:"""
         return {"adjust": False, "reason": "checkpoint skipped (parse issue)"}
 
 
-# ---------------------------------------------------------------------------
+
 # EXECUTION
-# ---------------------------------------------------------------------------
+
 def run_tool(name: str) -> bool:
     t = TOOLS[name]
     for cmd in [t["cmd"]] + t.get("extra_cmds", []):
@@ -228,7 +224,7 @@ def main():
     print("=" * 66)
     print(f"\nGOAL: {GOAL}\n")
 
-    # ---- PHASE 1: decompose ------------------------------------------------
+    #  PHASE 1: decompose 
     print("PHASE 1 - Decomposing goal into sub-tasks...\n")
     plan = decompose_goal(allow_scrape)["plan"]
 
@@ -275,7 +271,7 @@ def main():
         print("\n  NOTE: raw data is absent and scrape is not included; "
               "tasks needing collected data may be unable to run.")
 
-    # ---- PHASE 2: execute included tasks in dependency order ---------------
+    #  PHASE 2: execute included tasks in dependency order 
     print("\nPHASE 2 - Executing included tasks (dependency-ordered)...")
     history = []
     did_analysis = False
@@ -298,7 +294,7 @@ def main():
             print("Stopping due to tool failure.")
             break
 
-        # ---- PHASE 3: re-plan checkpoint, once, right after analysis ------
+        #  PHASE 3: re-plan checkpoint, once, right after analysis 
         if nxt == "analyze" and not did_analysis:
             did_analysis = True
             print("\n  CHECKPOINT - re-planning after analysis...")
@@ -306,7 +302,7 @@ def main():
             print(f"  re-plan: adjust={chk['adjust']} - {chk['reason']}")
         time.sleep(0.2)
 
-    # ---- SUMMARY -----------------------------------------------------------
+    #  SUMMARY 
     print("\n" + "=" * 66)
     print("AGENT RUN COMPLETE")
     print("=" * 66)

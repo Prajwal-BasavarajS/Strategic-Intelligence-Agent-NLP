@@ -4,8 +4,6 @@ Source #3 of 3. Pulls official NVIDIA press releases / announcements from
 the company newsroom RSS feed. This is the 'corporate' viewpoint that makes
 the 3-source independence story airtight (community / press / corporate).
 
-Outputs: data/raw/nvidia_ir.json
-Run:     python scrapers/nvidia_ir_scraper.py
 """
 
 import json

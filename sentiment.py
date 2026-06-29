@@ -9,7 +9,6 @@ headlines are often written neutrally, so news skews toward neutral. That's
 why we report sentiment SEPARATELY by source - public sentiment is the more
 expressive signal, news sentiment is more neutral by nature.
 
-Run:  python sentiment.py
 """
 
 import json

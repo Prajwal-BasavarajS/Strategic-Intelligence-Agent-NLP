@@ -5,7 +5,6 @@ Queries the ChromaDB store with a few strategic questions and prints the
 top matches with source + similarity. Purpose: prove retrieval returns
 RELEVANT documents before we build the RAG/LLM layer on top of it.
 
-Run:  python test_retrieval.py
 """
 
 import chromadb

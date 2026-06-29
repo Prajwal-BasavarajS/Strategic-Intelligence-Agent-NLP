@@ -3,7 +3,6 @@ Reddit scraper for NVIDIA CEO Agent (RSS + rate-limit handling).
 Source #1 of 3. Uses public .rss feeds. Handles Reddit's 429 rate limiting
 with a longer inter-request delay and one retry with backoff.
 
-Outputs: data/raw/reddit.json
 """
 
 import json

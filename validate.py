@@ -23,7 +23,6 @@ Recommendations that fail are flagged (and optionally dropped). The result is
 written to data/recommendations_validated.json, each rec carrying a
 "validation" block so the dashboard can show only trustworthy recommendations.
 
-Run:  python validate.py
 """
 
 import json
@@ -49,9 +48,8 @@ def load_recs(path=RECS_PATH):
         return json.load(f)
 
 
-# ---------------------------------------------------------------------------
 # LAYER 1: rule-based structural gate
-# ---------------------------------------------------------------------------
+
 def rule_check(rec: dict) -> list:
     """Return a list of structural problems. Empty list == passes the gate."""
     problems = []
@@ -75,9 +73,8 @@ def rule_check(rec: dict) -> list:
     return problems
 
 
-# ---------------------------------------------------------------------------
 # LAYER 2: LLM semantic groundedness judgment
-# ---------------------------------------------------------------------------
+
 def llm_check(rec: dict) -> dict:
     """Ask the LLM whether the evidence actually supports the recommendation."""
     evidence_titles = "\n".join(f"  - {e['title']}" for e in rec.get("evidence", []))
@@ -115,9 +112,8 @@ JSON:"""
             "reason": parsed.get("reason", "")}
 
 
-# ---------------------------------------------------------------------------
 # Orchestration of the two layers
-# ---------------------------------------------------------------------------
+
 def validate_one(rec: dict) -> dict:
     problems = rule_check(rec)
     if problems:

@@ -19,7 +19,6 @@ It re-uses the existing, tested building blocks from analyze.py (retrieve,
 build_prompt, extract_json) so the working pipeline is untouched. If this
 agent fails, analyze.py still runs exactly as before.
 
-Run:  python agent.py
 """
 
 import json

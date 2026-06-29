@@ -6,8 +6,6 @@ all-MiniLM-L6-v2, and stores it in a persistent ChromaDB collection with
 full provenance in metadata. One document = one vector (no chunking).
 
 Embed once; the dashboard and RAG layer read this same store.
-
-Run:  python index.py
 """
 
 import json

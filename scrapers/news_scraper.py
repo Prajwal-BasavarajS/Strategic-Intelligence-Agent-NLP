@@ -3,8 +3,7 @@ News RSS scraper for NVIDIA CEO Agent.
 Source #2 of 3. Pulls from Google News (NVIDIA query) + one independent
 tech outlet. Snippets-only (RSS summaries), not full article bodies.
 
-Outputs: data/raw/news.json
-Run:     python scrapers/news_scraper.py
+
 """
 
 import json

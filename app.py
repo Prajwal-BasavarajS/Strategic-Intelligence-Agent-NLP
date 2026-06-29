@@ -5,7 +5,6 @@ Reads cached JSON artifacts (no live LLM calls) and renders the 7 required
 sections with a full visual style pass: color system, KPI tiles, styled
 section headers, and cards. No data/logic changes from the working version.
 
-Run:  streamlit run app.py
 """
 
 import json

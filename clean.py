@@ -9,8 +9,6 @@ Reads every JSON in data/raw/, then:
                      the same event is corroborating evidence, not noise.)
 
 Writes the survivors to data/clean/docs.json.
-
-Run:  python clean.py
 """
 
 import json

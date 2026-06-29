@@ -8,8 +8,6 @@ summary that answers the brief's three questions:
   - What should management do next?
 
 Writes data/briefing.json, which Dashboard Section 7 reads.
-
-Run:  python briefing.py
 """
 
 import json

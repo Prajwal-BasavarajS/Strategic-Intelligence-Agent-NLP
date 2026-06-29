@@ -17,7 +17,6 @@ Agent design (honest mix):
 Build is staged. THIS FILE currently wires the supervisor + a few nodes to
 prove the pattern. More nodes are added once this runs.
 
-Run:  python graph_agents.py
 """
 
 import json
@@ -43,9 +42,8 @@ ALLOW_SCRAPE = "--scrape" in sys.argv
 FINAL_GOAL_AGENTS = ["recommendation", "sentiment", "validation", "briefing"]
 
 
-# ---------------------------------------------------------------------------
 # SHARED STATE  (LangGraph passes this dict between agents)
-# ---------------------------------------------------------------------------
+
 class AgentState(TypedDict):
     goal: str
     plan: list           # the planner's execution plan (capabilities, in order)
@@ -54,9 +52,9 @@ class AgentState(TypedDict):
     log: list            # human-readable trace of decisions
 
 
-# ---------------------------------------------------------------------------
+
 # Helper: what outputs exist on disk (the agents' shared memory of progress)
-# ---------------------------------------------------------------------------
+
 ARTIFACTS = {
     "collection": "data/raw",
     "cleaning": "data/clean/docs.json",
@@ -93,9 +91,9 @@ def _run(cmd):
     return subprocess.run(cmd).returncode == 0
 
 
-# ---------------------------------------------------------------------------
+
 # PLANNER  (runs ONCE before routing: turns the goal into an execution plan)
-# ---------------------------------------------------------------------------
+
 def planner(state: AgentState) -> AgentState:
     """Goal -> Plan. The planner decomposes the goal into the capabilities
     needed and the order to run them, before any execution. This is the
@@ -135,9 +133,8 @@ Output ONLY the JSON."""
     return {**state, "plan": plan, "log": log}
 
 
-# ---------------------------------------------------------------------------
 # SUPERVISOR AGENT  (true agent - decides the next agent via the LLM)
-# ---------------------------------------------------------------------------
+
 def supervisor(state: AgentState) -> AgentState:
     done = [a for a in ARTIFACTS if _exists(ARTIFACTS[a])]
 
@@ -190,9 +187,9 @@ Output ONLY the JSON."""
     return {**state, "next_agent": decision, "log": log}
 
 
-# ---------------------------------------------------------------------------
+
 # TASK / AGENT NODES  (each reuses the existing working script)
-# ---------------------------------------------------------------------------
+
 def collection_node(state: AgentState) -> AgentState:
     print("  [collection] scraping sources (RSS)...")
     _run(["python", "scrapers/reddit_scraper.py"])
@@ -245,16 +242,16 @@ def briefing_node(state: AgentState) -> AgentState:
     return {**state, "completed": state["completed"] + ["briefing"]}
 
 
-# ---------------------------------------------------------------------------
+
 # ROUTING  (supervisor's decision -> which node to go to)
-# ---------------------------------------------------------------------------
+
 def route(state: AgentState) -> str:
     return state["next_agent"]
 
 
-# ---------------------------------------------------------------------------
+
 # BUILD THE GRAPH
-# ---------------------------------------------------------------------------
+
 def build_graph():
     g = StateGraph(AgentState)
 

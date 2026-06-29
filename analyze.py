@@ -9,10 +9,6 @@ For a given category (opportunities | risks | trends):
   4. Map evidence ids back to {title, url} so the dashboard can show
      clickable supporting evidence.
 
-This is a deterministic retrieve -> reason pipeline (not an autonomous
-agent loop): predictable, debuggable, defensible under live coding.
-
-Run:  python analyze.py
 """
 
 import json
@@ -23,7 +19,7 @@ import chromadb
 import ollama
 from sentence_transformers import SentenceTransformer
 
-# --- Config -----------------------------------------------------------------
+#  Config 
 CHROMA_DIR = "./chroma_db"
 COLLECTION_NAME = "nvidia_docs"
 EMBED_MODEL = "all-MiniLM-L6-v2"
