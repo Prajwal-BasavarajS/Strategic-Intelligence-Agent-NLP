@@ -69,7 +69,7 @@ calling everything an agent.
 ## How the goal is planned, then executed
 
 The run has two stages: plan, then execute. A planner node runs once at the
-start. It takes the goal and produces an explicit execution plan — the ordered
+start. It takes the goal and produces an explicit execution plan. The ordered
 list of capabilities needed to reach it (collection, cleaning, indexing,
 analysis, recommendation, validation, briefing). The plan is stored in the
 shared state. The supervisor then executes that plan, routing one agent at a
@@ -88,8 +88,8 @@ The supervisor executes the plan but does not blindly follow a fixed sequence.
 On each turn it looks at which
 output files already exist, works out which agents are eligible (their output is
 missing and their prerequisites are present), and picks one. The order is still
-shaped by real dependencies — you can't index before cleaning, or analyze before
-indexing — but the choice of which eligible agent to run, and the decision that the
+shaped by real dependencies, you can't index before cleaning, or analyze before
+indexing, but the choice of which eligible agent to run, and the decision that the
 goal is finished, are the supervisor's. A small deterministic check stops it from
 declaring "finished" while a required output is still missing.
 
@@ -112,7 +112,7 @@ ChromaDB is the knowledge base. It holds the scraped documents as vectors, and t
 analysis agent retrieves from it. It's external information the agents consult.
 
 The workflow memory is different. LangGraph's shared state carries the lightweight
-coordination data — which agents have finished, what the supervisor decided and why,
+coordination data, which agents have finished, what the supervisor decided and why,
 the running log. The heavier outputs (findings, recommendations, and so on) are
 written to JSON files on disk, and the next agent reads them instead of recomputing.
 I used files for this deliberately: they survive a crash, I can open and inspect any
@@ -168,7 +168,7 @@ routes between them, rather than a hardcoded pipeline. This is the main thing th
 makes it a multi-agent system rather than a sequence of function calls.
 
 Components labeled for what they do. The analysis and validation agents have real
-control flow; recommendation and briefing are single LLM calls; sentiment and the
+control flow, recommendation and briefing are single LLM calls, sentiment and the
 data-prep steps are deterministic. Calling the VADER step an "agent" would be
 misleading, so I don't.
 

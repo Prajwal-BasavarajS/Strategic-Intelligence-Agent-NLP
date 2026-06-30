@@ -17,6 +17,10 @@ Agent design (honest mix):
 Build is staged. THIS FILE currently wires the supervisor + a few nodes to
 prove the pattern. More nodes are added once this runs.
 
+rm -rf data/raw data/clean chroma_db
+rm -f data/analysis.json data/recommendations.json data/sentiment.json data/briefing.json data/recommendations_validated.json
+python graph_agents.py --scrape
+
 """
 
 import json
@@ -301,16 +305,16 @@ def main():
         "next_agent": "",
         "log": [],
     }
-    print("=" * 60)
+    print()
     print("LANGGRAPH MULTI-AGENT SYSTEM")
-    print("=" * 60)
+    print()
     # recursion_limit lets the supervisor loop run enough times.
     final = graph.invoke(initial, {"recursion_limit": 50})
-    print("\n" + "=" * 60)
+    print("---")
     print("AGENT DECISION LOG:")
     for line in final["log"]:
         print("  " + line)
-    print("=" * 60)
+    print()
     print("Launch dashboard:  streamlit run app.py")
 
 

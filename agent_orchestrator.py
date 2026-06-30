@@ -22,6 +22,7 @@ This demonstrates:
   - Memory                           (tracks plan, completed tasks, artifacts)
   - Tool usage beyond the LLM        (scrapers, embeddings, ChromaDB, VADER)
 
+      python agent_orchestrator.py --scrape    # allow fresh collection
 """
 
 import json
@@ -45,7 +46,7 @@ def _exists(path):
 
 
 # TOOL REGISTRY
-
+# 
 TOOLS = {
     "scrape": {
         "desc": "Collect raw documents from Reddit, news, and NVIDIA IR (RSS). "
@@ -153,6 +154,7 @@ JSON:"""
     return {"plan": plan}
 
 
+
 # PHASE 3: RE-PLAN CHECKPOINT (after analysis)
 
 def replan_after_analysis(included: set) -> dict:
@@ -200,9 +202,7 @@ JSON:"""
         return {"adjust": False, "reason": "checkpoint skipped (parse issue)"}
 
 
-
 # EXECUTION
-
 def run_tool(name: str) -> bool:
     t = TOOLS[name]
     for cmd in [t["cmd"]] + t.get("extra_cmds", []):
@@ -271,8 +271,16 @@ def main():
         print("\n  NOTE: raw data is absent and scrape is not included; "
               "tasks needing collected data may be unable to run.")
 
-    #  PHASE 2: execute included tasks in dependency order 
+    # PHASE 2: execute included tasks in dependency order 
     print("\nPHASE 2 - Executing included tasks (dependency-ordered)...")
+
+    # Transparency: any included task whose output already exists is reported
+    # as already-satisfied rather than silently skipped.
+    already_done = [t for t in included if _exists(TOOLS[t]["produces"])]
+    for t in already_done:
+        print(f"  ALREADY DONE  {t:<10} - output {TOOLS[t]['produces']} "
+              f"already exists; not re-running.")
+
     history = []
     did_analysis = False
     for step in range(1, MAX_STEPS + 1):
@@ -303,12 +311,15 @@ def main():
         time.sleep(0.2)
 
     #  SUMMARY 
-    print("\n" + "=" * 66)
+    print()
     print("AGENT RUN COMPLETE")
-    print("=" * 66)
+    print()
     print("Plan decisions:")
     for task in included:
-        print(f"  - included: {task}")
+        if task in already_done:
+            print(f"  - included (already done): {task}")
+        else:
+            print(f"  - included: {task}")
     for task, reason in skipped:
         print(f"  - SKIPPED:  {task} ({reason})")
     print("\nExecution trace:")

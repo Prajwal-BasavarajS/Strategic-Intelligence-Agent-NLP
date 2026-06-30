@@ -1,22 +1,22 @@
 {
   "overall_distribution": {
-    "positive": 77,
-    "neutral": 65,
-    "negative": 39
+    "positive": 90,
+    "neutral": 64,
+    "negative": 28
   },
   "by_source": {
     "news": {
-      "avg_compound": 0.0588,
+      "avg_compound": 0.1414,
       "label": "positive",
-      "count": 111,
+      "count": 112,
       "distribution": {
-        "positive": 37,
-        "neutral": 47,
-        "negative": 27
+        "positive": 46,
+        "neutral": 46,
+        "negative": 20
       }
     },
     "nvidia_ir": {
-      "avg_compound": 0.5801,
+      "avg_compound": 0.5708,
       "label": "positive",
       "count": 20,
       "distribution": {
@@ -26,142 +26,102 @@
       }
     },
     "reddit": {
-      "avg_compound": 0.2106,
+      "avg_compound": 0.3465,
       "label": "positive",
       "count": 50,
       "distribution": {
-        "positive": 23,
+        "positive": 27,
         "neutral": 15,
-        "negative": 12
+        "negative": 8
       }
     }
   },
   "trend": [
     {
-      "date": "2026-05-31",
-      "avg_compound": 0.0,
-      "count": 1
-    },
-    {
-      "date": "2026-06-11",
-      "avg_compound": 0.0,
-      "count": 1
-    },
-    {
       "date": "2026-06-16",
-      "avg_compound": 0.4591,
-      "count": 3
+      "avg_compound": 0.765,
+      "count": 1
     },
     {
       "date": "2026-06-18",
-      "avg_compound": 0.5997,
-      "count": 4
+      "avg_compound": 0.7175,
+      "count": 2
+    },
+    {
+      "date": "2026-06-21",
+      "avg_compound": 0.5574,
+      "count": 1
     },
     {
       "date": "2026-06-22",
-      "avg_compound": 0.4533,
-      "count": 13
+      "avg_compound": 0.4447,
+      "count": 12
     },
     {
       "date": "2026-06-23",
-      "avg_compound": 0.4406,
-      "count": 8
+      "avg_compound": 0.555,
+      "count": 9
     },
     {
       "date": "2026-06-24",
-      "avg_compound": -0.0736,
-      "count": 4
+      "avg_compound": 0.7406,
+      "count": 2
     },
     {
       "date": "2026-06-25",
-      "avg_compound": -0.0078,
-      "count": 7
+      "avg_compound": 0.8404,
+      "count": 2
     },
     {
       "date": "2026-06-26",
-      "avg_compound": -0.0685,
-      "count": 17
+      "avg_compound": -0.1705,
+      "count": 4
     },
     {
       "date": "2026-06-27",
-      "avg_compound": 0.1233,
-      "count": 11
+      "avg_compound": 0.0464,
+      "count": 7
     },
     {
       "date": "2026-06-28",
-      "avg_compound": 0.0866,
-      "count": 42
+      "avg_compound": 0.3045,
+      "count": 16
     },
     {
       "date": "2026-06-29",
-      "avg_compound": 0.1712,
-      "count": 70
+      "avg_compound": 0.1844,
+      "count": 109
+    },
+    {
+      "date": "2026-06-30",
+      "avg_compound": 0.2188,
+      "count": 17
     }
   ],
   "documents": [
     {
-      "id": "news_google_news_9ff7df3da911",
+      "id": "news_google_news_9b76aa721136",
       "source": "news",
-      "title": "Here are Monday's biggest analyst calls: Nvidia, Apple, Tesla, Seagate, Warby Parker, AppLovin & more - CNBC",
+      "title": "Nvidia, Micron, and Broadcom hold the stock market's fate in the palm of their hands - Yahoo Finance",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T12:29:20+00:00"
+      "date": "2026-06-29T13:07:53+00:00"
     },
     {
-      "id": "news_google_news_e8bfb4e4bade",
+      "id": "news_google_news_189946b1812e",
       "source": "news",
-      "title": "Is NVIDIA Corporation (NVDA) One of the Best Semiconductor Stocks to Buy According to Billionaires? - Yahoo Finance",
-      "compound": 0.8677,
+      "title": "Nvidia Stock Rises Amid Signs of Strong AI Chip Demand - Barron's",
+      "compound": 0.4019,
       "label": "positive",
-      "date": "2026-06-28T18:44:18+00:00"
+      "date": "2026-06-29T13:54:00+00:00"
     },
     {
-      "id": "news_google_news_70f73ff94cf0",
+      "id": "news_google_news_076ddb3acc04",
       "source": "news",
-      "title": "Palantir Stock Is Rising Again and This Nvidia Partnership Could Help the Recovery - Barron's",
-      "compound": 0.6597,
+      "title": "Micron and Nvidia are trading like the AI cycle is peaking now, says D.A. Davidson's Gil Luria - CNBC",
+      "compound": 0.6124,
       "label": "positive",
-      "date": "2026-06-29T12:49:00+00:00"
-    },
-    {
-      "id": "news_google_news_3185ad5ce5ff",
-      "source": "news",
-      "title": "AI Startup Firmus to Build Indonesia Data Center With Nvidia - Bloomberg.com",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T14:01:00+00:00"
-    },
-    {
-      "id": "news_google_news_80e1d8ebd65b",
-      "source": "news",
-      "title": "Australia's Firmus Technologies strikes AI access deal with Nvidia - Reuters",
-      "compound": -0.6124,
-      "label": "negative",
-      "date": "2026-06-28T21:00:36+00:00"
-    },
-    {
-      "id": "news_google_news_6b22b878743b",
-      "source": "news",
-      "title": "Nvidia\u2019s soft spot for Firmus stirs new $20b-plus spendathon - AFR",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T14:01:00+00:00"
-    },
-    {
-      "id": "news_google_news_17464b2a5115",
-      "source": "news",
-      "title": "Bit Origin lands $11M AI servers tied to $360K monthly revenue - Stock Titan",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T13:00:00+00:00"
-    },
-    {
-      "id": "news_google_news_9942a62fa641",
-      "source": "news",
-      "title": "Nvidia\u2019s AI chip sales in China stall, as local chipmakers like Huawei take the lead - AP News",
-      "compound": 0.34,
-      "label": "positive",
-      "date": "2026-06-29T04:39:00+00:00"
+      "date": "2026-06-29T17:53:00+00:00"
     },
     {
       "id": "news_google_news_970b7b5369eb",
@@ -172,92 +132,60 @@
       "date": "2026-06-29T10:59:00+00:00"
     },
     {
-      "id": "news_google_news_d37f40ce8efe",
+      "id": "news_google_news_70f73ff94cf0",
       "source": "news",
-      "title": "Micron is about to be more profitable than any U.S. company except Nvidia and Google - MarketWatch",
-      "compound": 0.7496,
-      "label": "positive",
-      "date": "2026-06-28T14:00:00+00:00"
-    },
-    {
-      "id": "news_google_news_2842572cedde",
-      "source": "news",
-      "title": "Palantir looks to boost commercialization of new software; teams with Nvidia on Nemotron (PLTR:NASDAQ) - Seeking Alpha",
-      "compound": 0.6597,
-      "label": "positive",
-      "date": "2026-06-29T11:28:33+00:00"
-    },
-    {
-      "id": "news_google_news_fe2fd7a9f343",
-      "source": "news",
-      "title": "Why BlackRock, Nvidia, and Temasek are betting billions on quantum computing - Fortune",
+      "title": "Palantir and Nvidia Deal: What It Means for PLTR Stock - Barron's",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T11:15:00+00:00"
+      "date": "2026-06-29T19:02:00+00:00"
     },
     {
-      "id": "news_google_news_9119f64f5edb",
+      "id": "news_google_news_226fba5b80cd",
       "source": "news",
-      "title": "Verde Servicos Internacionais S.A. Buys 9,787 Shares of NVIDIA Corporation $NVDA - MarketBeat",
+      "title": "Palantir Shares Jump After Striking Nvidia AI Deal - Yahoo Finance",
       "compound": 0.5267,
       "label": "positive",
-      "date": "2026-06-29T10:19:45+00:00"
+      "date": "2026-06-29T17:59:03+00:00"
     },
     {
-      "id": "news_google_news_892c81200365",
+      "id": "news_google_news_1b1c32d00d24",
       "source": "news",
-      "title": "NVIDIA App has no measurable FPS impact, but filters can reduce performance by up to 10% - VideoCardz.com",
-      "compound": -0.5267,
-      "label": "negative",
-      "date": "2026-06-29T06:42:51+00:00"
-    },
-    {
-      "id": "news_google_news_73e73df6f862",
-      "source": "news",
-      "title": "Open Models, Closed Environments: Palantir Brings Secure AI to US Agencies With NVIDIA Nemotron - NVIDIA Blog",
-      "compound": 0.5859,
-      "label": "positive",
-      "date": "2026-06-29T11:05:09+00:00"
-    },
-    {
-      "id": "news_google_news_189946b1812e",
-      "source": "news",
-      "title": "Nvidia Stock Rises Amid Signs of Strong AI Chip Demand - Barron's",
-      "compound": 0.6808,
-      "label": "positive",
-      "date": "2026-06-29T12:16:00+00:00"
-    },
-    {
-      "id": "news_google_news_907a39961c13",
-      "source": "news",
-      "title": "Firmus, Nvidia partner to build 170,000-GPU AI facility in Indonesia - Yahoo Finance",
+      "title": "Nvidia is quietly staffing up around its AI ambitions in outer space - Business Insider",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T11:15:28+00:00"
+      "date": "2026-06-29T09:00:00+00:00"
     },
     {
-      "id": "news_google_news_62156ee811b7",
+      "id": "news_google_news_682f917436a6",
       "source": "news",
-      "title": "NN lands more NVIDIA cooling work as 52 machines go to data centers - Stock Titan",
+      "title": "AMD Radeon GPUs Can Now Run NVIDIA PhysX Games With 3x Boost Thanks To ZLUDA, Without Requiring A Dedicated PhysX GPU - Wccftech",
+      "compound": 0.7383,
+      "label": "positive",
+      "date": "2026-06-29T21:05:00+00:00"
+    },
+    {
+      "id": "news_google_news_c68cb7b9bd51",
+      "source": "news",
+      "title": "Nvidia and Firmus to build 170,000-GPU data center in Indonesia - Yahoo Finance",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T11:00:00+00:00"
+      "date": "2026-06-29T13:22:22+00:00"
     },
     {
-      "id": "news_google_news_b4510dd7afa2",
+      "id": "news_google_news_cc7c318ef15e",
       "source": "news",
-      "title": "Nvidia (NVDA) Wins BioNeMo Partners As Jamendo Suit Tests Its AI Expansion - simplywall.st",
-      "compound": 0.8126,
+      "title": "Legacy Nvidia RTX 3060 12GB returns to retail five years after original launch, priced at $339 \u2014 resurrected GPU strategy that Jensen called a 'good idea' apparently comes to fruition - Tom's Hardware",
+      "compound": 0.8555,
       "label": "positive",
-      "date": "2026-06-29T11:54:05+00:00"
+      "date": "2026-06-29T17:11:15+00:00"
     },
     {
-      "id": "news_google_news_c7559cb8b1bf",
+      "id": "news_google_news_9942a62fa641",
       "source": "news",
-      "title": "Why Chinese AI Models Should Worry Nvidia, Micron Stock Investors - Trefis",
-      "compound": -0.7003,
-      "label": "negative",
-      "date": "2026-06-29T12:54:48+00:00"
+      "title": "Nvidia\u2019s AI chip sales in China stall, as local chipmakers like Huawei take the lead - AP News",
+      "compound": 0.34,
+      "label": "positive",
+      "date": "2026-06-29T04:39:00+00:00"
     },
     {
       "id": "news_google_news_8a41d1f9affc",
@@ -268,44 +196,108 @@
       "date": "2026-06-28T15:00:00+00:00"
     },
     {
-      "id": "news_google_news_9994d2282547",
+      "id": "news_google_news_3185ad5ce5ff",
       "source": "news",
-      "title": "NVIDIA (NVDA) CEO Says National Security Takes Priority Over Commercial Opportunity - Yahoo Finance",
-      "compound": 0.8555,
+      "title": "AI Startup Firmus to Build Indonesia Data Center With Nvidia - Bloomberg.com",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-28T14:01:00+00:00"
+    },
+    {
+      "id": "news_google_news_3db80a530fec",
+      "source": "news",
+      "title": "Anthropic\u2019s first NVIDIA deployment launched at Microsoft Azure - Investing.com",
+      "compound": 0.25,
       "label": "positive",
-      "date": "2026-06-29T07:54:41+00:00"
+      "date": "2026-06-29T21:02:01+00:00"
     },
     {
-      "id": "news_google_news_06b08e9ce904",
+      "id": "news_google_news_fd5d55184c5c",
       "source": "news",
-      "title": "NVIDIA Announces BioNeMo Agent Toolkit \u2014 Tools for Agents to Accelerate Scientific Discovery - NVIDIA Newsroom",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-23T13:10:22+00:00"
-    },
-    {
-      "id": "news_google_news_3ff7b5bc239e",
-      "source": "news",
-      "title": "Is NVIDIA (NVDA) the Best Fast Growth Stock to Buy as It Targets Fully Autonomous AI for Telecom Networks? - Yahoo Finance",
-      "compound": 0.932,
+      "title": "Open Models, Closed Environments: Palantir Brings Secure AI to US Agencies With NVIDIA Nemotron - NVIDIA Blog",
+      "compound": 0.5859,
       "label": "positive",
-      "date": "2026-06-29T10:25:25+00:00"
+      "date": "2026-06-29T11:05:09+00:00"
     },
     {
-      "id": "news_google_news_9b76aa721136",
+      "id": "news_google_news_3c07dffb572c",
       "source": "news",
-      "title": "Nvidia, Micron, and Broadcom hold the stock market's fate in the palm of their hands - Yahoo Finance",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T13:07:53+00:00"
+      "title": "Is Nvidia Still a Millionaire-Maker Stock? - The Motley Fool",
+      "compound": -0.7319,
+      "label": "negative",
+      "date": "2026-06-29T20:00:00+00:00"
     },
     {
-      "id": "news_google_news_0d8298faa849",
+      "id": "news_google_news_e7525c46d7a3",
       "source": "news",
-      "title": "Nokia (HLSE:NOKIA) Partners With Nvidia To Build AI RAN 6G Networks - Yahoo Finance",
+      "title": "Nvidia Stock Price Prediction: 95% of Analysts Stay Bullish - 24/7 Wall St.",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-28T22:06:00+00:00"
+      "date": "2026-06-29T14:32:03+00:00"
+    },
+    {
+      "id": "news_google_news_9a6e07d4f085",
+      "source": "news",
+      "title": "What's Going On With NVIDIA Stock Monday? - Benzinga",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T14:08:31+00:00"
+    },
+    {
+      "id": "news_google_news_80e1d8ebd65b",
+      "source": "news",
+      "title": "Australia's Firmus Technologies strikes AI access deal with Nvidia - Reuters",
+      "compound": -0.6124,
+      "label": "negative",
+      "date": "2026-06-28T21:00:36+00:00"
+    },
+    {
+      "id": "news_google_news_a5fe1c68ff78",
+      "source": "news",
+      "title": "Nvidia (NVDA) Shares Gain as Bernstein Affirms Outperform Rating - GuruFocus",
+      "compound": 0.8807,
+      "label": "positive",
+      "date": "2026-06-29T15:10:14+00:00"
+    },
+    {
+      "id": "news_google_news_dc8fbf84e843",
+      "source": "news",
+      "title": "Palantir and Nvidia partner on AI platform for U.S. government - qz.com",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T16:01:38+00:00"
+    },
+    {
+      "id": "news_google_news_34c3385965f6",
+      "source": "news",
+      "title": "Firefly Aerospace Operates NVIDIA Jetson in Lunar Orbit for the First Time - NVIDIA Blog",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T15:05:09+00:00"
+    },
+    {
+      "id": "news_google_news_a9c9a4dc5ec2",
+      "source": "news",
+      "title": "Super Micro Plunges 8% as Taiwan Raids Its Offices in NVIDIA AI Chip Smuggling Probe - Yahoo Finance",
+      "compound": 0.3818,
+      "label": "positive",
+      "date": "2026-06-29T19:55:09+00:00"
+    },
+    {
+      "id": "news_google_news_a328854c3909",
+      "source": "news",
+      "title": "AMD Stock Is Crushing Nvidia's in 2026. Will That Continue? - The Motley Fool",
+      "compound": -0.8796,
+      "label": "negative",
+      "date": "2026-06-29T18:45:00+00:00"
+    },
+    {
+      "id": "news_google_news_877698f5a435",
+      "source": "news",
+      "title": "NN Shares Soar After Winning New NVIDIA AI Data Centre Contracts (NNBR) - Yahoo Finance",
+      "compound": 0.8807,
+      "label": "positive",
+      "date": "2026-06-29T14:05:07+00:00"
     },
     {
       "id": "news_google_news_6f174c8bc159",
@@ -316,20 +308,44 @@
       "date": "2026-06-27T17:38:00+00:00"
     },
     {
-      "id": "news_google_news_90a5f07c5a0a",
+      "id": "news_google_news_0f8b7c280b5f",
       "source": "news",
-      "title": "Nvidia's Next $1 Trillion Opportunity May Have Nothing to Do With GPUs - The Motley Fool",
-      "compound": -0.0516,
-      "label": "negative",
-      "date": "2026-06-29T04:00:00+00:00"
+      "title": "Palantir and Nvidia Bring Open AI Models Inside U.S. Government Systems - Yahoo Finance",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T17:54:10+00:00"
     },
     {
-      "id": "news_google_news_3db1c87d4e9e",
+      "id": "news_google_news_76e4ef7c186d",
       "source": "news",
-      "title": "Jensen Huang\u2019s Net Worth Under Pressure As Nvidia Stock Nears Bear Market - Yahoo Finance",
-      "compound": -0.1531,
-      "label": "negative",
-      "date": "2026-06-29T10:46:07+00:00"
+      "title": "Nvidia Stock Has Underperformed the Semiconductor Sector in 2026. Will It Skyrocket in the Second Half? - AOL.com",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T14:15:08+00:00"
+    },
+    {
+      "id": "news_google_news_06b08e9ce904",
+      "source": "news",
+      "title": "NVIDIA Announces BioNeMo Agent Toolkit \u2014 Tools for Agents to Accelerate Scientific Discovery - NVIDIA Newsroom",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-23T13:10:22+00:00"
+    },
+    {
+      "id": "news_google_news_13d3e5136840",
+      "source": "news",
+      "title": "Palantir and Nvidia want to change who owns government AI - The New Stack",
+      "compound": 0.1531,
+      "label": "positive",
+      "date": "2026-06-29T17:58:32+00:00"
+    },
+    {
+      "id": "news_google_news_ff65dd851d7c",
+      "source": "news",
+      "title": "Smart Money is Leaving Nvidia for This AI Chip Stock - Yahoo Finance",
+      "compound": 0.6597,
+      "label": "positive",
+      "date": "2026-06-29T20:00:00+00:00"
     },
     {
       "id": "news_google_news_95821184d51d",
@@ -340,20 +356,20 @@
       "date": "2026-06-22T13:05:16+00:00"
     },
     {
-      "id": "news_google_news_d9707b0e34fb",
+      "id": "news_google_news_95facf0d221b",
       "source": "news",
-      "title": "Is Micron Stock the New Nvidia? - The Motley Fool",
-      "compound": -0.7319,
-      "label": "negative",
-      "date": "2026-06-28T23:10:00+00:00"
+      "title": "Nvidia and 2 AI Infrastructure Stocks Backed by Cash Flow Value - simplywall.st",
+      "compound": 0.6124,
+      "label": "positive",
+      "date": "2026-06-30T03:54:30+00:00"
     },
     {
-      "id": "news_google_news_8e91cf85d8bb",
+      "id": "news_google_news_39e4a78d1e19",
       "source": "news",
-      "title": "NVIDIA (NVDA) Announces the NVIDIA Vera Rubin Platform - Yahoo Finance",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-27T19:08:52+00:00"
+      "title": "This Under-the-Radar Semiconductor Stock Is Beating Nvidia and Broadcom in 2026 - The Motley Fool",
+      "compound": -0.8957,
+      "label": "negative",
+      "date": "2026-06-30T02:30:00+00:00"
     },
     {
       "id": "news_google_news_623f446dca2c",
@@ -364,36 +380,148 @@
       "date": "2026-06-22T08:15:23+00:00"
     },
     {
-      "id": "news_google_news_ef54565b438b",
+      "id": "news_google_news_ebf739e8a0b3",
       "source": "news",
-      "title": "Nvidia, Meta, Uber And An Energy Stock On CNBC\u2019s \u2018Final Trades\u2019 - Benzinga",
-      "compound": 0.5758,
+      "title": "Nvidia Is Still a Bargain. Analysts See 57% Upside in NVDA Stock. - Barchart.com",
+      "compound": 0.3818,
       "label": "positive",
-      "date": "2026-06-29T11:18:25+00:00"
+      "date": "2026-06-29T20:09:03+00:00"
     },
     {
-      "id": "news_google_news_f89d9a9a7d82",
+      "id": "news_google_news_fddf24041d37",
       "source": "news",
-      "title": "Nvidia's Huang calls black market data centers made of smuggled parts a 'dead end' - CNBC",
-      "compound": -0.9274,
+      "title": "Palantir surges 4% on Nvidia sovereign AI pact as software beats semis - Yahoo Finance",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T15:10:38+00:00"
+    },
+    {
+      "id": "news_google_news_b98dbf190294",
+      "source": "news",
+      "title": "Has Micron Technology Become the New Nvidia? - The Motley Fool",
+      "compound": -0.7319,
       "label": "negative",
-      "date": "2026-06-24T18:20:46+00:00"
+      "date": "2026-06-29T21:00:00+00:00"
     },
     {
-      "id": "news_google_news_94cfe2989a61",
+      "id": "news_google_news_4aade7672734",
       "source": "news",
-      "title": "Halos for Robotics: NVIDIA's Full Stack Robot Safety System - AI Magazine",
+      "title": "BlackRock Flags Big AI Trade Beyond Nvidia, AMD, Micron - Benzinga",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T21:46:33+00:00"
+    },
+    {
+      "id": "news_google_news_c7559cb8b1bf",
+      "source": "news",
+      "title": "Why Chinese AI Models Should Worry Nvidia, Micron Stock Investors - Trefis",
+      "compound": -0.7003,
+      "label": "negative",
+      "date": "2026-06-29T12:54:48+00:00"
+    },
+    {
+      "id": "news_google_news_87cd40e8de07",
+      "source": "news",
+      "title": "The share price of Nvidia and Micron are both testing/breaking key support targets - investingLive",
+      "compound": 0.8316,
+      "label": "positive",
+      "date": "2026-06-29T15:18:26+00:00"
+    },
+    {
+      "id": "news_google_news_56ccb0a0f964",
+      "source": "news",
+      "title": "Is The Vera CPU Already Priced Into NVIDIA Stock? - Forbes",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T14:31:08+00:00"
+    },
+    {
+      "id": "news_google_news_ba4aaaa6e555",
+      "source": "news",
+      "title": "NVIDIA DAQIRI targets real-time CERN data analysis | ETIH EdTech News - EdTech Innovation Hub",
+      "compound": 0.6369,
+      "label": "positive",
+      "date": "2026-06-30T00:00:01+00:00"
+    },
+    {
+      "id": "news_google_news_74de7ffb939c",
+      "source": "news",
+      "title": "Nvidia and Australian startup Firmus are building a 170,000-GPU data center in Indonesia - qz.com",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T15:24:21+00:00"
+    },
+    {
+      "id": "news_google_news_17464b2a5115",
+      "source": "news",
+      "title": "Bit Origin lands $11M AI servers tied to $360K monthly revenue - Stock Titan",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T13:00:00+00:00"
+    },
+    {
+      "id": "news_google_news_3be86ea3e47d",
+      "source": "news",
+      "title": "Databricks and Nvidia Launch Genesis Workbench for AI Scientists - HPCwire",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T15:30:36+00:00"
+    },
+    {
+      "id": "news_google_news_0d8298faa849",
+      "source": "news",
+      "title": "Nokia (HLSE:NOKIA) Partners With Nvidia To Build AI RAN 6G Networks - Yahoo Finance",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-28T22:06:00+00:00"
+    },
+    {
+      "id": "news_google_news_8f08bbf2a785",
+      "source": "news",
+      "title": "NVIDIA (NVDA) Among The Most Promising Robotics Stocks; Here\u2019s Why - Insider Monkey",
+      "compound": 0.7172,
+      "label": "positive",
+      "date": "2026-06-30T02:22:15+00:00"
+    },
+    {
+      "id": "news_google_news_140423f4f3a6",
+      "source": "news",
+      "title": "Hotter Than a Hot Tub: The 45\u00b0C Breakthrough to Cool AI\u2019s Biggest Machines - NVIDIA Blog",
+      "compound": 0.5574,
+      "label": "positive",
+      "date": "2026-06-21T07:00:00+00:00"
+    },
+    {
+      "id": "news_google_news_41c4089a8e78",
+      "source": "news",
+      "title": "Supermicro (SMCI) Faces Taiwan Raids In Nvidia Chip Smuggling Probe - Yahoo Finance",
+      "compound": -0.7351,
+      "label": "negative",
+      "date": "2026-06-29T21:07:31+00:00"
+    },
+    {
+      "id": "news_google_news_93d6a0729718",
+      "source": "news",
+      "title": "Nvidia's five-year-old RTX 3060 is reportedly back, and it costs almost exactly what it did in 2021 - XDA",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-30T05:55:58+00:00"
+    },
+    {
+      "id": "news_google_news_62156ee811b7",
+      "source": "news",
+      "title": "NN lands more NVIDIA cooling work as 52 machines go to data centers - Stock Titan",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T11:00:00+00:00"
+    },
+    {
+      "id": "news_google_news_18609032f04a",
+      "source": "news",
+      "title": "Halos signals Nvidia's bid to make safety certification the robotics gateway - digitimes",
       "compound": 0.6808,
       "label": "positive",
-      "date": "2026-06-29T11:48:34+00:00"
-    },
-    {
-      "id": "news_google_news_4fc87660e50d",
-      "source": "news",
-      "title": "Sharon AI Closes $1.6 Billion Strategic Financing To Support NVIDIA Compute Collaboration - Pulse 2.0",
-      "compound": 0.6597,
-      "label": "positive",
-      "date": "2026-06-29T12:07:32+00:00"
+      "date": "2026-06-29T23:30:07+00:00"
     },
     {
       "id": "news_google_news_b8ab385b1532",
@@ -404,140 +532,188 @@
       "date": "2026-06-24T20:53:00+00:00"
     },
     {
-      "id": "news_google_news_41341a17fb31",
+      "id": "news_google_news_e88abdf19b9f",
       "source": "news",
-      "title": "Nvidia Stock Slips Below $200. Competition Fears Are Growing. - Barron's",
-      "compound": -0.4939,
-      "label": "negative",
-      "date": "2026-06-25T18:38:00+00:00"
-    },
-    {
-      "id": "news_google_news_9b25cbdad611",
-      "source": "news",
-      "title": "Nvidia Owns This Under-the-Radar $20 Stock Poised to Disrupt a $1.8 Trillion Market - The Motley Fool",
-      "compound": -0.4215,
-      "label": "negative",
-      "date": "2026-06-27T12:23:00+00:00"
-    },
-    {
-      "id": "news_google_news_22c9047aa338",
-      "source": "news",
-      "title": "Will Nvidia Follow Amazon's Dot-Com Path? Jeremy Grantham Warns Of Brutal Tech Stock Reversal - Benzinga",
-      "compound": -0.885,
-      "label": "negative",
-      "date": "2026-06-29T06:32:35+00:00"
-    },
-    {
-      "id": "news_google_news_9ecea0846bbd",
-      "source": "news",
-      "title": "Wall Street Sees SpaceX Surpassing Nvidia in Long-Term Valuation - The Motley Fool",
-      "compound": -0.7003,
-      "label": "negative",
-      "date": "2026-06-28T22:07:00+00:00"
-    },
-    {
-      "id": "news_google_news_140423f4f3a6",
-      "source": "news",
-      "title": "Hotter Than a Hot Tub: The 45\u00b0C Breakthrough to Cool AI\u2019s Biggest Machines - NVIDIA Blog",
+      "title": "Marvell: A Buy Amid AI Infrastructure Boom And Nvidia Endorsement (NASDAQ:MRVL) - Seeking Alpha",
       "compound": 0.5574,
       "label": "positive",
-      "date": "2026-06-22T05:02:51+00:00"
+      "date": "2026-06-29T21:27:42+00:00"
     },
     {
-      "id": "news_google_news_63461449c9a9",
+      "id": "news_google_news_260e9ef798af",
       "source": "news",
-      "title": "Nvidia releases 'world's most powerful chip' for AI - The World Economic Forum",
-      "compound": 0.734,
+      "title": "Nvidia flew to Beijing with Trump to sell but China said no - Asia Times",
+      "compound": -0.6808,
+      "label": "negative",
+      "date": "2026-06-29T21:58:49+00:00"
+    },
+    {
+      "id": "news_google_news_d37f40ce8efe",
+      "source": "news",
+      "title": "Micron is about to be more profitable than any U.S. company except Nvidia and Google - MarketWatch",
+      "compound": 0.7496,
       "label": "positive",
-      "date": "2026-06-23T04:00:00+00:00"
+      "date": "2026-06-28T14:00:00+00:00"
     },
     {
-      "id": "news_google_news_a1c2396ad109",
+      "id": "news_google_news_9bb937fa8725",
       "source": "news",
-      "title": "NN stock surges 68% on new NVIDIA data center product awards - Investing.com",
-      "compound": 0.7184,
-      "label": "positive",
-      "date": "2026-06-29T11:39:54+00:00"
-    },
-    {
-      "id": "news_google_news_8cbeb58df14b",
-      "source": "news",
-      "title": "Nvidia expands Space-1 team for orbital AI - Let's Data Science",
+      "title": "Firmus expands to Indonesia through AI access deal with Nvidia - Light Reading",
       "compound": 0.2023,
       "label": "positive",
-      "date": "2026-06-29T09:46:17+00:00"
+      "date": "2026-06-29T12:41:34+00:00"
     },
     {
-      "id": "news_google_news_c7889b48d730",
+      "id": "news_google_news_5fe98e828d41",
       "source": "news",
-      "title": "Nvidia says AI's water challenge is largely solved - Axios",
+      "title": "NVIDIA BioNeMo Agent Toolkit Turns Biomolecular Models Into Callable Skills for AI Agents in Drug Discovery - MarkTechPost",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T19:06:47+00:00"
+    },
+    {
+      "id": "news_google_news_82a62ff04445",
+      "source": "news",
+      "title": "Nvidia cuts deals with Palantir, Anthropic and Firefly Aerospace - GamesBeat",
+      "compound": -0.5267,
+      "label": "negative",
+      "date": "2026-06-29T21:43:11+00:00"
+    },
+    {
+      "id": "news_google_news_b09a6531df24",
+      "source": "news",
+      "title": "Quantum Computing Emerges As The Next Major Investment Frontier, With NVIDIA (NASDAQ: NVDA), Google (NASDAQ: GOOG), And Microsoft (NASDAQ: MSFT) Leading - foreignpolicyjournal.com",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-30T02:30:00+00:00"
+    },
+    {
+      "id": "news_google_news_fad773e846df",
+      "source": "news",
+      "title": "NVIDIA adds BioNeMo toolkit for life sciences AI agents - Engineering.com",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T14:18:25+00:00"
+    },
+    {
+      "id": "news_google_news_181f9b79315a",
+      "source": "news",
+      "title": "Nvidia\u2019s Massive Telecom Project Could Be the Next Big Catalyst for Ciena Stock - Yahoo Finance",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T17:38:14+00:00"
+    },
+    {
+      "id": "news_google_news_269b2e07e367",
+      "source": "news",
+      "title": "NVIDIA (NASDAQ:NVDA) Trading 1.3% Higher - Should You Buy? - MarketBeat",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T21:24:20+00:00"
+    },
+    {
+      "id": "news_google_news_f9a5567e58b8",
+      "source": "news",
+      "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding - NVIDIA Developer",
+      "compound": 0.7351,
+      "label": "positive",
+      "date": "2026-06-23T15:14:05+00:00"
+    },
+    {
+      "id": "news_google_news_9d142e331bd2",
+      "source": "news",
+      "title": "Behind Rubin's decline, NVIDIA's CUDA myth is beginning to unravel. - Moomoo",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-30T03:04:06+00:00"
+    },
+    {
+      "id": "news_google_news_697487248694",
+      "source": "news",
+      "title": "Wall Street Sees SpaceX Surpassing Nvidia in Long-Term Valuation - Yahoo Finance",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-28T21:27:00+00:00"
+    },
+    {
+      "id": "news_google_news_6615ac9368f1",
+      "source": "news",
+      "title": "Forget prompts: Nvidia's Huang sees 'loop engineering' as AI's next frontier - digitimes",
+      "compound": -0.4215,
+      "label": "negative",
+      "date": "2026-06-30T02:29:04+00:00"
+    },
+    {
+      "id": "news_google_news_3ff7b5bc239e",
+      "source": "news",
+      "title": "Is NVIDIA (NVDA) the Best Fast Growth Stock to Buy as It Targets Fully Autonomous AI for Telecom Networks? - Yahoo Finance",
+      "compound": 0.932,
+      "label": "positive",
+      "date": "2026-06-29T10:25:25+00:00"
+    },
+    {
+      "id": "news_google_news_667cbe7a4fdc",
+      "source": "news",
+      "title": "NVIDIA\u2019s Blackwell Ultra GB300 Now Powers Anthropic\u2019s Claude Models on Microsoft Azure, Targeting Autonomous Enterprise Agents - Wccftech",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T19:05:00+00:00"
+    },
+    {
+      "id": "news_google_news_1dde0626529a",
+      "source": "news",
+      "title": "Super Micro Insists Cooperation as Taiwan Authorities Storm Offices in NVIDIA GPU Smuggling Crackdown on China Exports - Wccftech",
+      "compound": 0.3818,
+      "label": "positive",
+      "date": "2026-06-29T21:30:00+00:00"
+    },
+    {
+      "id": "news_google_news_6466fe146e0b",
+      "source": "news",
+      "title": "Green day on Monday for NVIDIA stock after gaining 1.27% - StockInvest.us",
+      "compound": 0.6808,
+      "label": "positive",
+      "date": "2026-06-30T00:48:55+00:00"
+    },
+    {
+      "id": "news_google_news_438460b7db9d",
+      "source": "news",
+      "title": "Nvidia (NASDAQ: NVDA) Holds Stakes In These Two Stocks That Investors Should Consider Buying Now - foreignpolicyjournal.com",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T21:11:00+00:00"
+    },
+    {
+      "id": "news_google_news_dc2465b855cf",
+      "source": "news",
+      "title": "Analysts Are Bullish on Top Technology Stocks: Penguin Solutions (PENG), Nvidia (NVDA) - The Globe and Mail",
+      "compound": 0.6124,
+      "label": "positive",
+      "date": "2026-06-30T00:58:22+00:00"
+    },
+    {
+      "id": "news_google_news_ff69afe6be07",
+      "source": "news",
+      "title": "Palantir and Nvidia Launch Secure AI Platform for Government Agencies (PLTR) - Yahoo Finance",
       "compound": 0.5859,
       "label": "positive",
-      "date": "2026-06-23T10:49:21+00:00"
+      "date": "2026-06-29T13:46:58+00:00"
     },
     {
-      "id": "news_google_news_e9013bfed53c",
+      "id": "news_google_news_39ca486c6c86",
       "source": "news",
-      "title": "Micron is tech's new margin king as memory crisis pushes company past Nvidia and Meta - CNBC",
-      "compound": -0.8481,
-      "label": "negative",
-      "date": "2026-06-24T22:32:56+00:00"
+      "title": "NVIDIA Brings Trusted, 24/7 AI Agents to Telecom Operations - NVIDIA Blog",
+      "compound": 0.7351,
+      "label": "positive",
+      "date": "2026-06-23T06:05:17+00:00"
     },
     {
-      "id": "news_google_news_61d50ac67490",
+      "id": "news_google_news_2842572cedde",
       "source": "news",
-      "title": "Nvidia Backs Firmus AI Cloud Deal - GuruFocus",
-      "compound": -0.1027,
-      "label": "negative",
-      "date": "2026-06-29T12:11:15+00:00"
-    },
-    {
-      "id": "news_google_news_bb12ba5a211f",
-      "source": "news",
-      "title": "Bit Origin (NASDAQ: BTOG) adds NVIDIA Blackwell B300 AI capacity - Stock Titan",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T13:01:41+00:00"
-    },
-    {
-      "id": "news_google_news_3127ff9038d9",
-      "source": "news",
-      "title": "Nvidia's AI Infrastructure Push Gets Bigger - GuruFocus",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T12:11:15+00:00"
-    },
-    {
-      "id": "news_google_news_e988a7cdceac",
-      "source": "news",
-      "title": "Kazakhstan Data Center Valley Attracts Firebird and NVIDIA Partnership - The Times Of Central Asia",
+      "title": "Palantir looks to boost commercialization of new software; teams with Nvidia on Nemotron (PLTR:NASDAQ) - Seeking Alpha",
       "compound": 0.6597,
       "label": "positive",
-      "date": "2026-06-29T12:44:21+00:00"
-    },
-    {
-      "id": "news_google_news_fac5aac8ecf7",
-      "source": "news",
-      "title": "After a year on AMD, one NVIDIA feature finally broke me\u2014and it has nothing to do with DLSS - How-To Geek",
-      "compound": -0.802,
-      "label": "negative",
-      "date": "2026-06-28T14:00:16+00:00"
-    },
-    {
-      "id": "news_google_news_ac88317544bb",
-      "source": "news",
-      "title": "Nvidia CEO says national security takes priority over commercial opportunities - Crypto Briefing",
-      "compound": 0.8402,
-      "label": "positive",
-      "date": "2026-06-29T09:09:49+00:00"
-    },
-    {
-      "id": "news_google_news_936a152deb77",
-      "source": "news",
-      "title": "NVIDIA\u2019s (NVDA) Banned AI Chips Have Doubled in Price on China\u2019s Black Market - Insider Monkey",
-      "compound": -0.7184,
-      "label": "negative",
-      "date": "2026-06-29T12:00:35+00:00"
+      "date": "2026-06-29T11:28:33+00:00"
     },
     {
       "id": "news_google_news_c68d05c46824",
@@ -548,84 +724,84 @@
       "date": "2026-06-16T07:00:00+00:00"
     },
     {
-      "id": "news_google_news_950cc38162b2",
+      "id": "news_google_news_b4510dd7afa2",
       "source": "news",
-      "title": "Nvidia targets fully autonomous AI for telecom networks - Crypto Briefing",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T10:48:43+00:00"
-    },
-    {
-      "id": "news_google_news_e2a03df3ba0b",
-      "source": "news",
-      "title": "NVIDIA, Australia's Firmus to jointly deploy 170,000 AI accelerators in Indonesia, targeting $30B in revenue - TNGlobal",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T04:41:19+00:00"
-    },
-    {
-      "id": "news_google_news_e9c22cac2dc6",
-      "source": "news",
-      "title": "CoreWeave (CRWV) Secures $99 Billion Backlog With Nvidia, Meta, Microsoft And OpenAI - Yahoo Finance",
-      "compound": 0.5574,
+      "title": "Nvidia (NVDA) Wins BioNeMo Partners As Jamendo Suit Tests Its AI Expansion - simplywall.st",
+      "compound": 0.8126,
       "label": "positive",
-      "date": "2026-06-28T22:06:13+00:00"
+      "date": "2026-06-29T11:54:05+00:00"
     },
     {
-      "id": "news_google_news_c1eb51323295",
+      "id": "news_google_news_9994d2282547",
       "source": "news",
-      "title": "Vistra Stock Is Down 24% From Its High. Here\u2019s What the KKR-Nvidia AI Partnership Means for the Recovery - TIKR.com",
+      "title": "NVIDIA (NVDA) CEO Says National Security Takes Priority Over Commercial Opportunity - Yahoo Finance",
+      "compound": 0.8555,
+      "label": "positive",
+      "date": "2026-06-29T07:54:41+00:00"
+    },
+    {
+      "id": "news_google_news_fe2fd7a9f343",
+      "source": "news",
+      "title": "Why BlackRock, Nvidia, and Temasek are betting billions on quantum computing - Fortune",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T08:32:27+00:00"
+      "date": "2026-06-29T11:15:00+00:00"
     },
     {
-      "id": "news_google_news_cfb870abfb65",
+      "id": "news_google_news_dbeec74a7d41",
       "source": "news",
-      "title": "Nvidia to Supply Up to 170,000 AI Accelerators for Firmus' Indonesia AI Campus - Moomoo",
+      "title": "NVIDIA stock holds near $193 as AI demand sustains despite recent pullback - eciks.org",
+      "compound": -0.25,
+      "label": "negative",
+      "date": "2026-06-29T14:39:10+00:00"
+    },
+    {
+      "id": "news_google_news_17f650904286",
+      "source": "news",
+      "title": "Tesla Leads Magnificent Seven Recovery, Analysts Chime In On Deliveries - Investor's Business Daily",
+      "compound": 0.8316,
+      "label": "positive",
+      "date": "2026-06-29T20:05:00+00:00"
+    },
+    {
+      "id": "news_google_news_3db1c87d4e9e",
+      "source": "news",
+      "title": "Jensen Huang\u2019s Net Worth Under Pressure As Nvidia Stock Nears Bear Market - Yahoo Finance",
+      "compound": -0.1531,
+      "label": "negative",
+      "date": "2026-06-29T10:46:07+00:00"
+    },
+    {
+      "id": "news_google_news_d63bf02fe614",
+      "source": "news",
+      "title": "Up 50% in a year! That\u2019s not the only reason I\u2019d consider buying Barclays over Nvidia stock today - twelfthmagpie.com",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T09:44:49+00:00"
+      "date": "2026-06-29T18:06:00+00:00"
     },
     {
-      "id": "news_google_news_6453acac4d94",
+      "id": "news_google_news_0ea058200eec",
       "source": "news",
-      "title": "Is NVIDIA Corporation (NVDA) One of the Best Brain-Computer Interface Stocks to Buy? - Yahoo Finance",
+      "title": "Bit Origin Acquires $11 Million Of NVIDIA Blackwell B300 AI Infrastructure - Pulse 2.0",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T17:17:34+00:00"
+    },
+    {
+      "id": "news_google_news_e8bfb4e4bade",
+      "source": "news",
+      "title": "Is NVIDIA Corporation (NVDA) One of the Best Semiconductor Stocks to Buy According to Billionaires? - Yahoo Finance",
       "compound": 0.8677,
       "label": "positive",
-      "date": "2026-06-27T15:32:45+00:00"
+      "date": "2026-06-28T18:44:18+00:00"
     },
     {
-      "id": "news_google_news_ffe0ef28bd1d",
+      "id": "news_google_news_63461449c9a9",
       "source": "news",
-      "title": "Palantir Deploys NVIDIA Nemotron AI in Secure Fed Environments - The Tech Buzz",
-      "compound": 0.5859,
+      "title": "Nvidia releases 'world's most powerful chip' for AI - The World Economic Forum",
+      "compound": 0.734,
       "label": "positive",
-      "date": "2026-06-29T11:44:00+00:00"
-    },
-    {
-      "id": "news_google_news_60781402e296",
-      "source": "news",
-      "title": "This Nvidia-Backed Artificial Intelligence (AI) Infrastructure Stock Has Multibagger Potential. It Is Trading at an Incredibly Attractive Valuation Right Now - The Motley Fool",
-      "compound": 0.7774,
-      "label": "positive",
-      "date": "2026-06-28T21:29:00+00:00"
-    },
-    {
-      "id": "news_google_news_e5f59971fd04",
-      "source": "news",
-      "title": "Nvidia, Micron, AMD lead tech sell-off as AI trade cools - Yahoo Finance",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-23T20:40:29+00:00"
-    },
-    {
-      "id": "news_google_news_dbbd9e30766d",
-      "source": "news",
-      "title": "Build On-Device AI Companions with the NVIDIA ACE Game Agent SDK and Unreal Engine 5 Plugins - NVIDIA Developer",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-16T07:00:00+00:00"
+      "date": "2026-06-23T04:00:00+00:00"
     },
     {
       "id": "news_google_news_8d7a64fd1e7d",
@@ -636,196 +812,140 @@
       "date": "2026-06-22T08:30:12+00:00"
     },
     {
-      "id": "news_google_news_dca2c271b7dd",
+      "id": "news_google_news_c7889b48d730",
       "source": "news",
-      "title": "1 Nvidia-Backed AI Infrastructure Stock to Buy Hand Over Fist Right Now - The Motley Fool",
-      "compound": 0.1531,
+      "title": "Nvidia says AI's water challenge is largely solved - Axios",
+      "compound": 0.5859,
       "label": "positive",
-      "date": "2026-06-28T16:30:00+00:00"
+      "date": "2026-06-23T10:49:21+00:00"
     },
     {
-      "id": "news_google_news_be51baba7928",
+      "id": "news_google_news_fac5aac8ecf7",
       "source": "news",
-      "title": "2 Nvidia-Owned Stocks Investors Should Buy Now - Yahoo Finance",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T08:45:00+00:00"
-    },
-    {
-      "id": "news_google_news_5e439a2d705c",
-      "source": "news",
-      "title": "Firmus & DayOne to co-develop 360MW Nvidia AI factory in Batam - W.Media",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T07:10:00+00:00"
-    },
-    {
-      "id": "news_google_news_bc338ba1ffef",
-      "source": "news",
-      "title": "NVIDIA Stockholder Meeting Set for June 24; Individuals Can Participate Online - NVIDIA Newsroom",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-11T07:00:00+00:00"
-    },
-    {
-      "id": "news_google_news_30970b0524c6",
-      "source": "news",
-      "title": "Industry Comparison: Evaluating NVIDIA Against Competitors In Semiconductors & Semiconductor Equipmen - Benzinga",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T09:58:27+00:00"
-    },
-    {
-      "id": "news_google_news_9ec8b564ceb6",
-      "source": "news",
-      "title": "NVIDIA CORP : Bernstein reaffirms its Buy rating - marketscreener.com",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T09:38:17+00:00"
-    },
-    {
-      "id": "news_google_news_c9660703018d",
-      "source": "news",
-      "title": "Qualcomm (NASDAQ: QCOM) Takes On Nvidia With AI Data Center Push, Meta And Microsoft Partnerships - foreignpolicyjournal.com",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T19:49:00+00:00"
-    },
-    {
-      "id": "news_google_news_5fb1af4323e4",
-      "source": "news",
-      "title": "The Billionaire Who Sold Nvidia Too Early Just Bought 196,000 Shares of Broadcom -- Here's the Thesis Behind the Rotation - The Motley Fool",
-      "compound": -0.34,
+      "title": "After a year on AMD, one NVIDIA feature finally broke me\u2014and it has nothing to do with DLSS - How-To Geek",
+      "compound": -0.802,
       "label": "negative",
-      "date": "2026-06-28T17:24:00+00:00"
+      "date": "2026-06-28T14:00:16+00:00"
     },
     {
-      "id": "news_google_news_7cbb95c669ec",
+      "id": "news_google_news_cddb4a54da58",
       "source": "news",
-      "title": "Duvvuru Sravan Kumar Reddy Earns NVIDIA Inception and Launches Tw - The National Law Review",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T11:25:23+00:00"
-    },
-    {
-      "id": "news_google_news_b3ce3877302b",
-      "source": "news",
-      "title": "NVidia AI Murder Bots Found Attacking Ukraine - flyingpenguin.com",
-      "compound": -0.9468,
-      "label": "negative",
-      "date": "2026-06-28T18:36:55+00:00"
-    },
-    {
-      "id": "news_google_news_75765e9f5241",
-      "source": "news",
-      "title": "NVIDIA has quietly dominated this type of chip - 36Kr",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T03:00:38+00:00"
-    },
-    {
-      "id": "news_google_news_9caaf1b2513f",
-      "source": "news",
-      "title": "AI Swing At Wall Street: Nasdaq Futures Jump 1%; Nvidia Seen Rebounding, Micron Under Pressure - NDTV Profit",
-      "compound": 0.34,
+      "title": "NN, Inc. Announces Significant New Awards for its NVIDIA Data Center Liquid Cooled Products Business - Yahoo Finance",
+      "compound": 0.8225,
       "label": "positive",
-      "date": "2026-06-29T12:19:11+00:00"
+      "date": "2026-06-29T11:00:00+00:00"
     },
     {
-      "id": "news_google_news_3beb6caf4130",
+      "id": "news_ars_technica_445626e5ca7c",
       "source": "news",
-      "title": "BlackRock, Nvidia, and Temasek pour billions into quantum computing as VC funding hits record highs - Crypto Briefing",
+      "title": "US offers $10 million for info on group behind Signal and WhatsApp hacking spree",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T11:40:43+00:00"
+      "date": "2026-06-29T22:05:33+00:00"
     },
     {
-      "id": "news_google_news_158e0d11d7f5",
+      "id": "news_ars_technica_8a1b18a340c7",
       "source": "news",
-      "title": "New GeForce Game Ready Driver Released - NVIDIA",
-      "compound": 0.6124,
-      "label": "positive",
-      "date": "2026-06-16T07:00:00+00:00"
-    },
-    {
-      "id": "news_google_news_9716022f7b07",
-      "source": "news",
-      "title": "Ex-Nvidia Engineers Build Office Robot That Actually Works - The Tech Buzz",
+      "title": "South Korea to spend $1T on more memory chip production and humanoid robots",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T08:41:00+00:00"
+      "date": "2026-06-29T21:09:43+00:00"
     },
     {
-      "id": "news_google_news_3d2a5c25b782",
+      "id": "news_ars_technica_5a945e83b5fc",
       "source": "news",
-      "title": "Australia's Firmus announces Nvidia-backed 'AI factory' in Indonesia - Nikkei Asia",
+      "title": "US renewable boom passes key milestone in April",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-29T03:07:00+00:00"
+      "date": "2026-06-29T20:12:30+00:00"
     },
     {
-      "id": "news_google_news_d62a8952111a",
+      "id": "news_ars_technica_7f9983b28627",
       "source": "news",
-      "title": "NVIDIA CEO Jensen Huang doesn't wear a watch, his reason has become a lesson in leadership - Firstpost",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T10:39:48+00:00"
-    },
-    {
-      "id": "news_google_news_602ff7d0e943",
-      "source": "news",
-      "title": "NVIDIA Enters a Critical Week at $192 \u2014 Can Core PCE Spark the Next AI Stock Rebound? - TradingKey",
-      "compound": -0.2869,
-      "label": "negative",
-      "date": "2026-06-29T03:06:52+00:00"
-    },
-    {
-      "id": "news_google_news_5188cfdf4306",
-      "source": "news",
-      "title": "BYD Seal tests new driving tech to counter Nvidia dominance - CarNewsChina.com",
-      "compound": 0.3818,
-      "label": "positive",
-      "date": "2026-06-29T01:27:00+00:00"
-    },
-    {
-      "id": "news_google_news_661f806de7e0",
-      "source": "news",
-      "title": "NVIDIA and Microsoft Reinvent Windows PCs for the Age of Personal AI - NVIDIA Newsroom",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-05-31T07:00:00+00:00"
-    },
-    {
-      "id": "news_google_news_7a693fe7dc10",
-      "source": "news",
-      "title": "Bit Origin Acquires NVIDIA Blackwell B300 AI Infrastructure with Contracted Customer Deployment in Malaysia - marketscreener.com",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T13:01:21+00:00"
-    },
-    {
-      "id": "news_google_news_43a450bfa555",
-      "source": "news",
-      "title": "Open Source AI Keeps Nvidia Ahead Of Cerebras - Open Source For You",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T12:53:38+00:00"
-    },
-    {
-      "id": "news_google_news_9ad9bc3c496f",
-      "source": "news",
-      "title": "Nvidia to offer affordable AI computing to Australia's Firmus Technologies under new deal - The Times of India",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T11:52:00+00:00"
-    },
-    {
-      "id": "news_google_news_35e8c1189081",
-      "source": "news",
-      "title": "IREN (NASDAQ: IREN) Secures Microsoft And Nvidia Partnerships As AI Data Center Push Targets $4.4B In Annual Recurring Revenue - foreignpolicyjournal.com",
+      "title": "Supreme Court ruling guts government\u2019s use of geofence warrants",
       "compound": 0.5574,
       "label": "positive",
-      "date": "2026-06-28T18:24:00+00:00"
+      "date": "2026-06-29T20:04:04+00:00"
+    },
+    {
+      "id": "news_ars_technica_9489ca565ae6",
+      "source": "news",
+      "title": "Sony erases digital content from libraries; we're reminded we don\u2019t own what we buy",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T19:10:57+00:00"
+    },
+    {
+      "id": "news_ars_technica_6eadcd426d2d",
+      "source": "news",
+      "title": "Ozone loss was a thing even before CFCs were widely used",
+      "compound": -0.6124,
+      "label": "negative",
+      "date": "2026-06-29T19:00:23+00:00"
+    },
+    {
+      "id": "news_ars_technica_3f011a303450",
+      "source": "news",
+      "title": "Google warns EU's plans to weaken its monopoly could expose user data",
+      "compound": -0.595,
+      "label": "negative",
+      "date": "2026-06-29T18:21:31+00:00"
+    },
+    {
+      "id": "news_ars_technica_455898d39b9f",
+      "source": "news",
+      "title": "Quantum computing startup says it will leapfrog everybody",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T17:59:50+00:00"
+    },
+    {
+      "id": "news_ars_technica_ecc423ee9950",
+      "source": "news",
+      "title": "Kalshi sues Illinois over new tax on prediction market sports bets",
+      "compound": -0.6486,
+      "label": "negative",
+      "date": "2026-06-29T17:48:11+00:00"
+    },
+    {
+      "id": "news_ars_technica_183347f16b1d",
+      "source": "news",
+      "title": "F1 in Austria: Starts off exciting, then goes the opposite way",
+      "compound": 0.4939,
+      "label": "positive",
+      "date": "2026-06-29T16:04:52+00:00"
+    },
+    {
+      "id": "news_ars_technica_5a9210f99459",
+      "source": "news",
+      "title": "Wildwood featurette lifts the veil on building its stop-motion world",
+      "compound": 0.4404,
+      "label": "positive",
+      "date": "2026-06-29T15:43:50+00:00"
+    },
+    {
+      "id": "news_ars_technica_da264dc0ca6f",
+      "source": "news",
+      "title": "In a bold move, Rocket Lab acquires Iridium Communications",
+      "compound": 0.3818,
+      "label": "positive",
+      "date": "2026-06-29T15:33:54+00:00"
+    },
+    {
+      "id": "news_ars_technica_0510e241eca2",
+      "source": "news",
+      "title": "Think tank games out how to respond to disaster scenarios in space warfare",
+      "compound": -0.743,
+      "label": "negative",
+      "date": "2026-06-29T15:21:40+00:00"
+    },
+    {
+      "id": "news_ars_technica_e9f97fa61407",
+      "source": "news",
+      "title": "Comcast is splitting its media and broadband properties",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T13:25:41+00:00"
     },
     {
       "id": "news_ars_technica_5b6ef0464929",
@@ -855,8 +975,8 @@
       "id": "news_ars_technica_9b4be103f5d0",
       "source": "news",
       "title": "South Korea plans to train entire military as \"drone warriors\"",
-      "compound": 0.2263,
-      "label": "positive",
+      "compound": -0.34,
+      "label": "negative",
       "date": "2026-06-26T22:19:05+00:00"
     },
     {
@@ -876,116 +996,20 @@
       "date": "2026-06-26T21:12:07+00:00"
     },
     {
-      "id": "news_ars_technica_a9ac2a1f6722",
-      "source": "news",
-      "title": "Russian citizens told \"switch to Android\" after Apple blocks key Russian apps",
-      "compound": -0.4939,
-      "label": "negative",
-      "date": "2026-06-26T20:58:02+00:00"
-    },
-    {
-      "id": "news_ars_technica_6676e195d81c",
-      "source": "news",
-      "title": "NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-26T20:04:55+00:00"
-    },
-    {
-      "id": "news_ars_technica_5d332f61c5ea",
-      "source": "news",
-      "title": "FCC accused of hiding Chairman Carr's messages with DOGE and Musk",
-      "compound": -0.765,
-      "label": "negative",
-      "date": "2026-06-26T18:51:04+00:00"
-    },
-    {
-      "id": "news_ars_technica_4d06943a6304",
-      "source": "news",
-      "title": "Netflix now requires every user profile to be tied to unique email address",
-      "compound": -0.1695,
-      "label": "negative",
-      "date": "2026-06-26T18:19:58+00:00"
-    },
-    {
-      "id": "news_ars_technica_c629e8c61565",
-      "source": "news",
-      "title": "Antibiotic \"megacluster\" discovery provides new strategy to fight superbugs",
-      "compound": 0.1531,
+      "id": "ir_nvidia_newsroom_e68b671fc2c8",
+      "source": "nvidia_ir",
+      "title": "Claude Meets Blackwell Ultra: Anthropic\u2019s Models Now Run on NVIDIA GB300 in Azure",
+      "compound": 0.7783,
       "label": "positive",
-      "date": "2026-06-26T17:46:07+00:00"
+      "date": "2026-06-29T17:00:19+00:00"
     },
     {
-      "id": "news_ars_technica_14968b11a7de",
-      "source": "news",
-      "title": "Ars Live: What's the latest in the aftermath of the New Glenn catastrophe?",
-      "compound": -0.4939,
-      "label": "negative",
-      "date": "2026-06-26T16:24:59+00:00"
-    },
-    {
-      "id": "news_ars_technica_678f1ddce3b9",
-      "source": "news",
-      "title": "VW may close four factories to adapt to the future, report says",
-      "compound": -0.1531,
-      "label": "negative",
-      "date": "2026-06-26T15:10:03+00:00"
-    },
-    {
-      "id": "news_ars_technica_b39af0e8a1d9",
-      "source": "news",
-      "title": "Feedbacks upon feedbacks: Rock weathering and the climate",
+      "id": "ir_nvidia_newsroom_5cf6f585efdc",
+      "source": "nvidia_ir",
+      "title": "Firefly Aerospace Operates NVIDIA Jetson in Lunar Orbit for the First Time",
       "compound": 0.0,
       "label": "neutral",
-      "date": "2026-06-26T14:41:18+00:00"
-    },
-    {
-      "id": "news_ars_technica_d387f145d331",
-      "source": "news",
-      "title": "SpaceX plans to launch Starlink mobile service in the US",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-26T13:22:59+00:00"
-    },
-    {
-      "id": "news_ars_technica_c954823c486b",
-      "source": "news",
-      "title": "Rocket Report: China may soon attempt booster landing; Rocket Lab does rapid response",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-26T11:00:59+00:00"
-    },
-    {
-      "id": "news_ars_technica_b8c293bad625",
-      "source": "news",
-      "title": "Microsoft adds another year to Windows 10 extended update program",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-25T20:24:09+00:00"
-    },
-    {
-      "id": "news_ars_technica_ebdefb1fdc36",
-      "source": "news",
-      "title": "FCC may kill $2B program that connects schools and libraries to Internet",
-      "compound": -0.7845,
-      "label": "negative",
-      "date": "2026-06-25T20:01:08+00:00"
-    },
-    {
-      "id": "news_ars_technica_47b14e041896",
-      "source": "news",
-      "title": "Notion killing Skiff-influenced email app since most users use AI agents instead",
-      "compound": -0.6597,
-      "label": "negative",
-      "date": "2026-06-25T19:04:57+00:00"
-    },
-    {
-      "id": "news_ars_technica_043db2fe0fe2",
-      "source": "news",
-      "title": "Google finally releases a Finance Android app, promises iOS version later in 2026",
-      "compound": 0.2023,
-      "label": "positive",
-      "date": "2026-06-25T18:38:51+00:00"
+      "date": "2026-06-29T15:00:00+00:00"
     },
     {
       "id": "ir_nvidia_newsroom_00c305c618d0",
@@ -1132,22 +1156,6 @@
       "date": "2026-06-18T13:00:43+00:00"
     },
     {
-      "id": "ir_nvidia_newsroom_e1a1021043ec",
-      "source": "nvidia_ir",
-      "title": "Sync and Stream: GeForce NOW Connects to Members\u2019 Game Libraries Across Devices",
-      "compound": 0.9638,
-      "label": "positive",
-      "date": "2026-06-18T13:00:32+00:00"
-    },
-    {
-      "id": "ir_nvidia_newsroom_4751d22d2888",
-      "source": "nvidia_ir",
-      "title": "France Advances Europe\u2019s AI Future With NVIDIA Technologies",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-18T06:00:59+00:00"
-    },
-    {
       "id": "reddit_t3_1ugi3g7",
       "source": "reddit",
       "title": "The Resonance Files #001: Dylan Faden Wakes",
@@ -1164,20 +1172,36 @@
       "date": "2026-06-25T21:52:10+00:00"
     },
     {
+      "id": "reddit_t3_1uj2th7",
+      "source": "reddit",
+      "title": "Wich RTX 5070Ti to choose?",
+      "compound": 0.8611,
+      "label": "positive",
+      "date": "2026-06-29T19:46:21+00:00"
+    },
+    {
+      "id": "reddit_t3_1uirrt1",
+      "source": "reddit",
+      "title": "Is upgrading from an RX 580 to an RTX 2060 6GB still worth it in 2026?",
+      "compound": 0.9636,
+      "label": "positive",
+      "date": "2026-06-29T12:57:13+00:00"
+    },
+    {
+      "id": "reddit_t3_1ujexr3",
+      "source": "reddit",
+      "title": "how did yall score your card on launch day?",
+      "compound": 0.9605,
+      "label": "positive",
+      "date": "2026-06-30T04:22:11+00:00"
+    },
+    {
       "id": "reddit_t3_1ui60cu",
       "source": "reddit",
       "title": "Undervolt on RTX 5070 is AMAZING",
       "compound": 0.9855,
       "label": "positive",
       "date": "2026-06-28T19:16:10+00:00"
-    },
-    {
-      "id": "reddit_t3_1uirbxe",
-      "source": "reddit",
-      "title": "5090 astral rog",
-      "compound": -0.9012,
-      "label": "negative",
-      "date": "2026-06-29T12:37:53+00:00"
     },
     {
       "id": "reddit_t3_1uiibtf",
@@ -1188,12 +1212,28 @@
       "date": "2026-06-29T04:28:52+00:00"
     },
     {
-      "id": "reddit_t3_1uirrt1",
+      "id": "reddit_t3_1uj0a87",
       "source": "reddit",
-      "title": "Is upgrading from an RX 580 to an RTX 2060 6GB still worth it in 2026?",
-      "compound": 0.9636,
+      "title": "Pny argb oc vs asus prime rtx 5070 ti",
+      "compound": 0.9697,
       "label": "positive",
-      "date": "2026-06-29T12:57:13+00:00"
+      "date": "2026-06-29T18:14:12+00:00"
+    },
+    {
+      "id": "reddit_t3_1uirbxe",
+      "source": "reddit",
+      "title": "5090 astral rog",
+      "compound": -0.9012,
+      "label": "negative",
+      "date": "2026-06-29T12:37:53+00:00"
+    },
+    {
+      "id": "reddit_t3_1uiwnxv",
+      "source": "reddit",
+      "title": "Upgrading from an RTX 3050 8gb",
+      "compound": 0.4767,
+      "label": "positive",
+      "date": "2026-06-29T16:03:13+00:00"
     },
     {
       "id": "reddit_t3_1uii6qv",
@@ -1218,14 +1258,6 @@
       "compound": 0.8176,
       "label": "positive",
       "date": "2026-06-29T03:01:02+00:00"
-    },
-    {
-      "id": "reddit_t3_1uic9eo",
-      "source": "reddit",
-      "title": "What's your oipinion on 4060?",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T23:33:50+00:00"
     },
     {
       "id": "reddit_t3_1ugzsp4",
@@ -1266,6 +1298,14 @@
       "compound": 0.9313,
       "label": "positive",
       "date": "2026-06-29T03:46:50+00:00"
+    },
+    {
+      "id": "reddit_t3_1uic9eo",
+      "source": "reddit",
+      "title": "What's your oipinion on 4060?",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-28T23:33:50+00:00"
     },
     {
       "id": "reddit_t3_1uicknc",
@@ -1316,44 +1356,28 @@
       "date": "2026-06-27T00:10:35+00:00"
     },
     {
-      "id": "reddit_t3_1uh8ddi",
+      "id": "reddit_t3_1uj37dn",
       "source": "reddit",
-      "title": "ASUS expands GeForce RTX 5060 Dual lineup with Advanced SKUs",
-      "compound": 0.5859,
-      "label": "positive",
-      "date": "2026-06-27T17:18:51+00:00"
-    },
-    {
-      "id": "reddit_t3_1ug2mev",
-      "source": "reddit",
-      "title": "PTM7950 on 3-year-old Gigabyte 4070Ti. Better temps than new.",
-      "compound": 0.7003,
-      "label": "positive",
-      "date": "2026-06-26T10:07:56+00:00"
-    },
-    {
-      "id": "reddit_t3_1uga2ok",
-      "source": "reddit",
-      "title": "It fit now!",
-      "compound": 0.1734,
-      "label": "positive",
-      "date": "2026-06-26T15:30:47+00:00"
-    },
-    {
-      "id": "reddit_t3_1ugco3r",
-      "source": "reddit",
-      "title": "NVIDIA 580.173.02 Linux driver released for older GeForce GTX GPUs",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-26T17:05:41+00:00"
-    },
-    {
-      "id": "reddit_t3_1uio695",
-      "source": "reddit",
-      "title": "Daily Discussion Thread for June 29, 2026",
+      "title": "What Are Your Moves Tomorrow, June 30, 2026",
       "compound": -0.2411,
       "label": "negative",
-      "date": "2026-06-29T10:00:37+00:00"
+      "date": "2026-06-29T20:00:37+00:00"
+    },
+    {
+      "id": "reddit_t3_1ujfj2b",
+      "source": "reddit",
+      "title": "Strategy prepares to sell up to $1.25 billion of Bitcoin",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-30T04:52:28+00:00"
+    },
+    {
+      "id": "reddit_t3_1ujepy8",
+      "source": "reddit",
+      "title": "$4,400 -> $294,000",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-30T04:11:25+00:00"
     },
     {
       "id": "reddit_t3_1uipg80",
@@ -1364,6 +1388,38 @@
       "date": "2026-06-29T11:08:52+00:00"
     },
     {
+      "id": "reddit_t3_1uiy6hq",
+      "source": "reddit",
+      "title": "Went full retard with my kid\u2019s college savings. WEN lambo?",
+      "compound": -0.7998,
+      "label": "negative",
+      "date": "2026-06-29T16:57:45+00:00"
+    },
+    {
+      "id": "reddit_t3_1uj0m1f",
+      "source": "reddit",
+      "title": "AND THE COWS GO MUUUUUU",
+      "compound": -0.4939,
+      "label": "negative",
+      "date": "2026-06-29T18:26:24+00:00"
+    },
+    {
+      "id": "reddit_t3_1uj3gef",
+      "source": "reddit",
+      "title": "Super Micro -8% after Taiwan raids offices in expanding Nvidia AI chip smuggling probe",
+      "compound": 0.8014,
+      "label": "positive",
+      "date": "2026-06-29T20:09:48+00:00"
+    },
+    {
+      "id": "reddit_t3_1uix1sw",
+      "source": "reddit",
+      "title": "Bag Holder Bingo Card",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T16:16:55+00:00"
+    },
+    {
       "id": "reddit_t3_1uiqkgp",
       "source": "reddit",
       "title": "Rocket Lab to buy satellite communications firm Iridium in $8 billion deal",
@@ -1372,180 +1428,132 @@
       "date": "2026-06-29T12:03:22+00:00"
     },
     {
-      "id": "reddit_t3_1ui8cae",
+      "id": "reddit_t3_1ujbst8",
       "source": "reddit",
-      "title": "Weekends Over, Wars Over!",
-      "compound": -0.5983,
-      "label": "negative",
-      "date": "2026-06-28T20:47:47+00:00"
-    },
-    {
-      "id": "reddit_t3_1uirnt3",
-      "source": "reddit",
-      "title": "Memory Trio Samsung, SK Hynix & Micron Face Class Action Lawsuit As Prices Reach Historical High Due To Shortages",
-      "compound": -0.5859,
-      "label": "negative",
-      "date": "2026-06-29T12:52:22+00:00"
-    },
-    {
-      "id": "reddit_t3_1uik31c",
-      "source": "reddit",
-      "title": "Samsung Electronics, SK Hynix to invest in two new fabrication sites in South Korea, government says",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T06:03:02+00:00"
-    },
-    {
-      "id": "reddit_t3_1uie8bf",
-      "source": "reddit",
-      "title": "KOSPI opens 3% lower as financial regulators indefinitely postpone the launch of weekly options.",
-      "compound": -0.7351,
-      "label": "negative",
-      "date": "2026-06-29T01:05:33+00:00"
-    },
-    {
-      "id": "reddit_t3_1uhypv3",
-      "source": "reddit",
-      "title": "Didn\u2019t know we had regards in Alaska",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T14:28:37+00:00"
-    },
-    {
-      "id": "reddit_t3_1ui8dyn",
-      "source": "reddit",
-      "title": "US, Iran Halt Strikes Ahead of Tuesday Talks",
-      "compound": -0.6124,
-      "label": "negative",
-      "date": "2026-06-28T20:49:45+00:00"
-    },
-    {
-      "id": "reddit_t3_1uidu6z",
-      "source": "reddit",
-      "title": "Samsung, SK Reportedly to Invest $1.3 Trillion Over 10 Years",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-29T00:46:48+00:00"
-    },
-    {
-      "id": "reddit_t3_1uiatng",
-      "source": "reddit",
-      "title": "Google limits Meta\u2019s use of its Gemini AI models, FT reports",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T22:30:17+00:00"
-    },
-    {
-      "id": "reddit_t3_1uiaw7j",
-      "source": "reddit",
-      "title": "So about that AI trade..",
-      "compound": 0.6597,
+      "title": "YOLO - Market Doesn't Understand Mattel (MAT)",
+      "compound": 0.9857,
       "label": "positive",
-      "date": "2026-06-28T22:33:23+00:00"
+      "date": "2026-06-30T01:52:41+00:00"
     },
     {
-      "id": "reddit_t3_1uin8ul",
+      "id": "reddit_t3_1ujcjf8",
       "source": "reddit",
-      "title": "Is anyone shorting Global ETFs ahead of July 7th?",
-      "compound": 0.212,
+      "title": "We ain\u2019t no Sellas!",
+      "compound": -0.6103,
+      "label": "negative",
+      "date": "2026-06-30T02:26:41+00:00"
+    },
+    {
+      "id": "reddit_t3_1uiwvd8",
+      "source": "reddit",
+      "title": "Discovered 0DTEs",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T16:10:31+00:00"
+    },
+    {
+      "id": "reddit_t3_1ujel6k",
+      "source": "reddit",
+      "title": "Sold some AMD today and diversified",
+      "compound": 0.4404,
       "label": "positive",
-      "date": "2026-06-29T09:05:39+00:00"
+      "date": "2026-06-30T04:04:56+00:00"
     },
     {
-      "id": "reddit_t3_1ui75bc",
+      "id": "reddit_t3_1uizig9",
       "source": "reddit",
-      "title": "What Are Your Moves Tomorrow, June 29, 2026",
+      "title": "Just YOLO\u2019d the dip on SNDK! Let\u2019s go! Bring me back a Lamborghini SVJ!",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T17:46:24+00:00"
+    },
+    {
+      "id": "reddit_t3_1uj39ph",
+      "source": "reddit",
+      "title": "$345,000 Yolo $BB",
+      "compound": 0.9409,
+      "label": "positive",
+      "date": "2026-06-29T20:02:52+00:00"
+    },
+    {
+      "id": "reddit_t3_1uisis7",
+      "source": "reddit",
+      "title": "Comcast soars 20% after announcing it will spin off NBCUniversal and Sky from cable business",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T13:27:56+00:00"
+    },
+    {
+      "id": "reddit_t3_1uixjey",
+      "source": "reddit",
+      "title": "$RDDT Leaps - The most misunderstood stock on Wall Street and the only stock I believe is still mis-priced.",
+      "compound": 0.9883,
+      "label": "positive",
+      "date": "2026-06-29T16:34:42+00:00"
+    },
+    {
+      "id": "reddit_t3_1uj8zaf",
+      "source": "reddit",
+      "title": "Calls on oracle? #regard #swingtrade",
+      "compound": 0.8054,
+      "label": "positive",
+      "date": "2026-06-29T23:47:39+00:00"
+    },
+    {
+      "id": "reddit_t3_1ujfynf",
+      "source": "reddit",
+      "title": "SLS to the moon",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-30T05:14:35+00:00"
+    },
+    {
+      "id": "reddit_t3_1uiyjui",
+      "source": "reddit",
+      "title": "Bought 20 GLW $210 calls at $8.75 on the breakout. Held through Friday's panic. Up 384% in 5 days. Patience pays",
+      "compound": -0.5106,
+      "label": "negative",
+      "date": "2026-06-29T17:11:13+00:00"
+    },
+    {
+      "id": "reddit_t3_1uiv3zu",
+      "source": "reddit",
+      "title": "Think this might be a sign",
+      "compound": 0.0,
+      "label": "neutral",
+      "date": "2026-06-29T15:07:19+00:00"
+    },
+    {
+      "id": "reddit_t3_1uivtr7",
+      "source": "reddit",
+      "title": "Full port into Netflix Calls",
+      "compound": 0.6249,
+      "label": "positive",
+      "date": "2026-06-29T15:33:07+00:00"
+    },
+    {
+      "id": "reddit_t3_1uj0x95",
+      "source": "reddit",
+      "title": "Long $FIG 1M in Shares \ud83d\ude80",
+      "compound": 0.5267,
+      "label": "positive",
+      "date": "2026-06-29T18:37:45+00:00"
+    },
+    {
+      "id": "reddit_t3_1uio695",
+      "source": "reddit",
+      "title": "Daily Discussion Thread for June 29, 2026",
       "compound": -0.2411,
       "label": "negative",
-      "date": "2026-06-28T20:00:37+00:00"
+      "date": "2026-06-29T10:00:37+00:00"
     },
     {
-      "id": "reddit_t3_1ui40c5",
+      "id": "reddit_t3_1uiyj3m",
       "source": "reddit",
-      "title": "The market remained irrational longer than I remained solvent",
-      "compound": -0.34,
-      "label": "negative",
-      "date": "2026-06-28T17:59:11+00:00"
-    },
-    {
-      "id": "reddit_t3_1uiq8d4",
-      "source": "reddit",
-      "title": "BB QNX Securing Physical AI",
-      "compound": 0.9962,
+      "title": "(ASTS)Now you shall hear from US",
+      "compound": 0.8587,
       "label": "positive",
-      "date": "2026-06-29T11:48:01+00:00"
-    },
-    {
-      "id": "reddit_t3_1ui1d28",
-      "source": "reddit",
-      "title": "CEG is literally printing glowing green money now. Walmart goes Nuclear? \u2622\ufe0f\ud83d\uded2",
-      "compound": 0.9497,
-      "label": "positive",
-      "date": "2026-06-28T16:14:31+00:00"
-    },
-    {
-      "id": "reddit_t3_1uhs9ux",
-      "source": "reddit",
-      "title": "Trump again threatens Iran with annihilation as Kuwait and Bahrain report attacks",
-      "compound": -0.9274,
-      "label": "negative",
-      "date": "2026-06-28T08:57:55+00:00"
-    },
-    {
-      "id": "reddit_t3_1uib0mk",
-      "source": "reddit",
-      "title": "BB then & now",
-      "compound": 0.296,
-      "label": "positive",
-      "date": "2026-06-28T22:38:56+00:00"
-    },
-    {
-      "id": "reddit_t3_1uhruvn",
-      "source": "reddit",
-      "title": "Wendy's: A Deep Value Turnaround",
-      "compound": 0.9982,
-      "label": "positive",
-      "date": "2026-06-28T08:32:25+00:00"
-    },
-    {
-      "id": "reddit_t3_1uhjt2g",
-      "source": "reddit",
-      "title": "Cathie Wood Invests $11.5 Million in Coinbase as Crypto Stock Slumps",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T01:25:00+00:00"
-    },
-    {
-      "id": "reddit_t3_1ui287h",
-      "source": "reddit",
-      "title": "Risked 20k on 0DTE MU calls just to break even and it worked (6/26)",
-      "compound": -0.2664,
-      "label": "negative",
-      "date": "2026-06-28T16:49:32+00:00"
-    },
-    {
-      "id": "reddit_t3_1uhko8e",
-      "source": "reddit",
-      "title": "Margin finally called me",
-      "compound": -0.4767,
-      "label": "negative",
-      "date": "2026-06-28T02:06:08+00:00"
-    },
-    {
-      "id": "reddit_t3_1ui8kuz",
-      "source": "reddit",
-      "title": "My first buy, picked up in October",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T20:57:46+00:00"
-    },
-    {
-      "id": "reddit_t3_1ui38y0",
-      "source": "reddit",
-      "title": "SLS holding until I have 1 mil. Thoughts",
-      "compound": 0.0,
-      "label": "neutral",
-      "date": "2026-06-28T17:29:11+00:00"
+      "date": "2026-06-29T17:10:28+00:00"
     }
   ]
 }
